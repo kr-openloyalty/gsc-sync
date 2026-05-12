@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-"""OAuth flow for Google Search Console API. Run once to generate token.json."""
+"""OAuth flow for Google Search Console API. Run once to generate token.json.
 
-import json
+Usage:
+  python3 auth.py              → prints the authorization URL
+  python3 auth.py <redirect>   → completes token exchange with the redirect URL
+"""
+
 import sys
 from urllib.parse import urlparse, parse_qs
 from google_auth_oauthlib.flow import Flow
@@ -20,24 +24,20 @@ def main():
         redirect_uri=REDIRECT_URI,
     )
 
-    auth_url, _ = flow.authorization_url(access_type="offline", prompt="consent")
+    if len(sys.argv) < 2:
+        auth_url, _ = flow.authorization_url(access_type="offline", prompt="consent")
+        print("Open this URL in your browser:\n")
+        print(auth_url)
+        print("\nAfter approving, copy the full redirect URL from your browser")
+        print("(starts with http://localhost:8080/?code=...) and run:")
+        print(f"\n  python3 auth.py '<redirect_url>'\n")
+        return
 
-    print("=" * 60)
-    print("1. Open this URL in your browser:")
-    print()
-    print(auth_url)
-    print()
-    print("2. Sign in and grant access.")
-    print("3. You'll be redirected to localhost:8080 (which will fail to load).")
-    print("4. Copy the FULL URL from your browser's address bar and paste it below.")
-    print("=" * 60)
-
-    redirected_url = input("\nPaste the full redirect URL here: ").strip()
-
+    redirected_url = sys.argv[1]
     parsed = urlparse(redirected_url)
     code = parse_qs(parsed.query).get("code", [None])[0]
     if not code:
-        print("ERROR: Could not find 'code' in the URL. Please try again.")
+        print("ERROR: Could not find 'code' in the URL.")
         sys.exit(1)
 
     flow.fetch_token(code=code)
@@ -45,9 +45,8 @@ def main():
 
     with open(TOKEN_FILE, "w") as f:
         f.write(creds.to_json())
-    print(f"\nCredentials saved to {TOKEN_FILE}")
+    print(f"Credentials saved to {TOKEN_FILE}")
 
-    # Quick test: list verified sites
     service = build("searchconsole", "v1", credentials=creds)
     sites = service.sites().list().execute()
     print("\nVerified Search Console properties:")
