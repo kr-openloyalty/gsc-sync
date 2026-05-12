@@ -6,6 +6,8 @@ Usage:
   python3 auth.py <redirect>   → completes token exchange with the redirect URL
 """
 
+import json
+import os
 import sys
 from urllib.parse import urlparse, parse_qs
 from google_auth_oauthlib.flow import Flow
@@ -14,18 +16,27 @@ from googleapiclient.discovery import build
 SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 CLIENT_SECRET_FILE = "client_secret.json"
 TOKEN_FILE = "token.json"
+STATE_FILE = ".auth_state.json"
 REDIRECT_URI = "http://localhost:8080/"
 
 
 def main():
-    flow = Flow.from_client_secrets_file(
-        CLIENT_SECRET_FILE,
-        scopes=SCOPES,
-        redirect_uri=REDIRECT_URI,
-    )
-
     if len(sys.argv) < 2:
-        auth_url, _ = flow.authorization_url(access_type="offline", prompt="consent")
+        flow = Flow.from_client_secrets_file(
+            CLIENT_SECRET_FILE,
+            scopes=SCOPES,
+            redirect_uri=REDIRECT_URI,
+        )
+        auth_url, state = flow.authorization_url(
+            access_type="offline",
+            prompt="consent",
+            include_granted_scopes="true",
+        )
+
+        # Save code_verifier so the second invocation can complete PKCE exchange
+        with open(STATE_FILE, "w") as f:
+            json.dump({"code_verifier": flow.code_verifier, "state": state}, f)
+
         print("Open this URL in your browser:\n")
         print(auth_url)
         print("\nAfter approving, copy the full redirect URL from your browser")
@@ -33,6 +44,7 @@ def main():
         print(f"\n  python3 auth.py '<redirect_url>'\n")
         return
 
+    # --- Step 2: exchange code for token ---
     redirected_url = sys.argv[1]
     parsed = urlparse(redirected_url)
     code = parse_qs(parsed.query).get("code", [None])[0]
@@ -40,8 +52,24 @@ def main():
         print("ERROR: Could not find 'code' in the URL.")
         sys.exit(1)
 
+    if not os.path.exists(STATE_FILE):
+        print(f"ERROR: {STATE_FILE} not found. Run 'python3 auth.py' first to generate the auth URL.")
+        sys.exit(1)
+
+    with open(STATE_FILE) as f:
+        saved = json.load(f)
+
+    flow = Flow.from_client_secrets_file(
+        CLIENT_SECRET_FILE,
+        scopes=SCOPES,
+        redirect_uri=REDIRECT_URI,
+        state=saved["state"],
+    )
+    flow.code_verifier = saved["code_verifier"]
     flow.fetch_token(code=code)
     creds = flow.credentials
+
+    os.remove(STATE_FILE)
 
     with open(TOKEN_FILE, "w") as f:
         f.write(creds.to_json())
