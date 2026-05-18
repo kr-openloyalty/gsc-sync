@@ -20,7 +20,7 @@ SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 CLIENT_SECRET_FILE = "client_secret.json"
 TOKEN_FILE = "token.json"
 STATE_FILE = ".auth_state.json"
-REDIRECT_URI = "http://localhost:8080/"
+REDIRECT_URI = "http://localhost:8080"
 
 
 def get_session():
