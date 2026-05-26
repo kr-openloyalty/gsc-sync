@@ -59,30 +59,27 @@ DEALS = [
         "first_url":   "https://www.openloyalty.io/",
         "created":     date(2026, 5, 22),
     },
-    # --- No organic-search contact (excluded from GSC lookup) ---
+    # HS source ≠ ORGANIC_SEARCH but deal is treated as organic
     {
         "deal":        "El Cielo",
         "contact":     "Luisa Fernanda Mendez Paredes",
         "lifecycle":   "opportunity",
-        "first_url":   None,   # PAID_SEARCH — skip
+        "first_url":   "https://www.openloyalty.io/",   # UTM params stripped
         "created":     date(2026, 5, 19),
-        "skip_reason": "PAID_SEARCH",
     },
     {
         "deal":        "Gjensidige",
         "contact":     "Simon Andersen",
         "lifecycle":   "opportunity",
-        "first_url":   None,   # DIRECT_TRAFFIC — skip
+        "first_url":   "https://openloyalty.io/ab/11a",
         "created":     date(2026, 5, 22),
-        "skip_reason": "DIRECT_TRAFFIC",
     },
     {
         "deal":        "Via Trading",
         "contact":     "Miguel Fonseca",
         "lifecycle":   "opportunity",
-        "first_url":   None,   # DIRECT_TRAFFIC — skip
+        "first_url":   "https://www.openloyalty.io/book-a-demo-contact",
         "created":     date(2026, 5, 22),
-        "skip_reason": "DIRECT_TRAFFIC",
     },
 ]
 
