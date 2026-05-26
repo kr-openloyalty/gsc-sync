@@ -1,0 +1,391 @@
+Processing 157 MQL contacts...
+
+  [  1/157] Joe Smaith                   IN  open loyalty
+  [  2/157] Lawson Edmonds               US  b2b loyalty platform
+  [  3/157] Nirmit Meher                 IN  no GSC data
+  [  4/157] debby smith                  NG  no GSC data
+  [  5/157] mohammad alhazaa             GB  open loyalty
+  [  6/157] Sopuru Ajihyginus            GB  white label loyalty rewards program
+  [  7/157] virang patel                 CA  loyalty pricing
+  [  8/157] Cale Drouin                  AU  loyalty program software
+  [  9/157] Evgeniya Shatalova           CY  loyalty solution
+  [ 10/157] Ruslan Mammadov              LU  digital rewards program software
+  [ 11/157] Marcin Galant                PL  open loyalty
+  [ 12/157] Sandro Toneatto              NL  loyalty
+  [ 13/157] Belgin Costur                TR  open loyalty
+  [ 14/157] Li Campos                    PE  gamification software
+  [ 15/157] ANIK GHOSH                   CA  no GSC data
+  [ 16/157] Ahab Khan                    PK  no URL
+  [ 17/157] Angela Green                 US  open loyalty
+  [ 18/157] Tarek El Gammal              US  open loyalty
+  [ 19/157] DEV ITALIYA                  IN  open loyalty
+  [ 20/157] Piotrek Polus                PL  open loyalty
+  [ 21/157] Justin Wachtel               CA  white label rewards platform
+  [ 22/157] Alan Pariser                 US  best loyalty programs
+  [ 23/157] Jeroen Jeroense              NL  cashback software
+  [ 24/157] Taylor Fuller                GB  open loyalty
+  [ 25/157] Ali AlBhrani                 KW  loyalty program
+  [ 26/157] Kate Novick                  US  open loyalty
+  [ 27/157] Jennifer Janeski             US  open loyalty
+  [ 28/157] Tom Kelly                    GB  open loyalty
+  [ 29/157] Paula Rivera                 CO  loyalty
+  [ 30/157] Blaine LaBron                US  best loyalty programs utilizing data ana
+  [ 31/157] Terry Chan                   HK  loyalty program
+  [ 32/157] Finance Department           ES  open loyalty
+  [ 33/157] Yulia KOSTERNA               PL  loyalty solutions outperforming competit
+  [ 34/157] RAFFAELE CIRIGLIANO          IT  open loyalty
+  [ 35/157] Javier Gisbert               ES  apps for loyalty programs
+  [ 36/157] London Summers               RO  open loyalty
+  [ 37/157] Ian k                        US  open loyalty
+  [ 38/157] German Sverdlov              AE  loyalty program software
+  [ 39/157] Lisa Maria Geyer             AT  loyalty program software
+  [ 40/157] shahin amani                 TR  open loyalty
+  [ 41/157] Oscar Illueca                PA  identify brands in real estate managemen
+  [ 42/157] Ayham Mhd                    IQ  open loyalty
+  [ 43/157] Irene Machado                PT  open loyalty
+  [ 44/157] Ronald Hewitt                US  loyalty program software
+  [ 45/157] William Miller               US  loyalty program cost calculation
+  [ 46/157] Hartley Williams             BS  open loyalty
+  [ 47/157] Northbrooks Farm             NG  customer loyalty analytics
+  [ 48/157] Angel Alexander Amezquita Va MX  loyalty
+  [ 49/157] TAL BAR ZEEV                 IL  open loyalty
+  [ 50/157] Ehab Hassan                  NG  open loyalty
+  [ 51/157] Robert Masse                 BE  open loyalty
+  [ 52/157] Asa Zahra                    ID  open loyalty
+  [ 53/157] Bhushan Bhingare             IN  open loyalty
+  [ 54/157] Ana Maria Micu               AT  loyalty
+  [ 55/157] Julia Kushchova              AE  sephora beauty insider
+  [ 56/157] Pheng Vathana                KH  loyalty program
+  [ 57/157] Muhannad Daous               SA  loyalty program system
+  [ 58/157] Maricielo Saldaña            PE  open loyalty
+  [ 59/157] Carlos Jaimes                CO  open loyalty
+  [ 60/157] Elvidge Mothibi              BW  open loyalty
+  [ 61/157] Vivian Ho                    CA  open loyalty
+  [ 62/157] keisuke saito                JP  no GSC data
+  [ 63/157] Ghhhhh Cbdgdgddg             PK  cloud loyalty system
+  [ 64/157] HeinThiri Tun                MM  no GSC data
+  [ 65/157] Jonathan Benallack           US  open loyalty
+  [ 66/157] Angel García                 ES  plataforma de fidelización
+  [ 67/157] Vali Munteanu                CO  open loyalty
+  [ 68/157] Ruslan Lavrinenko            UA  no GSC data
+  [ 69/157] Jessyka Dart-McLean          US  loyalty program receipt scanning
+  [ 70/157] Thati Mabe                   ZA  loyalty
+  [ 71/157] Mikias Leulseged             ET  loyaity
+  [ 72/157] Javier Garcia                ES  open loyalty
+  [ 73/157] Matthew Harrison             AE  openloyalty
+  [ 74/157] Steve Bramble                GB  loyalty api
+  [ 75/157] Martin Simms                 US  open loyalty
+  [ 76/157] Marjan Akter                 AE  loyalty program software
+  [ 77/157] Wahid Zaland                 US  loyalty program software
+  [ 78/157] Gerard McClure               PK  no GSC data
+  [ 79/157] Collins Tindimwebwa          UG  customer loyalty card programs
+  [ 80/157] Vladimír Netušil             CZ  loyalty program
+  [ 81/157] Bennett Thrasher             PK  loyalty program
+  [ 82/157] Mritunjay Gupta              IN  loyalty
+  [ 83/157] lina lina                    LV  open loyalty
+  [ 84/157] Akash Luthra                 US  loylaty program
+  [ 85/157] naug nall                    TH  loyalty program
+  [ 86/157] Lauren Burgoni               US  best gamification tools for web applicat
+  [ 87/157] Niel Koekemoer               GB  open loyalty
+  [ 88/157] David Marin                  CO  digital loyalty platform cost per user
+  [ 89/157] Ifeoluwa Olawoye             SE  loyalty program
+  [ 90/157] Mark Stafferton              GB  open loyalty
+  [ 91/157] David Laplante               CA  open loyalty
+  [ 92/157] Gerard Gonzalez              ES  open loyalty
+  [ 93/157] Joe Ryan                     GB  customer loyalty software
+  [ 94/157] Roopak Revankar              IN  open loyalty
+  [ 95/157] Joe Callan                   US  ai-powered loyalty management software
+  [ 96/157] JOSEPH Zaccour               QA  coffee shop loyalty program
+  [ 97/157] Loay Kadmany                 IL  loyalty experts
+  [ 98/157] Elton Muchaiabande           MZ  open loyalty
+  [ 99/157] Wayne Moosa                  ZA  loyalty program
+  [100/157] Mikhail Bogdanov             RU  open loyalty
+  [101/157] Raymond Raffety              US  loyalty apps
+  [102/157] Devon Hibbert                ZA  earn loyalty points
+  [103/157] Krish S                      GB  open loyalty
+  [104/157] Prince Shah                  IN  rewards program software
+  [105/157] Dennis Smith Smith           DE  customer loyalty management system
+  [106/157] Matthew Graham               JM  open loyalty
+  [107/157] Cam Hunsley                  CA  which ordering solutions offer customer 
+  [108/157] Konstantin Khlynov           AM  loyalty management platform
+  [109/157] Matias Csorgics              HU  open loyalty
+  [110/157] Lauren Lewis                 US  no GSC data
+  [111/157] Sinchan Noharah              IN  loyalty management system
+  [112/157] Jen Doe                      US  no GSC data
+  [113/157] Eliza Liddy                  AU  loyalty program platforms
+  [114/157] George Stancioiu             RO  loyalty
+  [115/157] Diego Amado                  US  open loyalty
+  [116/157] Jacob Krisiano               KI  open loyalty
+  [117/157] Reda el khyat                CI  open loyalty
+  [118/157] Anthony Farina               US  customer loyalty software
+  [119/157] Rob Injeyan                  US  open loyalty
+  [120/157] Soufiane Haouani             MA  open loyalty
+  [121/157] Sophie Rousseau              AR  beauty insider
+  [122/157] Casey May                    AU  loyalty platform software
+  [123/157] javier pineiro               AR  open loyalty
+  [124/157] Flandize Thrower             US  customer loyalty software
+  [125/157] Prateek Yadav                IN  openloyalty
+  [126/157] Pinky Ghadai                 IN  loyalty program
+  [127/157] Mat Havelock                 GB  loyalty program api
+  [128/157] kamal chandramohan           AE  open loyalty
+  [129/157] Ammar Chomoko                TZ  coupon dealers
+  [130/157] Theo Quilichini              KH  openloyalty.io
+  [131/157] SEJAL SAHU                   IN  voucher software
+  [132/157] Kathryn Hamilton             AU  open loyalty
+  [133/157] Faisal Baasheer              BE  loyalty platforms
+  [134/157] Marie Rousseau               IE  no URL
+  [135/157] Soumyajit Bose               IN  open loyalty
+  [136/157] Skyler Bell                  CA  open loyalty
+  [137/157] Anurag Nambiar               IN  no GSC data
+  [138/157] Vahe Gevorgyan               AM  reliable customer analytics platforms fo
+  [139/157] Shaheed Kadri                KW  open loyalty api
+  [140/157] David Pavel                  RS  loyalty system
+  [141/157] Piyush Patil                 IN  open loyalty
+  [142/157] Nassief Mohamed              ZA  open loyalty
+  [143/157] Sanjay Maharajh              ZA  loyalty platform
+  [144/157] Oscar Alejandro Flamenco Riv HN  open loyalty
+  [145/157] Sharath Kumar                IN  open loyalty
+  [146/157] Mazen Bahashwan              RO  open loyalty
+  [147/157] Ricardo Taveras              DO  open loyalty
+  [148/157] Max Volkov                   UA  open loyalty
+  [149/157] Christian Camilleri          MT  open loyalty
+  [150/157] George Androulakis           GR  open loyalty
+  [151/157] Eduardo Cristóvão            BR  saas loyalty
+  [152/157] Taleem Mandinka              US  loyalty platforms
+  [153/157] Test test                    IN  loyalty platform
+  [154/157] howy joy                     DZ  no GSC data
+  [155/157] Julien                       IE  no URL
+  [156/157] Julien Carpentier            IE  no URL
+  [157/157] Danielle Lutrick             US  open loyalty
+
+============================================================================================================================================
+  January 2026  (59 MQLs)
+============================================================================================================================================
+Contact                       Src       Country         First Page                                  Date         Top Keyword                             Self-Reported           Clicks     Impr    Pos
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Joe Smaith                    ORGANIC   India           /                                           2026-01-01   open loyalty                            Other                        7        8      —
+Lawson Edmonds                ORGANIC   United States   /insider/best-loyalty-software-comparison-  2026-01-01   b2b loyalty platform                    Google                       0        4    9.5
+Nirmit Meher                  DIRECT    India           /book-a-demo-contact                        2026-01-02   no GSC data                             Google                       —        —      —
+debby smith                   DIRECT    Nigeria         /book-a-demo-contact                        2026-01-02   no GSC data                             Google                       —        —      —
+mohammad alhazaa              DIRECT    United Kingdom  /                                           2026-01-02   open loyalty                            ChatGPT                      3        6      —
+Sopuru Ajihyginus             ORGANIC   United Kingdom  /applications/white-label-loyalty           2026-01-02   white label loyalty rewards program     Google                       1        1      —
+virang patel                  DIRECT    Canada          /pricing                                    2026-01-03   loyalty pricing                         Google                       0        1      —
+Cale Drouin                   ORGANIC   Australia       /                                           2026-01-04   loyalty program software                Google                       0        6      —
+Evgeniya Shatalova            ORGANIC   Cyprus          /                                           2026-01-05   loyalty solution                        AI (other)                   0        1      —
+Ruslan Mammadov               DIRECT    Luxembourg      /product/digital-wallet-software            2026-01-05   digital rewards program software        ChatGPT                      0        4   25.2
+Marcin Galant                 ORGANIC   Poland          /technology/loyalty-program-api             2026-01-05   open loyalty                            Other                        1       11    1.1
+Sandro Toneatto               DIRECT    Netherlands     /                                           2026-01-05   loyalty                                 Other                        0       10   36.2
+Belgin Costur                 ORGANIC   Turkey          /technology/loyalty-program-api             2026-01-06   open loyalty                            Google                       0        1      —
+Li Campos                     DIRECT    Peru            /product/customer-gamification-software     2026-01-06   gamification software                   Other                        0       13   72.8
+ANIK GHOSH                    DIRECT    Canada          /book-a-demo-contact                        2026-01-06   no GSC data                             Google                       —        —      —
+Ahab Khan                     DIRECT    Pakistan        https://app.hubspot.com/meetings/hswiatkow  2026-01-07   no URL                                  —                            —        —      —
+Angela Green                  ORGANIC   United States   /                                           2026-01-07   open loyalty                            Referral/Word-of-mouth       2        9   14.1
+Tarek El Gammal               DIRECT    United States   /pricing                                    2026-01-08   open loyalty                            Other                        0        7      —
+DEV ITALIYA                   ORGANIC   India           /                                           2026-01-08   open loyalty                            Google                       3        4      —
+Piotrek Polus                 ORGANIC   Poland          /                                           2026-01-09   open loyalty                            Google                       6       21      —
+Justin Wachtel                ORGANIC   Canada          /applications/white-label-loyalty           2026-01-09   white label rewards platform            Google                       1        1      —
+Alan Pariser                  ORGANIC   United States   /insider/best-retail-loyalty-programs       2026-01-11   best loyalty programs                   Other                        0       20      —
+Jeroen Jeroense               ORGANIC   Netherlands     /product/cashback                           2026-01-12   cashback software                       Google                       1        2      —
+Taylor Fuller                 DIRECT    United Kingdom  /                                           2026-01-12   open loyalty                            ChatGPT                      3        4      —
+Ali AlBhrani                  DIRECT    Kuwait          /                                           2026-01-13   loyalty program                         Referral/Word-of-mouth       0        2    3.5
+Kate Novick                   DIRECT    United States   /                                           2026-01-13   open loyalty                            Other                        5       10      —
+Jennifer Janeski              DIRECT    United States   /                                           2026-01-13   open loyalty                            ChatGPT                      5       10      —
+Tom Kelly                     ORGANIC   United Kingdom  /                                           2026-01-13   open loyalty                            AI (other)                   3        5      —
+Paula Rivera                  DIRECT    Colombia        /                                           2026-01-13   loyalty                                 Other                        0        4      —
+Blaine LaBron                 ORGANIC   United States   /insider/rewards-program-software           2026-01-14   best loyalty programs utilizing data a  Other                        0        4      —
+Terry Chan                    DIRECT    Hong Kong       /                                           2026-01-14   loyalty program                         Google                       0        5      —
+Finance Department            ORGANIC   Spain           /                                           2026-01-14   open loyalty                            Google                       1        1      —
+Yulia KOSTERNA                DIRECT    Poland          /webinars/video-how-retailers-use-gamified  2026-01-15   loyalty solutions outperforming compet  LinkedIn                     0        1      —
+RAFFAELE CIRIGLIANO           ORGANIC   Italy           /                                           2026-01-15   open loyalty                            Other                        3        5      —
+Javier Gisbert                DIRECT    Spain           /                                           2026-01-16   apps for loyalty programs               Google                       0        4   36.8
+London Summers                ORGANIC   Romania         /                                           2026-01-16   open loyalty                            ChatGPT                      1        2      —
+Ian k                         DIRECT    United States   /pricing                                    2026-01-19   open loyalty                            AI (other)                   1        6   12.2
+German Sverdlov               DIRECT    United Arab Em  /applications/white-label-loyalty           2026-01-19   loyalty program software                Google                       0        3   40.3
+Lisa Maria Geyer              ORGANIC   Austria         /applications/white-label-loyalty           2026-01-20   loyalty program software                Other                        0       67   61.4
+shahin amani                  ORGANIC   Turkey          /                                           2026-01-20   open loyalty                            Other                        1        1      —
+Oscar Illueca                 ORGANIC   Panama          /insider/best-loyalty-software-comparison-  2026-01-20   identify brands in real estate managem  Other                        0        1      —
+Ayham Mhd                     DIRECT    Iraq            /pricing                                    2026-01-21   open loyalty                            Google                       1       58    1.1
+Irene Machado                 ORGANIC   Portugal        /                                           2026-01-21   open loyalty                            Other                        1        1      —
+Ronald Hewitt                 DIRECT    United States   /applications/white-label-loyalty           2026-01-21   loyalty program software                Other                        0       14   63.1
+William Miller                DIRECT    United States   /resources/loyalty-program-roi              2026-01-21   loyalty program cost calculation        Google                       0        4   14.8
+Hartley Williams              ORGANIC   Bahamas         /pricing                                    2026-01-22   open loyalty                            Other                        1        1      —
+Northbrooks Farm              DIRECT    Nigeria         /product/customer-loyalty-analytics         2026-01-24   customer loyalty analytics              Referral/Word-of-mouth       0       15   38.6
+Angel Alexander Amezquita Va  DIRECT    Mexico          /                                           2026-01-24   loyalty                                 Other                        0        5   25.8
+TAL BAR ZEEV                  ORGANIC   Israel          /                                           2026-01-25   open loyalty                            Gemini                       2        2      —
+Ehab Hassan                   ORGANIC   Nigeria         /                                           2026-01-25   open loyalty                            Other                        1        1      —
+Robert Masse                  ORGANIC   Belgium         /                                           2026-01-25   open loyalty                            ChatGPT                      1        1      —
+Asa Zahra                     ORGANIC   Indonesia       /pricing                                    2026-01-26   open loyalty                            Google                       0        2      —
+Bhushan Bhingare              DIRECT    India           /                                           2026-01-27   open loyalty                            Google                       3        7      —
+Ana Maria Micu                DIRECT    Austria         /                                           2026-01-27   loyalty                                 Other                        0        6   19.5
+Julia Kushchova               ORGANIC   United Arab Em  /insider/sephora-beauty-insider             2026-01-27   sephora beauty insider                  Other                        0        3      —
+Pheng Vathana                 DIRECT    Cambodia        /                                           2026-01-28   loyalty program                         Other                        0        1      —
+Muhannad Daous                ORGANIC   Saudi Arabia    /                                           2026-01-28   loyalty program system                  Other                        1        1      —
+Maricielo Saldaña             ORGANIC   Peru            /es                                         2026-01-29   open loyalty                            —                            0        1      —
+Carlos Jaimes                 ORGANIC   Colombia        /es                                         2026-01-31   open loyalty                            ChatGPT                      1        1      —
+
+============================================================================================================================================
+  February 2026  (24 MQLs)
+============================================================================================================================================
+Contact                       Src       Country         First Page                                  Date         Top Keyword                             Self-Reported           Clicks     Impr    Pos
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Elvidge Mothibi               ORGANIC   Botswana        /                                           2026-02-02   open loyalty                            Other                       27       78    1.7
+Vivian Ho                     ORGANIC   Canada          /pricing                                    2026-02-02   open loyalty                            ChatGPT                      1        4      —
+keisuke saito                 DIRECT    Japan           /%20(Open%20Loyalty)                        2026-02-03   no GSC data                             Other                        —        —      —
+Ghhhhh Cbdgdgddg              ORGANIC   Pakistan        /technology/cloud-loyalty                   2026-02-05   cloud loyalty system                    Other                        0       21      —
+HeinThiri Tun                 DIRECT    Myanmar         /book-a-demo-contact                        2026-02-09   no GSC data                             Other                        —        —      —
+Jonathan Benallack            DIRECT    United States   /                                           2026-02-09   open loyalty                            Google                       6       10      —
+Angel García                  ORGANIC   Spain           /es                                         2026-02-11   plataforma de fidelización              Google                       0        8    1.6
+Vali Munteanu                 ORGANIC   Colombia        /technology/loyalty-program-api             2026-02-13   open loyalty                            Google                       0        1      —
+Ruslan Lavrinenko             DIRECT    Ukraine         /book-a-demo-contact                        2026-02-16   no GSC data                             Google                       —        —      —
+Jessyka Dart-McLean           DIRECT    United States   /product/code-scanning                      2026-02-16   loyalty program receipt scanning        ChatGPT                      0        4   11.5
+Thati Mabe                    DIRECT    South Africa    /                                           2026-02-17   loyalty                                 Google                       0        8   14.8
+Mikias Leulseged              DIRECT    Ethiopia        /                                           2026-02-18   loyaity                                 Other                        0        1      —
+Javier Garcia                 ORGANIC   Spain           /es                                         2026-02-18   open loyalty                            ChatGPT                      1        2      —
+Matthew Harrison              DIRECT    United Arab Em  /pricing                                    2026-02-18   openloyalty                             Google                       0        1      —
+Steve Bramble                 ORGANIC   United Kingdom  /technology/loyalty-program-api             2026-02-18   loyalty api                             Google                       0        4    8.5
+Martin Simms                  DIRECT    United States   /                                           2026-02-19   open loyalty                            ChatGPT                      1        7    1.3
+Marjan Akter                  ORGANIC   United Arab Em  /                                           2026-02-19   loyalty program software                Other                        1        5    1.2
+Wahid Zaland                  ORGANIC   United States   /applications/white-label-loyalty           2026-02-21   loyalty program software                Google                       0       10   53.5
+Gerard McClure                DIRECT    Pakistan        /book-a-demo-contact                        2026-02-21   no GSC data                             Referral/Word-of-mouth       —        —      —
+Collins Tindimwebwa           DIRECT    Uganda          /product/loyalty-card-system                2026-02-21   customer loyalty card programs          Google                       0        9   30.7
+Vladimír Netušil              DIRECT    Czech Republic  /                                           2026-02-23   loyalty program                         AI (other)                   0        2      —
+Bennett Thrasher              DIRECT    Pakistan        /                                           2026-02-27   loyalty program                         Blog/Content                 0        5    9.4
+Mritunjay Gupta               ORGANIC   India           /                                           2026-02-28   loyalty                                 Other                        0       27   11.5
+lina lina                     DIRECT    Latvia          /                                           2026-02-28   open loyalty                            Google                       7       15      —
+
+============================================================================================================================================
+  March 2026  (28 MQLs)
+============================================================================================================================================
+Contact                       Src       Country         First Page                                  Date         Top Keyword                             Self-Reported           Clicks     Impr    Pos
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Akash Luthra                  DIRECT    United States   /resources/loyalty-program-implementation-  2026-03-01   loylaty program                         Google                       1        1      —
+naug nall                     DIRECT    Thailand        /                                           2026-03-02   loyalty program                         Other                        0        2   19.5
+Lauren Burgoni                ORGANIC   United States   /insider/best-gamification-software         2026-03-03   best gamification tools for web applic  Google                       0       10    4.7
+Niel Koekemoer                ORGANIC   United Kingdom  /                                           2026-03-05   open loyalty                            Claude                       3        5      —
+David Marin                   DIRECT    Colombia        /pricing                                    2026-03-06   digital loyalty platform cost per user  Google                       0        1      —
+Ifeoluwa Olawoye              ORGANIC   Sweden          /                                           2026-03-06   loyalty program                         Google                       0        1      —
+Mark Stafferton               DIRECT    United Kingdom  /pricing                                    2026-03-09   open loyalty                            Other                        0        5    1.8
+David Laplante                ORGANIC   Canada          /                                           2026-03-09   open loyalty                            Other                        2        2      —
+Gerard Gonzalez               ORGANIC   Spain           /es                                         2026-03-10   open loyalty                            Other                        2        2      —
+Joe Ryan                      DIRECT    United Kingdom  /applications/white-label-loyalty           2026-03-11   customer loyalty software               Copilot                      0        6   33.5
+Roopak Revankar               ORGANIC   India           /                                           2026-03-12   open loyalty                            Other                        3        3      —
+Joe Callan                    ORGANIC   United States   /insider/best-loyalty-software-comparison-  2026-03-12   ai-powered loyalty management software  Other                        0        4      —
+JOSEPH Zaccour                ORGANIC   Qatar           /insider/coffee-loyalty-programs-successfu  2026-03-13   coffee shop loyalty program             Google                       1        1      —
+Loay Kadmany                  ORGANIC   Israel          /                                           2026-03-13   loyalty experts                         ChatGPT                      0        1      —
+Elton Muchaiabande            DIRECT    Mozambique      /pricing                                    2026-03-14   open loyalty                            Other                        0        2      —
+Wayne Moosa                   DIRECT    South Africa    /                                           2026-03-15   loyalty program                         Other                        0        5      —
+Mikhail Bogdanov              ORGANIC   Russian Federa  /                                           2026-03-17   open loyalty                            Other                        2        2      —
+Raymond Raffety               ORGANIC   United States   /insider/10-best-mobile-loyalty-program-ap  2026-03-18   loyalty apps                            Blog/Content                 0        6      —
+Devon Hibbert                 ORGANIC   South Africa    /product/loyalty-points-system              2026-03-18   earn loyalty points                     Other                        1        1      —
+Krish S                       DIRECT    United Kingdom  /pricing                                    2026-03-19   open loyalty                            Other                        1        7      —
+Prince Shah                   ORGANIC   India           /insider/rewards-program-software           2026-03-21   rewards program software                Google                       0        2      —
+Dennis Smith Smith            ORGANIC   Germany         /                                           2026-03-24   customer loyalty management system      Other                        0        3      —
+Matthew Graham                ORGANIC   Jamaica         /                                           2026-03-25   open loyalty                            Other                       17       75    2.8
+Cam Hunsley                   DIRECT    Canada          /                                           2026-03-25   which ordering solutions offer custome  Google                       0        3      —
+Konstantin Khlynov            DIRECT    Armenia         /insider/best-loyalty-software-comparison-  2026-03-26   loyalty management platform             Google                       0        1      —
+Matias Csorgics               ORGANIC   Hungary         /                                           2026-03-26   open loyalty                            ChatGPT                      2        2      —
+Lauren Lewis                  DIRECT    United States   /book-a-demo-contact                        2026-03-31   no GSC data                             ChatGPT                      —        —      —
+Sinchan Noharah               ORGANIC   India           /                                           2026-03-31   loyalty management system               Other                        2        7   10.6
+
+============================================================================================================================================
+  April 2026  (22 MQLs)
+============================================================================================================================================
+Contact                       Src       Country         First Page                                  Date         Top Keyword                             Self-Reported           Clicks     Impr    Pos
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Jen Doe                       DIRECT    United States   /book-a-demo-contact                        2026-04-01   no GSC data                             Other                        —        —      —
+Eliza Liddy                   DIRECT    Australia       /                                           2026-04-01   loyalty program platforms               Google                       0        7      —
+George Stancioiu              ORGANIC   Romania         /                                           2026-04-01   loyalty                                 Google                       0        7    9.6
+Diego Amado                   DIRECT    United States   /                                           2026-04-01   open loyalty                            YouTube/Video                4       10      —
+Jacob Krisiano                ORGANIC   Kiribati        /                                           2026-04-03   open loyalty                            ChatGPT                      1        1      —
+Reda el khyat                 DIRECT    Cote D Ivoire   /                                           2026-04-04   open loyalty                            Google                       4       22    3.0
+Anthony Farina                ORGANIC   United States   /                                           2026-04-10   customer loyalty software               ChatGPT                      3       58    2.1
+Rob Injeyan                   DIRECT    United States   /technology/loyalty-program-api             2026-04-13   open loyalty                            ChatGPT                      1        8      —
+Soufiane Haouani              ORGANIC   Morocco         /pricing                                    2026-04-14   open loyalty                            Google                       2       67    1.1
+Sophie Rousseau               ORGANIC   Argentina       /insider/sephora-beauty-insider             2026-04-15   beauty insider                          Other                        0        1      —
+Casey May                     ORGANIC   Australia       /applications/white-label-loyalty           2026-04-16   loyalty platform software               Google                       0        1      —
+javier pineiro                DIRECT    Argentina       /pricing                                    2026-04-16   open loyalty                            Other                        0        1      —
+Flandize Thrower              ORGANIC   United States   /                                           2026-04-16   customer loyalty software               Other                        1       56    3.6
+Prateek Yadav                 ORGANIC   India           /                                           2026-04-17   openloyalty                             Google                       2        4      —
+Pinky Ghadai                  ORGANIC   India           /                                           2026-04-18   loyalty program                         Other                        2       17    9.6
+Mat Havelock                  ORGANIC   United Kingdom  /insider/how-to-integrate-an-api-first-loy  2026-04-22   loyalty program api                     Google                       0        2      —
+kamal chandramohan            ORGANIC   United Arab Em  /                                           2026-04-22   open loyalty                            ChatGPT                      1        2      —
+Ammar Chomoko                 ORGANIC   Tanzania        /insider/coupon-management-software         2026-04-22   coupon dealers                          Other                        0        7      —
+Theo Quilichini               DIRECT    Cambodia        /pricing                                    2026-04-24   openloyalty.io                          Other                        0        1      —
+SEJAL SAHU                    ORGANIC   India           /product/vouchers                           2026-04-27   voucher software                        Other                        5        7    1.7
+Kathryn Hamilton              ORGANIC   Australia       /                                           2026-04-28   open loyalty                            Other                        4        4      —
+Faisal Baasheer               ORGANIC   Belgium         /                                           2026-04-30   loyalty platforms                       Other                        1        1      —
+
+============================================================================================================================================
+  May 2026 (1–22)  (24 MQLs)
+============================================================================================================================================
+Contact                       Src       Country         First Page                                  Date         Top Keyword                             Self-Reported           Clicks     Impr    Pos
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Marie Rousseau                DIRECT    Ireland         https://share.hsforms.com/20ca75d8f40a45bf  2026-05-01   no URL                                  Other                        —        —      —
+Soumyajit Bose                ORGANIC   India           /                                           2026-05-02   open loyalty                            Other                        1        1      —
+Skyler Bell                   ORGANIC   Canada          /                                           2026-05-03   open loyalty                            Other                        1        1      —
+Anurag Nambiar                DIRECT    India           /book-a-demo-with-us                        2026-05-04   no GSC data                             Claude                       —        —      —
+Vahe Gevorgyan                DIRECT    Armenia         /                                           2026-05-04   reliable customer analytics platforms   Ahrefs                       0        1      —
+Shaheed Kadri                 ORGANIC   Kuwait          /technology/loyalty-program-api             2026-05-05   open loyalty api                        Other                        1        1      —
+David Pavel                   DIRECT    Serbia          /                                           2026-05-05   loyalty system                          Other                        0        1      —
+Piyush Patil                  ORGANIC   India           /                                           2026-05-06   open loyalty                            Google                       5       10      —
+Nassief Mohamed               DIRECT    South Africa    /pricing                                    2026-05-06   open loyalty                            Referral/Word-of-mouth       0        1      —
+Sanjay Maharajh               ORGANIC   South Africa    /                                           2026-05-07   loyalty platform                        Other                        0        3    1.7
+Oscar Alejandro Flamenco Riv  ORGANIC   Honduras        /es                                         2026-05-07   open loyalty                            ChatGPT                      1        1      —
+Sharath Kumar                 DIRECT    India           /about                                      2026-05-08   open loyalty                            Other                        0        1      —
+Mazen Bahashwan               DIRECT    Romania         /pricing                                    2026-05-09   open loyalty                            ChatGPT                      0        1      —
+Ricardo Taveras               ORGANIC   Dominican Repu  /                                           2026-05-11   open loyalty                            ChatGPT                      1        1      —
+Max Volkov                    ORGANIC   Ukraine         /                                           2026-05-11   open loyalty                            ChatGPT                      1        1      —
+Christian Camilleri           ORGANIC   Malta           /                                           2026-05-12   open loyalty                            Google                      30       65    1.6
+George Androulakis            DIRECT    Greece          /pricing                                    2026-05-12   open loyalty                            Google                       0       63    1.0
+Eduardo Cristóvão             ORGANIC   Brazil          /applications/saas-enrichment               2026-05-13   saas loyalty                            Other                        1        1      —
+Taleem Mandinka               DIRECT    United States   /                                           2026-05-15   loyalty platforms                       Other                        2        8      —
+Test test                     ORGANIC   India           /insider/best-loyalty-software-comparison-  2026-05-15   loyalty platform                        Other                        0        2      —
+howy joy                      DIRECT    Algeria         /book-a-demo-contact                        2026-05-15   no GSC data                             Google                       —        —      —
+Julien                        DIRECT    Ireland         https://share.hsforms.com/7d48c80bec23467f  2026-05-18   no URL                                  Other                        —        —      —
+Julien Carpentier             DIRECT    Ireland         https://share.hsforms.com/bd0d9819b05c478e  2026-05-20   no URL                                  Other                        —        —      —
+Danielle Lutrick              DIRECT    United States   /                                           2026-05-21   open loyalty                            Other                        1        3      —
+
+============================================================
+  Self-Reported Attribution Breakdown
+============================================================
+Category                         Count      %
+---------------------------------------------
+Other                               66  42.0%
+Google                              49  31.2%
+ChatGPT                             22  14.0%
+Referral/Word-of-mouth               5   3.2%
+AI (other)                           4   2.5%
+—                                    2   1.3%
+Blog/Content                         2   1.3%
+Claude                               2   1.3%
+LinkedIn                             1   0.6%
+Gemini                               1   0.6%
+Copilot                              1   0.6%
+YouTube/Video                        1   0.6%
+Ahrefs                               1   0.6%
+TOTAL                              157
+
+============================================================
+  Notable / Unusual Self-Reported Values
+============================================================
+  [Other] I have done business with Open Loyalty before for another employer (dacadoo, Switzerland)
+  [Other] research.
+
+please contact me by email only, thank you.
+  [Other] mediante recomendaciones
+  [Other] Could you please provide the following details:
+•	Pricing structure
+•	Demo session availability
+•	Features relevant t
+  [Other] https://wefglobal.eu.qualtrics.com/jfe/form/SV_af38noL8hELk7ie?PageOrigin=Organizations
+  [Other] Just searching for loyalty program services that can help us.
+  [Other] Recherche web – votre site est ressorti lors d’une veille sur les outils de loyalty en Europe.
+  [Other] Hi,
+
+We wanted to let you know that the domain nekama.net is now available for purchase. If you are interested in acqu
+  [Other] I came across your company online
+  [Other] J’ai découvert votre solution via le site openloyalty.io en recherchant des outils adaptés aux audits énergétiques et à 
+  [Other] J’ai découvert votre offre en visitant le site openloyalty.io, où votre solution a retenu mon attention pour son approch
+  [Other] Exploring all option online. 
+
+Please email me - do not call.

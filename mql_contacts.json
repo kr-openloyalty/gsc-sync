@@ -1,0 +1,2669 @@
+[
+  {
+    "id": 189528161071,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Joe",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:04.168Z",
+      "self_reported_attribution": "Jist testing",
+      "hs_full_name_or_email": "Joe Smaith",
+      "ip_country": "india",
+      "hs_object_id": "189528161071",
+      "createdate": "2026-01-01T04:31:58.321Z",
+      "lastname": "Smaith"
+    },
+    "displayName": "Joe Smaith"
+  },
+  {
+    "id": 189610440470,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/best-loyalty-software-comparison-guide",
+      "firstname": "Lawson",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:01.704Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Lawson Edmonds",
+      "ip_country": "united states",
+      "hs_object_id": "189610440470",
+      "createdate": "2026-01-01T14:13:15.740Z",
+      "lastname": "Edmonds"
+    },
+    "displayName": "Lawson Edmonds"
+  },
+  {
+    "id": 189774154129,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "Nirmit",
+      "ip_country_code": "in",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:53.741Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Nirmit Meher",
+      "ip_country": "india",
+      "hs_object_id": "189774154129",
+      "createdate": "2026-01-02T08:52:16.181Z",
+      "lastname": "Meher"
+    },
+    "displayName": "Nirmit Meher"
+  },
+  {
+    "id": 189816239951,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "debby",
+      "ip_country_code": "ng",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:55.267Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "debby smith",
+      "ip_country": "nigeria",
+      "hs_object_id": "189816239951",
+      "createdate": "2026-01-02T13:41:20.153Z",
+      "lastname": "smith"
+    },
+    "displayName": "debby smith"
+  },
+  {
+    "id": 189859044233,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "mohammad",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:57.843Z",
+      "self_reported_attribution": "ChatGPT",
+      "hs_full_name_or_email": "mohammad alhazaa",
+      "ip_country": "united kingdom",
+      "hs_object_id": "189859044233",
+      "createdate": "2026-01-02T15:30:47.696Z",
+      "lastname": "alhazaa"
+    },
+    "displayName": "mohammad alhazaa"
+  },
+  {
+    "id": 189928196212,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/white-label-loyalty",
+      "firstname": "Sopuru",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:31.186Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Sopuru Ajihyginus",
+      "ip_country": "united kingdom",
+      "hs_object_id": "189928196212",
+      "createdate": "2026-01-02T22:51:40.454Z",
+      "lastname": "Ajihyginus"
+    },
+    "displayName": "Sopuru Ajihyginus"
+  },
+  {
+    "id": 190097038445,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "virang",
+      "ip_country_code": "ca",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:02.103Z",
+      "self_reported_attribution": "online google search",
+      "hs_full_name_or_email": "virang patel",
+      "ip_country": "canada",
+      "hs_object_id": "190097038445",
+      "createdate": "2026-01-03T18:23:43.151Z",
+      "lastname": "patel"
+    },
+    "displayName": "virang patel"
+  },
+  {
+    "id": 190189906203,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Cale",
+      "ip_country_code": "au",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:03.629Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Cale Drouin",
+      "ip_country": "australia",
+      "hs_object_id": "190189906203",
+      "createdate": "2026-01-04T05:32:52.425Z",
+      "lastname": "Drouin"
+    },
+    "displayName": "Cale Drouin"
+  },
+  {
+    "id": 190403991592,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Evgeniya",
+      "ip_country_code": "cy",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:03.972Z",
+      "self_reported_attribution": "gpt search",
+      "hs_full_name_or_email": "Evgeniya Shatalova",
+      "ip_country": "cyprus",
+      "hs_object_id": "190403991592",
+      "createdate": "2026-01-05T10:02:04.058Z",
+      "lastname": "Shatalova"
+    },
+    "displayName": "Evgeniya Shatalova"
+  },
+  {
+    "id": 190477903540,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/product/digital-wallet-software",
+      "firstname": "Ruslan",
+      "ip_country_code": "lu",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:31.360Z",
+      "self_reported_attribution": "From Google and ChatGPT research",
+      "hs_full_name_or_email": "Ruslan Mammadov",
+      "ip_country": "luxembourg",
+      "hs_object_id": "190477903540",
+      "createdate": "2026-01-05T12:24:19.542Z",
+      "lastname": "Mammadov"
+    },
+    "displayName": "Ruslan Mammadov"
+  },
+  {
+    "id": 190481530745,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/technology/loyalty-program-api",
+      "firstname": "Marcin",
+      "ip_country_code": "pl",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:36.495Z",
+      "self_reported_attribution": "from book",
+      "hs_full_name_or_email": "Marcin Galant",
+      "ip_country": "poland",
+      "hs_object_id": "190481530745",
+      "createdate": "2026-01-05T13:12:15.084Z",
+      "lastname": "Galant"
+    },
+    "displayName": "Marcin Galant"
+  },
+  {
+    "id": 190520484910,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Sandro",
+      "ip_country_code": "nl",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T13:24:57.610Z",
+      "self_reported_attribution": "I have done business with Open Loyalty before for another employer (dacadoo, Switzerland)",
+      "hs_full_name_or_email": "Sandro Toneatto",
+      "ip_country": "netherlands",
+      "hs_object_id": "190520484910",
+      "createdate": "2026-01-05T16:02:45.303Z",
+      "lastname": "Toneatto"
+    },
+    "displayName": "Sandro Toneatto"
+  },
+  {
+    "id": 188047764607,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/technology/loyalty-program-api",
+      "firstname": "Belgin",
+      "ip_country_code": "tr",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:54.879Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Belgin Costur",
+      "ip_country": "turkey",
+      "hs_object_id": "188047764607",
+      "createdate": "2026-01-06T11:29:12.153Z",
+      "lastname": "Costur"
+    },
+    "displayName": "Belgin Costur"
+  },
+  {
+    "id": 190979445634,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/product/customer-gamification-software",
+      "firstname": "Li",
+      "ip_country_code": "pe",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:07.198Z",
+      "self_reported_attribution": "Web",
+      "hs_full_name_or_email": "Li Campos",
+      "ip_country": "peru",
+      "hs_object_id": "190979445634",
+      "createdate": "2026-01-06T22:31:02.772Z",
+      "lastname": "Campos"
+    },
+    "displayName": "Li Campos"
+  },
+  {
+    "id": 190988693762,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "ANIK",
+      "ip_country_code": "ca",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:08.563Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "ANIK GHOSH",
+      "ip_country": "canada",
+      "hs_object_id": "190988693762",
+      "createdate": "2026-01-06T23:26:11.348Z",
+      "lastname": "GHOSH"
+    },
+    "displayName": "ANIK GHOSH"
+  },
+  {
+    "id": 191064434602,
+    "properties": {
+      "hs_analytics_first_url": "https://app.hubspot.com/meetings/hswiatkowski?uuid=5cdeb4ff-c0e4-497e-9b74-a3ed4fb73469",
+      "firstname": "Ahab",
+      "ip_country_code": "pk",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:00.349Z",
+      "hs_full_name_or_email": "Ahab Khan",
+      "ip_country": "pakistan",
+      "hs_object_id": "191064434602",
+      "createdate": "2026-01-07T09:50:58.114Z",
+      "lastname": "Khan"
+    },
+    "displayName": "Ahab Khan"
+  },
+  {
+    "id": 176447316908,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Angela",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:52.628Z",
+      "self_reported_attribution": "referred by a friend",
+      "hs_full_name_or_email": "Angela Green",
+      "ip_country": "united states",
+      "hs_object_id": "176447316908",
+      "createdate": "2026-01-07T22:46:35.559Z",
+      "lastname": "Green"
+    },
+    "displayName": "Angela Green"
+  },
+  {
+    "id": 191347819591,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Tarek",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:52.678Z",
+      "self_reported_attribution": "Web",
+      "hs_full_name_or_email": "Tarek El Gammal",
+      "ip_country": "united states",
+      "hs_object_id": "191347819591",
+      "createdate": "2026-01-08T11:36:01.059Z",
+      "lastname": "El Gammal"
+    },
+    "displayName": "Tarek El Gammal"
+  },
+  {
+    "id": 190399466347,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "DEV",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:06.581Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "DEV ITALIYA",
+      "ip_country": "india",
+      "hs_object_id": "190399466347",
+      "createdate": "2026-01-08T11:51:58.357Z",
+      "lastname": "ITALIYA"
+    },
+    "displayName": "DEV ITALIYA"
+  },
+  {
+    "id": 191132754031,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Piotrek",
+      "ip_country_code": "pl",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:01.604Z",
+      "self_reported_attribution": "Google research",
+      "hs_full_name_or_email": "Piotrek Polus",
+      "ip_country": "poland",
+      "hs_object_id": "191132754031",
+      "createdate": "2026-01-09T12:59:22.772Z",
+      "lastname": "Polus"
+    },
+    "displayName": "Piotrek Polus"
+  },
+  {
+    "id": 191741352592,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/white-label-loyalty",
+      "firstname": "Justin",
+      "ip_country_code": "ca",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:55.088Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Justin Wachtel",
+      "ip_country": "canada",
+      "hs_object_id": "191741352592",
+      "createdate": "2026-01-09T20:00:31.854Z",
+      "lastname": "Wachtel"
+    },
+    "displayName": "Justin Wachtel"
+  },
+  {
+    "id": 192058581072,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/best-retail-loyalty-programs",
+      "firstname": "Alan",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:05.837Z",
+      "self_reported_attribution": "search",
+      "hs_full_name_or_email": "Alan Pariser",
+      "ip_country": "united states",
+      "hs_object_id": "192058581072",
+      "createdate": "2026-01-11T16:50:29.192Z",
+      "lastname": "Pariser"
+    },
+    "displayName": "Alan Pariser"
+  },
+  {
+    "id": 191561716886,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/product/cashback",
+      "firstname": "Jeroen",
+      "ip_country_code": "nl",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:09.378Z",
+      "self_reported_attribution": "Google.",
+      "hs_full_name_or_email": "Jeroen Jeroense",
+      "ip_country": "netherlands",
+      "hs_object_id": "191561716886",
+      "createdate": "2026-01-12T09:06:17.201Z",
+      "lastname": "Jeroense"
+    },
+    "displayName": "Jeroen Jeroense"
+  },
+  {
+    "id": 192322107669,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Taylor",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:53.529Z",
+      "self_reported_attribution": "ChatGPT",
+      "hs_full_name_or_email": "Taylor Fuller",
+      "ip_country": "united kingdom",
+      "hs_object_id": "192322107669",
+      "createdate": "2026-01-12T16:22:07.607Z",
+      "lastname": "Fuller"
+    },
+    "displayName": "Taylor Fuller"
+  },
+  {
+    "id": 192528917921,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Ali",
+      "ip_country_code": "kw",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-20T20:28:15.157Z",
+      "self_reported_attribution": "Referral from another Kuwait Bank",
+      "hs_full_name_or_email": "Ali AlBhrani",
+      "ip_country": "kuwait",
+      "hs_object_id": "192528917921",
+      "createdate": "2026-01-13T09:29:27.158Z",
+      "lastname": "AlBhrani"
+    },
+    "displayName": "Ali AlBhrani"
+  },
+  {
+    "id": 192646859446,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Kate",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:02.949Z",
+      "self_reported_attribution": "research.\r\n\r\nplease contact me by email only, thank you.",
+      "hs_full_name_or_email": "Kate Novick",
+      "ip_country": "united states",
+      "hs_object_id": "192646859446",
+      "createdate": "2026-01-13T14:57:49.317Z",
+      "lastname": "Novick"
+    },
+    "displayName": "Kate Novick"
+  },
+  {
+    "id": 189212249916,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Jennifer",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:57.064Z",
+      "self_reported_attribution": "chaptgpt",
+      "hs_full_name_or_email": "Jennifer Janeski",
+      "ip_country": "united states",
+      "hs_object_id": "189212249916",
+      "createdate": "2026-01-13T17:46:29.910Z",
+      "lastname": "Janeski"
+    },
+    "displayName": "Jennifer Janeski"
+  },
+  {
+    "id": 192788007691,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Tom",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:05.569Z",
+      "self_reported_attribution": "GPT",
+      "hs_full_name_or_email": "Tom Kelly",
+      "ip_country": "united kingdom",
+      "hs_object_id": "192788007691",
+      "createdate": "2026-01-13T19:09:20.975Z",
+      "lastname": "Kelly"
+    },
+    "displayName": "Tom Kelly"
+  },
+  {
+    "id": 192799374228,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Paula",
+      "ip_country_code": "co",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-20T20:27:15.399Z",
+      "self_reported_attribution": "oNline research",
+      "hs_full_name_or_email": "Paula Rivera",
+      "ip_country": "colombia",
+      "hs_object_id": "192799374228",
+      "createdate": "2026-01-13T21:58:37.906Z",
+      "lastname": "Rivera"
+    },
+    "displayName": "Paula Rivera"
+  },
+  {
+    "id": 192862241594,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/rewards-program-software",
+      "firstname": "Blaine",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:05.351Z",
+      "self_reported_attribution": "Online",
+      "hs_full_name_or_email": "Blaine LaBron",
+      "ip_country": "united states",
+      "hs_object_id": "192862241594",
+      "createdate": "2026-01-14T00:35:22.954Z",
+      "lastname": "LaBron"
+    },
+    "displayName": "Blaine LaBron"
+  },
+  {
+    "id": 184431069785,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Terry",
+      "ip_country_code": "hk",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-14T15:02:27.058Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Terry Chan",
+      "ip_country": "hong kong",
+      "hs_object_id": "184431069785",
+      "createdate": "2026-01-14T04:31:10.046Z",
+      "lastname": "Chan"
+    },
+    "displayName": "Terry Chan"
+  },
+  {
+    "id": 192911139933,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Finance",
+      "ip_country_code": "es",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:01.157Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Finance Department",
+      "ip_country": "spain",
+      "hs_object_id": "192911139933",
+      "createdate": "2026-01-14T09:29:35.952Z",
+      "lastname": "Department"
+    },
+    "displayName": "Finance Department"
+  },
+  {
+    "id": 193316951970,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/webinars/video-how-retailers-use-gamified-loyalty-to-outperform-competitors",
+      "firstname": "Yulia",
+      "ip_country_code": "pl",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:54.347Z",
+      "self_reported_attribution": "Linkedin",
+      "hs_full_name_or_email": "Yulia KOSTERNA",
+      "ip_country": "poland",
+      "hs_object_id": "193316951970",
+      "createdate": "2026-01-15T09:40:43.602Z",
+      "lastname": "KOSTERNA"
+    },
+    "displayName": "Yulia KOSTERNA"
+  },
+  {
+    "id": 193317375065,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "RAFFAELE",
+      "ip_country_code": "it",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:02.796Z",
+      "self_reported_attribution": "internet",
+      "hs_full_name_or_email": "RAFFAELE CIRIGLIANO",
+      "ip_country": "italy",
+      "hs_object_id": "193317375065",
+      "createdate": "2026-01-15T09:40:58.660Z",
+      "lastname": "CIRIGLIANO"
+    },
+    "displayName": "RAFFAELE CIRIGLIANO"
+  },
+  {
+    "id": 193414385234,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Javier",
+      "ip_country_code": "es",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-20T13:02:36.506Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Javier Gisbert",
+      "ip_country": "spain",
+      "hs_object_id": "193414385234",
+      "createdate": "2026-01-16T14:03:04.232Z",
+      "lastname": "Gisbert"
+    },
+    "displayName": "Javier Gisbert"
+  },
+  {
+    "id": 193794961020,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "London",
+      "ip_country_code": "ro",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:08.478Z",
+      "self_reported_attribution": "chatGPT",
+      "hs_full_name_or_email": "London Summers",
+      "ip_country": "romania",
+      "hs_object_id": "193794961020",
+      "createdate": "2026-01-16T15:51:42.258Z",
+      "lastname": "Summers"
+    },
+    "displayName": "London Summers"
+  },
+  {
+    "id": 194239943768,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Ian",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-08T11:48:02.241Z",
+      "self_reported_attribution": "gpt",
+      "hs_full_name_or_email": "Ian k",
+      "ip_country": "united states",
+      "hs_object_id": "194239943768",
+      "createdate": "2026-01-19T03:26:00.441Z",
+      "lastname": "k"
+    },
+    "displayName": "Ian k"
+  },
+  {
+    "id": 194351524357,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/white-label-loyalty",
+      "firstname": "German",
+      "ip_country_code": "ae",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:57.487Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "German Sverdlov",
+      "ip_country": "united arab emirates",
+      "hs_object_id": "194351524357",
+      "createdate": "2026-01-19T14:24:41.472Z",
+      "lastname": "Sverdlov"
+    },
+    "displayName": "German Sverdlov"
+  },
+  {
+    "id": 192205300112,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/white-label-loyalty",
+      "firstname": "Lisa Maria",
+      "ip_country_code": "at",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:55.036Z",
+      "self_reported_attribution": "internet",
+      "hs_full_name_or_email": "Lisa Maria Geyer",
+      "ip_country": "austria",
+      "hs_object_id": "192205300112",
+      "createdate": "2026-01-20T11:05:50.191Z",
+      "lastname": "Geyer"
+    },
+    "displayName": "Lisa Maria Geyer"
+  },
+  {
+    "id": 194615043136,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "shahin",
+      "ip_country_code": "tr",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:33.854Z",
+      "self_reported_attribution": "search engine",
+      "hs_full_name_or_email": "shahin amani",
+      "ip_country": "turkey",
+      "hs_object_id": "194615043136",
+      "createdate": "2026-01-20T13:12:19.780Z",
+      "lastname": "amani"
+    },
+    "displayName": "shahin amani"
+  },
+  {
+    "id": 179272512048,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/best-loyalty-software-comparison-guide",
+      "firstname": "Oscar",
+      "ip_country_code": "pa",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:01.260Z",
+      "self_reported_attribution": "Search on the web",
+      "hs_full_name_or_email": "Oscar Illueca",
+      "ip_country": "panama",
+      "hs_object_id": "179272512048",
+      "createdate": "2026-01-20T20:26:59.361Z",
+      "lastname": "Illueca"
+    },
+    "displayName": "Oscar Illueca"
+  },
+  {
+    "id": 194901922942,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/pricing",
+      "firstname": "Ayham",
+      "ip_country_code": "iq",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:58.945Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Ayham Mhd",
+      "ip_country": "iraq",
+      "hs_object_id": "194901922942",
+      "createdate": "2026-01-21T11:02:31.326Z",
+      "lastname": "Mhd"
+    },
+    "displayName": "Ayham Mhd"
+  },
+  {
+    "id": 187036501157,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Irene",
+      "ip_country_code": "pt",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:06.508Z",
+      "self_reported_attribution": "Online research",
+      "hs_full_name_or_email": "Irene Machado",
+      "ip_country": "portugal",
+      "hs_object_id": "187036501157",
+      "createdate": "2026-01-21T16:38:46.171Z",
+      "lastname": "Machado"
+    },
+    "displayName": "Irene Machado"
+  },
+  {
+    "id": 194996006446,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/white-label-loyalty",
+      "firstname": "Ronald",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:54.763Z",
+      "self_reported_attribution": "Internet",
+      "hs_full_name_or_email": "Ronald Hewitt",
+      "ip_country": "united states",
+      "hs_object_id": "194996006446",
+      "createdate": "2026-01-21T18:06:22.728Z",
+      "lastname": "Hewitt"
+    },
+    "displayName": "Ronald Hewitt"
+  },
+  {
+    "id": 195041899887,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/resources/loyalty-program-roi",
+      "firstname": "William",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:58.521Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "William Miller",
+      "ip_country": "united states",
+      "hs_object_id": "195041899887",
+      "createdate": "2026-01-21T21:27:54.427Z",
+      "lastname": "Miller"
+    },
+    "displayName": "William Miller"
+  },
+  {
+    "id": 195118959784,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Hartley",
+      "ip_country_code": "bs",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:31.461Z",
+      "self_reported_attribution": "Web search",
+      "hs_full_name_or_email": "Hartley Williams",
+      "ip_country": "bahamas",
+      "hs_object_id": "195118959784",
+      "createdate": "2026-01-22T06:55:17.441Z",
+      "lastname": "Williams"
+    },
+    "displayName": "Hartley Williams"
+  },
+  {
+    "id": 195752573818,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/product/customer-loyalty-analytics",
+      "firstname": "Northbrooks",
+      "ip_country_code": "ng",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:11.096Z",
+      "self_reported_attribution": "Referral",
+      "hs_full_name_or_email": "Northbrooks Farm",
+      "ip_country": "nigeria",
+      "hs_object_id": "195752573818",
+      "createdate": "2026-01-24T12:47:10.859Z",
+      "lastname": "Farm"
+    },
+    "displayName": "Northbrooks Farm"
+  },
+  {
+    "id": 195791652429,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Angel Alexander",
+      "ip_country_code": "mx",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:37.025Z",
+      "self_reported_attribution": "mediante recomendaciones",
+      "hs_full_name_or_email": "Angel Alexander Amezquita Vargas",
+      "ip_country": "mexico",
+      "hs_object_id": "195791652429",
+      "createdate": "2026-01-24T17:11:42.255Z",
+      "lastname": "Amezquita Vargas"
+    },
+    "displayName": "Angel Alexander Amezquita Vargas"
+  },
+  {
+    "id": 195918690057,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "TAL",
+      "ip_country_code": "il",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:07.258Z",
+      "self_reported_attribution": "GEMINI",
+      "hs_full_name_or_email": "TAL BAR ZEEV",
+      "ip_country": "israel",
+      "hs_object_id": "195918690057",
+      "createdate": "2026-01-25T10:51:36.276Z",
+      "lastname": "BAR ZEEV"
+    },
+    "displayName": "TAL BAR ZEEV"
+  },
+  {
+    "id": 196010835633,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Ehab",
+      "ip_country_code": "ng",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:59.360Z",
+      "self_reported_attribution": "from website search",
+      "hs_full_name_or_email": "Ehab Hassan",
+      "ip_country": "nigeria",
+      "hs_object_id": "196010835633",
+      "createdate": "2026-01-25T20:56:24.846Z",
+      "lastname": "Hassan"
+    },
+    "displayName": "Ehab Hassan"
+  },
+  {
+    "id": 196025467664,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Robert",
+      "ip_country_code": "be",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:59.625Z",
+      "self_reported_attribution": "Gemini and chatGPT",
+      "hs_full_name_or_email": "Robert Masse",
+      "ip_country": "belgium",
+      "hs_object_id": "196025467664",
+      "createdate": "2026-01-25T22:16:17.689Z",
+      "lastname": "Masse"
+    },
+    "displayName": "Robert Masse"
+  },
+  {
+    "id": 194543420588,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Asa",
+      "ip_country_code": "id",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:01.267Z",
+      "self_reported_attribution": "Google Ads",
+      "hs_full_name_or_email": "Asa Zahra",
+      "ip_country": "indonesia",
+      "hs_object_id": "194543420588",
+      "createdate": "2026-01-26T09:46:52.980Z",
+      "lastname": "Zahra"
+    },
+    "displayName": "Asa Zahra"
+  },
+  {
+    "id": 195484725175,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Bhushan",
+      "ip_country_code": "in",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:08.131Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Bhushan Bhingare",
+      "ip_country": "india",
+      "hs_object_id": "195484725175",
+      "createdate": "2026-01-27T06:34:38.018Z",
+      "lastname": "Bhingare"
+    },
+    "displayName": "Bhushan Bhingare"
+  },
+  {
+    "id": 196617286266,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Ana Maria",
+      "ip_country_code": "at",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:08.131Z",
+      "self_reported_attribution": "Personal Research",
+      "hs_full_name_or_email": "Ana Maria Micu",
+      "ip_country": "austria",
+      "hs_object_id": "196617286266",
+      "createdate": "2026-01-27T12:15:33.553Z",
+      "lastname": "Micu"
+    },
+    "displayName": "Ana Maria Micu"
+  },
+  {
+    "id": 196818859133,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/sephora-beauty-insider",
+      "firstname": "Julia",
+      "ip_country_code": "ae",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:56.457Z",
+      "self_reported_attribution": "online",
+      "hs_full_name_or_email": "Julia Kushchova",
+      "ip_country": "united arab emirates",
+      "hs_object_id": "196818859133",
+      "createdate": "2026-01-27T21:14:01.022Z",
+      "lastname": "Kushchova"
+    },
+    "displayName": "Julia Kushchova"
+  },
+  {
+    "id": 187784712575,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/",
+      "firstname": "Pheng",
+      "ip_country_code": "kh",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:02.143Z",
+      "self_reported_attribution": "s",
+      "hs_full_name_or_email": "Pheng Vathana",
+      "ip_country": "cambodia",
+      "hs_object_id": "187784712575",
+      "createdate": "2026-01-28T06:19:58.382Z",
+      "lastname": "Vathana"
+    },
+    "displayName": "Pheng Vathana"
+  },
+  {
+    "id": 197065249914,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Muhannad",
+      "ip_country_code": "sa",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:06.175Z",
+      "self_reported_attribution": "Internet",
+      "hs_full_name_or_email": "Muhannad Daous",
+      "ip_country": "saudi arabia",
+      "hs_object_id": "197065249914",
+      "createdate": "2026-01-28T07:06:12.811Z",
+      "lastname": "Daous"
+    },
+    "displayName": "Muhannad Daous"
+  },
+  {
+    "id": 187437102372,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/es",
+      "firstname": "Maricielo",
+      "ip_country_code": "pe",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-25T11:31:38.027Z",
+      "self_reported_attribution": "-",
+      "hs_full_name_or_email": "Maricielo Salda\u00f1a",
+      "ip_country": "peru",
+      "hs_object_id": "187437102372",
+      "createdate": "2026-01-29T16:08:59.070Z",
+      "lastname": "Salda\u00f1a"
+    },
+    "displayName": "Maricielo Salda\u00f1a"
+  },
+  {
+    "id": 198220982387,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/es",
+      "firstname": "Carlos",
+      "ip_country_code": "co",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:03.609Z",
+      "self_reported_attribution": "chatgpt",
+      "hs_full_name_or_email": "Carlos Jaimes",
+      "ip_country": "colombia",
+      "hs_object_id": "198220982387",
+      "createdate": "2026-01-31T20:31:25.212Z",
+      "lastname": "Jaimes"
+    },
+    "displayName": "Carlos Jaimes"
+  },
+  {
+    "id": 198811640699,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Elvidge",
+      "ip_country_code": "bw",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:37.179Z",
+      "self_reported_attribution": "Internet search",
+      "hs_full_name_or_email": "Elvidge Mothibi",
+      "ip_country": "botswana",
+      "hs_object_id": "198811640699",
+      "createdate": "2026-02-02T19:55:10.413Z",
+      "lastname": "Mothibi"
+    },
+    "displayName": "Elvidge Mothibi"
+  },
+  {
+    "id": 198843875378,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Vivian",
+      "ip_country_code": "ca",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:02.407Z",
+      "self_reported_attribution": "chatgpt",
+      "hs_full_name_or_email": "Vivian Ho",
+      "ip_country": "canada",
+      "hs_object_id": "198843875378",
+      "createdate": "2026-02-02T21:48:03.757Z",
+      "lastname": "Ho"
+    },
+    "displayName": "Vivian Ho"
+  },
+  {
+    "id": 198911246355,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/%20(Open%20Loyalty)",
+      "firstname": "keisuke",
+      "ip_country_code": "jp",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:02.708Z",
+      "self_reported_attribution": "Internet search",
+      "hs_full_name_or_email": "keisuke saito",
+      "ip_country": "japan",
+      "hs_object_id": "198911246355",
+      "createdate": "2026-02-03T04:49:48.835Z",
+      "lastname": "saito"
+    },
+    "displayName": "keisuke saito"
+  },
+  {
+    "id": 199586194047,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/technology/cloud-loyalty",
+      "firstname": "Ghhhhh",
+      "ip_country_code": "pk",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:36.145Z",
+      "self_reported_attribution": "Dhdhshshhs",
+      "hs_full_name_or_email": "Ghhhhh Cbdgdgddg",
+      "ip_country": "pakistan",
+      "hs_object_id": "199586194047",
+      "createdate": "2026-02-05T07:23:12.232Z",
+      "lastname": "Cbdgdgddg"
+    },
+    "displayName": "Ghhhhh Cbdgdgddg"
+  },
+  {
+    "id": 200475397523,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "HeinThiri",
+      "ip_country_code": "mm",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:34.155Z",
+      "self_reported_attribution": "nnn",
+      "hs_full_name_or_email": "HeinThiri Tun",
+      "ip_country": "myanmar",
+      "hs_object_id": "200475397523",
+      "createdate": "2026-02-09T06:59:25.935Z",
+      "lastname": "Tun"
+    },
+    "displayName": "HeinThiri Tun"
+  },
+  {
+    "id": 200824732038,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Jonathan",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-26T02:57:48.866Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Jonathan Benallack",
+      "ip_country": "united states",
+      "hs_object_id": "200824732038",
+      "createdate": "2026-02-09T20:50:26.665Z",
+      "lastname": "Benallack"
+    },
+    "displayName": "Jonathan Benallack"
+  },
+  {
+    "id": 197742283047,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/es",
+      "firstname": "Angel",
+      "ip_country_code": "es",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:55.708Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Angel Garc\u00eda",
+      "ip_country": "spain",
+      "hs_object_id": "197742283047",
+      "createdate": "2026-02-11T11:21:28.153Z",
+      "lastname": "Garc\u00eda"
+    },
+    "displayName": "Angel Garc\u00eda"
+  },
+  {
+    "id": 201935553877,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/technology/loyalty-program-api",
+      "firstname": "Vali",
+      "ip_country_code": "co",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:57.087Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Vali Munteanu",
+      "ip_country": "colombia",
+      "hs_object_id": "201935553877",
+      "createdate": "2026-02-13T04:53:43.064Z",
+      "lastname": "Munteanu"
+    },
+    "displayName": "Vali Munteanu"
+  },
+  {
+    "id": 202873771692,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "Ruslan",
+      "ip_country_code": "ua",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:33.428Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Ruslan Lavrinenko",
+      "ip_country": "ukraine",
+      "hs_object_id": "202873771692",
+      "createdate": "2026-02-16T10:46:24.001Z",
+      "lastname": "Lavrinenko"
+    },
+    "displayName": "Ruslan Lavrinenko"
+  },
+  {
+    "id": 201567442610,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/product/code-scanning",
+      "firstname": "Jessyka",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:53.554Z",
+      "self_reported_attribution": "ChatGPT",
+      "hs_full_name_or_email": "Jessyka Dart-McLean",
+      "ip_country": "united states",
+      "hs_object_id": "201567442610",
+      "createdate": "2026-02-16T20:23:47.128Z",
+      "lastname": "Dart-McLean"
+    },
+    "displayName": "Jessyka Dart-McLean"
+  },
+  {
+    "id": 201391832458,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/",
+      "firstname": "Thati",
+      "ip_country_code": "za",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:57.125Z",
+      "self_reported_attribution": "Google search",
+      "hs_full_name_or_email": "Thati Mabe",
+      "ip_country": "south africa",
+      "hs_object_id": "201391832458",
+      "createdate": "2026-02-17T12:23:47.174Z",
+      "lastname": "Mabe"
+    },
+    "displayName": "Thati Mabe"
+  },
+  {
+    "id": 203495786553,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Mikias",
+      "ip_country_code": "et",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:34.093Z",
+      "self_reported_attribution": "contacts",
+      "hs_full_name_or_email": "Mikias Leulseged",
+      "ip_country": "ethiopia",
+      "hs_object_id": "203495786553",
+      "createdate": "2026-02-18T05:26:52.971Z",
+      "lastname": "Leulseged"
+    },
+    "displayName": "Mikias Leulseged"
+  },
+  {
+    "id": 202762655137,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/es",
+      "firstname": "Javier",
+      "ip_country_code": "es",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:59.297Z",
+      "self_reported_attribution": "Chatgpt",
+      "hs_full_name_or_email": "Javier Garcia",
+      "ip_country": "spain",
+      "hs_object_id": "202762655137",
+      "createdate": "2026-02-18T08:33:55.417Z",
+      "lastname": "Garcia"
+    },
+    "displayName": "Javier Garcia"
+  },
+  {
+    "id": 203576639365,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Matthew",
+      "ip_country_code": "ae",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:34.400Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Matthew Harrison",
+      "ip_country": "united arab emirates",
+      "hs_object_id": "203576639365",
+      "createdate": "2026-02-18T12:46:06.322Z",
+      "lastname": "Harrison"
+    },
+    "displayName": "Matthew Harrison"
+  },
+  {
+    "id": 203623959132,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/technology/loyalty-program-api",
+      "firstname": "Steve",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:06.314Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Steve Bramble",
+      "ip_country": "united kingdom",
+      "hs_object_id": "203623959132",
+      "createdate": "2026-02-18T14:42:26.256Z",
+      "lastname": "Bramble"
+    },
+    "displayName": "Steve Bramble"
+  },
+  {
+    "id": 203776483159,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Martin",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:06.985Z",
+      "self_reported_attribution": "Chat gpt",
+      "hs_full_name_or_email": "Martin Simms",
+      "ip_country": "united states",
+      "hs_object_id": "203776483159",
+      "createdate": "2026-02-19T07:26:39.354Z",
+      "lastname": "Simms"
+    },
+    "displayName": "Martin Simms"
+  },
+  {
+    "id": 203805453135,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Marjan",
+      "ip_country_code": "ae",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:02.214Z",
+      "self_reported_attribution": "Could you please provide the following details:\r\n\u2022\tPricing structure\r\n\u2022\tDemo session availability\r\n\u2022\tFeatures relevant to the hospitality industry\r\n\u2022\tSupport services and response time\r\n\r\nKindly let us know the next steps to proceed. We look forward to your response.",
+      "hs_full_name_or_email": "Marjan Akter",
+      "ip_country": "united arab emirates",
+      "hs_object_id": "203805453135",
+      "createdate": "2026-02-19T10:06:39.964Z",
+      "lastname": "Akter"
+    },
+    "displayName": "Marjan Akter"
+  },
+  {
+    "id": 204388754574,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/white-label-loyalty",
+      "firstname": "Wahid",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:52.678Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Wahid Zaland",
+      "ip_country": "united states",
+      "hs_object_id": "204388754574",
+      "createdate": "2026-02-21T16:22:09.719Z",
+      "lastname": "Zaland"
+    },
+    "displayName": "Wahid Zaland"
+  },
+  {
+    "id": 204420191080,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "Gerard",
+      "ip_country_code": "pk",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:35.541Z",
+      "self_reported_attribution": "for my bussiness partner",
+      "hs_full_name_or_email": "Gerard McClure",
+      "ip_country": "pakistan",
+      "hs_object_id": "204420191080",
+      "createdate": "2026-02-21T21:19:00.638Z",
+      "lastname": "McClure"
+    },
+    "displayName": "Gerard McClure"
+  },
+  {
+    "id": 204427272811,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/product/loyalty-card-system",
+      "firstname": "Collins",
+      "ip_country_code": "ug",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:56.564Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Collins Tindimwebwa",
+      "ip_country": "uganda",
+      "hs_object_id": "204427272811",
+      "createdate": "2026-02-21T22:10:46.450Z",
+      "lastname": "Tindimwebwa"
+    },
+    "displayName": "Collins Tindimwebwa"
+  },
+  {
+    "id": 204671409997,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/",
+      "firstname": "Vladim\u00edr",
+      "ip_country_code": "cz",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:30.863Z",
+      "self_reported_attribution": "AI reference",
+      "hs_full_name_or_email": "Vladim\u00edr Netu\u0161il",
+      "ip_country": "czech republic",
+      "hs_object_id": "204671409997",
+      "createdate": "2026-02-23T10:56:03.280Z",
+      "lastname": "Netu\u0161il"
+    },
+    "displayName": "Vladim\u00edr Netu\u0161il"
+  },
+  {
+    "id": 205820800071,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/",
+      "firstname": "Bennett",
+      "ip_country_code": "pk",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:05.029Z",
+      "self_reported_attribution": "Dear,\r\n\r\nI hope you are doing well.\r\n\r\nI work with an SEO guest posting agency, and after reviewing your website, I noticed that your site currently has very low traffic. I have access to several high-quality websites that receive over 1M+ monthly visitors. If you publish your articles on these sites, you can gain significantly more traffic and improve your rankings.\r\n\r\nIf you are interested, please let me know so that I can share the list of available sites with you.\r\n\r\nI look forward to your response.",
+      "hs_full_name_or_email": "Bennett Thrasher",
+      "ip_country": "pakistan",
+      "hs_object_id": "205820800071",
+      "createdate": "2026-02-27T10:33:08.370Z",
+      "lastname": "Thrasher"
+    },
+    "displayName": "Bennett Thrasher"
+  },
+  {
+    "id": 205974164885,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Mritunjay",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:35.045Z",
+      "self_reported_attribution": "Everything",
+      "hs_full_name_or_email": "Mritunjay Gupta",
+      "ip_country": "india",
+      "hs_object_id": "205974164885",
+      "createdate": "2026-02-28T03:58:56.834Z",
+      "lastname": "Gupta"
+    },
+    "displayName": "Mritunjay Gupta"
+  },
+  {
+    "id": 206077376407,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/",
+      "firstname": "lina",
+      "ip_country_code": "lv",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:28.351Z",
+      "self_reported_attribution": "Hello Sir,\r\n\r\nSEO (Search Engine Optimization) is a smart and reliable way to improve your website\u2019s ranking on Google and bring in consistent, organic traffic. I\u2019ve been working in the SEO field for over 9 years, helping companies increase their visibility and outperform competitors online. I work with a wide network of high-authority websites where you can publish guest posts to strengthen your online reputation and gain quality backlinks. These placements help improve search engine rankings and drive targeted traffic to your business. From finding the right sites to publishing engaging content, I manage the entire process for you. This is a proven way to build trust with Google and grow your brand.\r\n\r\nCheck out my websites below :\r\n\r\nWebsites\tDA\tSpam Score\tTraffic\r\nhttps://e-ptolemeos.gr/ \t41\t3%\t351K  \r\nhttps://www.pojoksatu.id/ \t55\t1%\t1.41M \r\nhttps://www.desdesoria.es/\t46\t5%\t450K\r\nhttps://www.miseria.com.br/\t44\t0%\t364K\r\nhttps://spacecoastdaily.com/\t72\t0%\t435K\r\nhttps://www.godisageek.com/\t67\t2%\t117K\r\nhttps://blacksportsonline.com/\t72\t1%\t180K\r\nhttps://tribuneonlineng.com/\t74\t0%\t454K\r\nhttps://newsyou.info/\t50\t5%\t1.96M\r\nhttps://www.haberdenizli.com/\t65\t2%\t167K\r\n\r\nf you need any other SEO-related services beyond guest posting, feel free to get in touch \u2014 I\u2019ll be glad to help you. I\u2019ll be waiting for your response.\r\n\r\nThank you,",
+      "hs_full_name_or_email": "lina lina",
+      "ip_country": "latvia",
+      "hs_object_id": "206077376407",
+      "createdate": "2026-02-28T18:27:29.345Z",
+      "lastname": "lina"
+    },
+    "displayName": "lina lina"
+  },
+  {
+    "id": 206244472416,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/resources/loyalty-program-implementation-a-step-by-step-guide",
+      "firstname": "Akash",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:00.888Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Akash Luthra",
+      "ip_country": "united states",
+      "hs_object_id": "206244472416",
+      "createdate": "2026-03-01T17:57:47.520Z",
+      "lastname": "Luthra"
+    },
+    "displayName": "Akash Luthra"
+  },
+  {
+    "id": 206590357615,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/#form",
+      "firstname": "naug",
+      "ip_country_code": "th",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:52.201Z",
+      "self_reported_attribution": "https://wefglobal.eu.qualtrics.com/jfe/form/SV_af38noL8hELk7ie?PageOrigin=Organizations",
+      "hs_full_name_or_email": "naug nall",
+      "ip_country": "thailand",
+      "hs_object_id": "206590357615",
+      "createdate": "2026-03-02T23:03:19.932Z",
+      "lastname": "nall"
+    },
+    "displayName": "naug nall"
+  },
+  {
+    "id": 206830419628,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/best-gamification-software",
+      "firstname": "Lauren",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:53.064Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Lauren Burgoni",
+      "ip_country": "united states",
+      "hs_object_id": "206830419628",
+      "createdate": "2026-03-03T20:36:08.827Z",
+      "lastname": "Burgoni"
+    },
+    "displayName": "Lauren Burgoni"
+  },
+  {
+    "id": 207209192582,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Niel",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:01.769Z",
+      "self_reported_attribution": "Claude",
+      "hs_full_name_or_email": "Niel Koekemoer",
+      "ip_country": "united kingdom",
+      "hs_object_id": "207209192582",
+      "createdate": "2026-03-05T14:47:50.971Z",
+      "lastname": "Koekemoer"
+    },
+    "displayName": "Niel Koekemoer"
+  },
+  {
+    "id": 207395284786,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "David",
+      "ip_country_code": "co",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-20T20:19:37.072Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "David Marin",
+      "ip_country": "colombia",
+      "hs_object_id": "207395284786",
+      "createdate": "2026-03-06T02:22:13.027Z",
+      "lastname": "Marin"
+    },
+    "displayName": "David Marin"
+  },
+  {
+    "id": 207582594893,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Ifeoluwa",
+      "ip_country_code": "se",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:36.600Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Ifeoluwa Olawoye",
+      "ip_country": "sweden",
+      "hs_object_id": "207582594893",
+      "createdate": "2026-03-06T19:04:49.123Z",
+      "lastname": "Olawoye"
+    },
+    "displayName": "Ifeoluwa Olawoye"
+  },
+  {
+    "id": 208067862832,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Mark",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-20T20:19:21.716Z",
+      "self_reported_attribution": "AI",
+      "hs_full_name_or_email": "Mark Stafferton",
+      "ip_country": "united kingdom",
+      "hs_object_id": "208067862832",
+      "createdate": "2026-03-09T14:41:27.990Z",
+      "lastname": "Stafferton"
+    },
+    "displayName": "Mark Stafferton"
+  },
+  {
+    "id": 208109324857,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "David",
+      "ip_country_code": "ca",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:29.317Z",
+      "self_reported_attribution": "internet",
+      "hs_full_name_or_email": "David Laplante",
+      "ip_country": "canada",
+      "hs_object_id": "208109324857",
+      "createdate": "2026-03-09T17:45:56.226Z",
+      "lastname": "Laplante"
+    },
+    "displayName": "David Laplante"
+  },
+  {
+    "id": 208288142763,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/es",
+      "firstname": "Gerard",
+      "ip_country_code": "es",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:59.679Z",
+      "self_reported_attribution": "Research online",
+      "hs_full_name_or_email": "Gerard Gonzalez",
+      "ip_country": "spain",
+      "hs_object_id": "208288142763",
+      "createdate": "2026-03-10T12:03:15.224Z",
+      "lastname": "Gonzalez"
+    },
+    "displayName": "Gerard Gonzalez"
+  },
+  {
+    "id": 208590551429,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/white-label-loyalty",
+      "firstname": "Joe",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:53.819Z",
+      "self_reported_attribution": "Co-pilot recommendation",
+      "hs_full_name_or_email": "Joe Ryan",
+      "ip_country": "united kingdom",
+      "hs_object_id": "208590551429",
+      "createdate": "2026-03-11T16:53:29.543Z",
+      "lastname": "Ryan"
+    },
+    "displayName": "Joe Ryan"
+  },
+  {
+    "id": 208696132456,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Roopak",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:08.466Z",
+      "self_reported_attribution": "Web search",
+      "hs_full_name_or_email": "Roopak Revankar",
+      "ip_country": "india",
+      "hs_object_id": "208696132456",
+      "createdate": "2026-03-12T05:37:23.547Z",
+      "lastname": "Revankar"
+    },
+    "displayName": "Roopak Revankar"
+  },
+  {
+    "id": 208893030978,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/best-loyalty-software-comparison-guide",
+      "firstname": "Joe",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-20T20:18:33.802Z",
+      "self_reported_attribution": "net",
+      "hs_full_name_or_email": "Joe Callan",
+      "ip_country": "united states",
+      "hs_object_id": "208893030978",
+      "createdate": "2026-03-12T22:04:39.791Z",
+      "lastname": "Callan"
+    },
+    "displayName": "Joe Callan"
+  },
+  {
+    "id": 208994054500,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/coffee-loyalty-programs-successful-examples",
+      "firstname": "JOSEPH",
+      "ip_country_code": "qa",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-20T20:18:19.487Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "JOSEPH Zaccour",
+      "ip_country": "qatar",
+      "hs_object_id": "208994054500",
+      "createdate": "2026-03-13T14:25:18.311Z",
+      "lastname": "Zaccour"
+    },
+    "displayName": "JOSEPH Zaccour"
+  },
+  {
+    "id": 209088237924,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Loay",
+      "ip_country_code": "il",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:43:00.183Z",
+      "self_reported_attribution": "chatgpt",
+      "hs_full_name_or_email": "Loay Kadmany",
+      "ip_country": "israel",
+      "hs_object_id": "209088237924",
+      "createdate": "2026-03-13T19:03:42.645Z",
+      "lastname": "Kadmany"
+    },
+    "displayName": "Loay Kadmany"
+  },
+  {
+    "id": 209225942620,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Elton",
+      "ip_country_code": "mz",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:00.349Z",
+      "self_reported_attribution": "Web",
+      "hs_full_name_or_email": "Elton Muchaiabande",
+      "ip_country": "mozambique",
+      "hs_object_id": "209225942620",
+      "createdate": "2026-03-14T18:13:45.940Z",
+      "lastname": "Muchaiabande"
+    },
+    "displayName": "Elton Muchaiabande"
+  },
+  {
+    "id": 209297771038,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Wayne",
+      "ip_country_code": "za",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:53.062Z",
+      "self_reported_attribution": "Referred",
+      "hs_full_name_or_email": "Wayne Moosa",
+      "ip_country": "south africa",
+      "hs_object_id": "209297771038",
+      "createdate": "2026-03-15T07:25:32.540Z",
+      "lastname": "Moosa"
+    },
+    "displayName": "Wayne Moosa"
+  },
+  {
+    "id": 209698260867,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Mikhail",
+      "ip_country_code": "ru",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:53.065Z",
+      "self_reported_attribution": "internet",
+      "hs_full_name_or_email": "Mikhail Bogdanov",
+      "ip_country": "russian federation",
+      "hs_object_id": "209698260867",
+      "createdate": "2026-03-17T06:12:19.841Z",
+      "lastname": "Bogdanov"
+    },
+    "displayName": "Mikhail Bogdanov"
+  },
+  {
+    "id": 208167514243,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/10-best-mobile-loyalty-program-apps-full-report",
+      "firstname": "Raymond",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-17T06:17:53.370Z",
+      "self_reported_attribution": "Blog post",
+      "hs_full_name_or_email": "Raymond Raffety",
+      "ip_country": "united states",
+      "hs_object_id": "208167514243",
+      "createdate": "2026-03-18T00:56:17.311Z",
+      "lastname": "Raffety"
+    },
+    "displayName": "Raymond Raffety"
+  },
+  {
+    "id": 210080646745,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/product/loyalty-points-system",
+      "firstname": "Devon",
+      "ip_country_code": "za",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-30T12:21:26.118Z",
+      "self_reported_attribution": "Just searching for loyalty program services that can help us.",
+      "hs_full_name_or_email": "Devon Hibbert",
+      "ip_country": "south africa",
+      "hs_object_id": "210080646745",
+      "createdate": "2026-03-18T13:13:30.154Z",
+      "lastname": "Hibbert"
+    },
+    "displayName": "Devon Hibbert"
+  },
+  {
+    "id": 210379184963,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/pricing",
+      "firstname": "Krish",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:36.873Z",
+      "self_reported_attribution": "Grok",
+      "hs_full_name_or_email": "Krish S",
+      "ip_country": "united kingdom",
+      "hs_object_id": "210379184963",
+      "createdate": "2026-03-19T17:17:20.104Z",
+      "lastname": "S"
+    },
+    "displayName": "Krish S"
+  },
+  {
+    "id": 210658325537,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/rewards-program-software",
+      "firstname": "Prince",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:53.061Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Prince Shah",
+      "ip_country": "india",
+      "hs_object_id": "210658325537",
+      "createdate": "2026-03-21T02:15:55.315Z",
+      "lastname": "Shah"
+    },
+    "displayName": "Prince Shah"
+  },
+  {
+    "id": 211223565230,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Dennis Smith",
+      "ip_country_code": "de",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:27.344Z",
+      "self_reported_attribution": "reseach",
+      "hs_full_name_or_email": "Dennis Smith Smith",
+      "ip_country": "germany",
+      "hs_object_id": "211223565230",
+      "createdate": "2026-03-24T11:08:20.815Z",
+      "lastname": "Smith"
+    },
+    "displayName": "Dennis Smith Smith"
+  },
+  {
+    "id": 211491805083,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Matthew",
+      "ip_country_code": "jm",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-25T12:39:54.554Z",
+      "self_reported_attribution": "research",
+      "hs_full_name_or_email": "Matthew Graham",
+      "ip_country": "jamaica",
+      "hs_object_id": "211491805083",
+      "createdate": "2026-03-25T12:20:39.923Z",
+      "lastname": "Graham"
+    },
+    "displayName": "Matthew Graham"
+  },
+  {
+    "id": 211529615020,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Cam",
+      "ip_country_code": "ca",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-26T05:35:30.935Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Cam Hunsley",
+      "ip_country": "canada",
+      "hs_object_id": "211529615020",
+      "createdate": "2026-03-25T14:59:16.775Z",
+      "lastname": "Hunsley"
+    },
+    "displayName": "Cam Hunsley"
+  },
+  {
+    "id": 211727211545,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/best-loyalty-software-comparison-guide",
+      "firstname": "Konstantin",
+      "ip_country_code": "am",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:53.625Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Konstantin Khlynov",
+      "ip_country": "armenia",
+      "hs_object_id": "211727211545",
+      "createdate": "2026-03-26T12:37:48.984Z",
+      "lastname": "Khlynov"
+    },
+    "displayName": "Konstantin Khlynov"
+  },
+  {
+    "id": 211866209336,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Matias",
+      "ip_country_code": "hu",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:32.419Z",
+      "self_reported_attribution": "chatgpt",
+      "hs_full_name_or_email": "Matias Csorgics",
+      "ip_country": "hungary",
+      "hs_object_id": "211866209336",
+      "createdate": "2026-03-26T20:00:42.340Z",
+      "lastname": "Csorgics"
+    },
+    "displayName": "Matias Csorgics"
+  },
+  {
+    "id": 212658384961,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "Lauren",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:07.674Z",
+      "self_reported_attribution": "chat gpt",
+      "hs_full_name_or_email": "Lauren Lewis",
+      "ip_country": "united states",
+      "hs_object_id": "212658384961",
+      "createdate": "2026-03-31T02:27:43.704Z",
+      "lastname": "Lewis"
+    },
+    "displayName": "Lauren Lewis"
+  },
+  {
+    "id": 211259598695,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Sinchan",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-06T07:36:10.158Z",
+      "self_reported_attribution": "internent",
+      "hs_full_name_or_email": "Sinchan Noharah",
+      "ip_country": "india",
+      "hs_object_id": "211259598695",
+      "createdate": "2026-03-31T10:52:42.438Z",
+      "lastname": "Noharah"
+    },
+    "displayName": "Sinchan Noharah"
+  },
+  {
+    "id": 212905801265,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "Jen",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:29.271Z",
+      "self_reported_attribution": "Hehe",
+      "hs_full_name_or_email": "Jen Doe",
+      "ip_country": "united states",
+      "hs_object_id": "212905801265",
+      "createdate": "2026-04-01T04:15:23.485Z",
+      "lastname": "Doe"
+    },
+    "displayName": "Jen Doe"
+  },
+  {
+    "id": 212896671401,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Eliza",
+      "ip_country_code": "au",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:06.102Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Eliza Liddy",
+      "ip_country": "australia",
+      "hs_object_id": "212896671401",
+      "createdate": "2026-04-01T05:24:34.556Z",
+      "lastname": "Liddy"
+    },
+    "displayName": "Eliza Liddy"
+  },
+  {
+    "id": 212980514210,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "George",
+      "ip_country_code": "ro",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-20T20:15:36.740Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "George Stancioiu",
+      "ip_country": "romania",
+      "hs_object_id": "212980514210",
+      "createdate": "2026-04-01T12:45:54.521Z",
+      "lastname": "Stancioiu"
+    },
+    "displayName": "George Stancioiu"
+  },
+  {
+    "id": 213066939272,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Diego",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:01.776Z",
+      "self_reported_attribution": "youtube",
+      "hs_full_name_or_email": "Diego Amado",
+      "ip_country": "united states",
+      "hs_object_id": "213066939272",
+      "createdate": "2026-04-01T21:21:46.430Z",
+      "lastname": "Amado"
+    },
+    "displayName": "Diego Amado"
+  },
+  {
+    "id": 213374284906,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Jacob",
+      "ip_country_code": "ki",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:34.886Z",
+      "self_reported_attribution": "Chatgpt",
+      "hs_full_name_or_email": "Jacob Krisiano",
+      "ip_country": "kiribati",
+      "hs_object_id": "213374284906",
+      "createdate": "2026-04-03T03:19:15.478Z",
+      "lastname": "Krisiano"
+    },
+    "displayName": "Jacob Krisiano"
+  },
+  {
+    "id": 213263834023,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Reda",
+      "ip_country_code": "ci",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:30.928Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Reda el khyat",
+      "ip_country": "cote d ivoire",
+      "hs_object_id": "213263834023",
+      "createdate": "2026-04-04T07:59:53.952Z",
+      "lastname": "el khyat"
+    },
+    "displayName": "Reda el khyat"
+  },
+  {
+    "id": 212513906531,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Anthony",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-04-27T12:32:34.235Z",
+      "self_reported_attribution": "Research through google + chatgpt.",
+      "hs_full_name_or_email": "Anthony Farina",
+      "ip_country": "united states",
+      "hs_object_id": "212513906531",
+      "createdate": "2026-04-10T16:52:24.768Z",
+      "lastname": "Farina"
+    },
+    "displayName": "Anthony Farina"
+  },
+  {
+    "id": 215258284190,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/technology/loyalty-program-api",
+      "firstname": "Rob",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-04-27T12:32:37.515Z",
+      "self_reported_attribution": "Chat gpt",
+      "hs_full_name_or_email": "Rob Injeyan",
+      "ip_country": "united states",
+      "hs_object_id": "215258284190",
+      "createdate": "2026-04-13T01:17:53.327Z",
+      "lastname": "Injeyan"
+    },
+    "displayName": "Rob Injeyan"
+  },
+  {
+    "id": 215566997806,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Soufiane",
+      "ip_country_code": "ma",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-18T09:06:40.954Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Soufiane Haouani",
+      "ip_country": "morocco",
+      "hs_object_id": "215566997806",
+      "createdate": "2026-04-14T15:13:15.429Z",
+      "lastname": "Haouani"
+    },
+    "displayName": "Soufiane Haouani"
+  },
+  {
+    "id": 213932654932,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/sephora-beauty-insider",
+      "firstname": "Sophie",
+      "ip_country_code": "ar",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-20T20:14:53.099Z",
+      "self_reported_attribution": "Online research",
+      "hs_full_name_or_email": "Sophie Rousseau",
+      "ip_country": "argentina",
+      "hs_object_id": "213932654932",
+      "createdate": "2026-04-15T18:55:28.242Z",
+      "lastname": "Rousseau"
+    },
+    "displayName": "Sophie Rousseau"
+  },
+  {
+    "id": 215904208562,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/white-label-loyalty",
+      "firstname": "Casey",
+      "ip_country_code": "au",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-23T18:03:24.894Z",
+      "self_reported_attribution": "Google search.",
+      "hs_full_name_or_email": "Casey May",
+      "ip_country": "australia",
+      "hs_object_id": "215904208562",
+      "createdate": "2026-04-16T06:20:55.891Z",
+      "lastname": "May"
+    },
+    "displayName": "Casey May"
+  },
+  {
+    "id": 215940809885,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "javier",
+      "ip_country_code": "ar",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-08T09:40:27.882Z",
+      "self_reported_attribution": "onli e",
+      "hs_full_name_or_email": "javier pineiro",
+      "ip_country": "argentina",
+      "hs_object_id": "215940809885",
+      "createdate": "2026-04-16T11:41:26.383Z",
+      "lastname": "pineiro"
+    },
+    "displayName": "javier pineiro"
+  },
+  {
+    "id": 215990302751,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Flandize",
+      "ip_country_code": "us",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-18T09:06:54.087Z",
+      "self_reported_attribution": "Online",
+      "hs_full_name_or_email": "Flandize Thrower",
+      "ip_country": "united states",
+      "hs_object_id": "215990302751",
+      "createdate": "2026-04-16T16:30:22.447Z",
+      "lastname": "Thrower"
+    },
+    "displayName": "Flandize Thrower"
+  },
+  {
+    "id": 216167418662,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Prateek",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:55.363Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "Prateek Yadav",
+      "ip_country": "india",
+      "hs_object_id": "216167418662",
+      "createdate": "2026-04-17T10:21:02.336Z",
+      "lastname": "Yadav"
+    },
+    "displayName": "Prateek Yadav"
+  },
+  {
+    "id": 216374660098,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Pinky",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-25T09:20:31.726Z",
+      "self_reported_attribution": "j",
+      "hs_full_name_or_email": "Pinky Ghadai",
+      "ip_country": "india",
+      "hs_object_id": "216374660098",
+      "createdate": "2026-04-18T08:23:28.176Z",
+      "lastname": "Ghadai"
+    },
+    "displayName": "Pinky Ghadai"
+  },
+  {
+    "id": 217060338042,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/how-to-integrate-an-api-first-loyalty-engine-with-your-tech-stack",
+      "firstname": "Mat",
+      "ip_country_code": "gb",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-11T09:46:26.755Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Mat Havelock",
+      "ip_country": "united kingdom",
+      "hs_object_id": "217060338042",
+      "createdate": "2026-04-22T05:42:13.912Z",
+      "lastname": "Havelock"
+    },
+    "displayName": "Mat Havelock"
+  },
+  {
+    "id": 217078452843,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "kamal",
+      "ip_country_code": "ae",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:54.755Z",
+      "self_reported_attribution": "Chatgpt",
+      "hs_full_name_or_email": "kamal chandramohan",
+      "ip_country": "united arab emirates",
+      "hs_object_id": "217078452843",
+      "createdate": "2026-04-22T07:46:44.225Z",
+      "lastname": "chandramohan"
+    },
+    "displayName": "kamal chandramohan"
+  },
+  {
+    "id": 217092676712,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/coupon-management-software",
+      "firstname": "Ammar",
+      "ip_country_code": "tz",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:56.845Z",
+      "self_reported_attribution": "Web search",
+      "hs_full_name_or_email": "Ammar Chomoko",
+      "ip_country": "tanzania",
+      "hs_object_id": "217092676712",
+      "createdate": "2026-04-22T08:43:14.785Z",
+      "lastname": "Chomoko"
+    },
+    "displayName": "Ammar Chomoko"
+  },
+  {
+    "id": 217722398639,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Theo",
+      "ip_country_code": "kh",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-18T09:07:18.743Z",
+      "self_reported_attribution": "Web search",
+      "hs_full_name_or_email": "Theo Quilichini",
+      "ip_country": "cambodia",
+      "hs_object_id": "217722398639",
+      "createdate": "2026-04-24T16:09:17.094Z",
+      "lastname": "Quilichini"
+    },
+    "displayName": "Theo Quilichini"
+  },
+  {
+    "id": 217855600785,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/product/vouchers",
+      "firstname": "SEJAL",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "self_reported_attribution": "EXPERIENCE",
+      "lastmodifieddate": "2026-05-18T09:07:32.877Z",
+      "hs_full_name_or_email": "SEJAL SAHU",
+      "ip_country": "india",
+      "hs_object_id": "217855600785",
+      "createdate": "2026-04-27T11:37:07.828Z",
+      "lastname": "SAHU"
+    },
+    "displayName": "SEJAL SAHU"
+  },
+  {
+    "id": 218365288450,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Kathryn",
+      "ip_country_code": "au",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-20T20:14:36.425Z",
+      "self_reported_attribution": "Reddit",
+      "hs_full_name_or_email": "Kathryn Hamilton",
+      "ip_country": "australia",
+      "hs_object_id": "218365288450",
+      "createdate": "2026-04-28T09:09:54.428Z",
+      "lastname": "Hamilton"
+    },
+    "displayName": "Kathryn Hamilton"
+  },
+  {
+    "id": 218873917323,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Faisal",
+      "ip_country_code": "be",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-21T06:00:46.037Z",
+      "self_reported_attribution": "online",
+      "hs_full_name_or_email": "Faisal Baasheer",
+      "ip_country": "belgium",
+      "hs_object_id": "218873917323",
+      "createdate": "2026-04-30T14:58:04.723Z",
+      "lastname": "Baasheer"
+    },
+    "displayName": "Faisal Baasheer"
+  },
+  {
+    "id": 219190715799,
+    "properties": {
+      "hs_analytics_first_url": "https://share.hsforms.com/20ca75d8f40a45bf9c6531",
+      "firstname": "Marie",
+      "ip_country_code": "ie",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-04T17:31:42.184Z",
+      "self_reported_attribution": "Recherche web \u2013 votre site est ressorti lors d\u2019une veille sur les outils de loyalty en Europe.",
+      "hs_full_name_or_email": "Marie Rousseau",
+      "ip_country": "ireland",
+      "hs_object_id": "219190715799",
+      "createdate": "2026-05-01T15:44:02.374Z",
+      "lastname": "Rousseau"
+    },
+    "displayName": "Marie Rousseau"
+  },
+  {
+    "id": 219289024380,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Soumyajit",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-25T05:11:14.984Z",
+      "self_reported_attribution": "Search Engine",
+      "hs_full_name_or_email": "Soumyajit Bose",
+      "ip_country": "india",
+      "hs_object_id": "219289024380",
+      "createdate": "2026-05-02T06:48:08.805Z",
+      "lastname": "Bose"
+    },
+    "displayName": "Soumyajit Bose"
+  },
+  {
+    "id": 219403366958,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Skyler",
+      "ip_country_code": "ca",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-18T09:06:32.862Z",
+      "self_reported_attribution": "Research online",
+      "hs_full_name_or_email": "Skyler Bell",
+      "ip_country": "canada",
+      "hs_object_id": "219403366958",
+      "createdate": "2026-05-03T05:08:22.784Z",
+      "lastname": "Bell"
+    },
+    "displayName": "Skyler Bell"
+  },
+  {
+    "id": 219590892925,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-with-us",
+      "firstname": "Anurag",
+      "ip_country_code": "in",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:58.711Z",
+      "self_reported_attribution": "Claude",
+      "hs_full_name_or_email": "Anurag Nambiar",
+      "ip_country": "india",
+      "hs_object_id": "219590892925",
+      "createdate": "2026-05-04T12:32:06.943Z",
+      "lastname": "Nambiar"
+    },
+    "displayName": "Anurag Nambiar"
+  },
+  {
+    "id": 219594473837,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/",
+      "firstname": "Vahe",
+      "ip_country_code": "am",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:53.345Z",
+      "self_reported_attribution": "Ahrefs",
+      "hs_full_name_or_email": "Vahe Gevorgyan",
+      "ip_country": "armenia",
+      "hs_object_id": "219594473837",
+      "createdate": "2026-05-04T13:10:05.087Z",
+      "lastname": "Gevorgyan"
+    },
+    "displayName": "Vahe Gevorgyan"
+  },
+  {
+    "id": 219757237427,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/technology/loyalty-program-api",
+      "firstname": "Shaheed",
+      "ip_country_code": "kw",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-21T12:11:02.613Z",
+      "self_reported_attribution": "Poland visit",
+      "hs_full_name_or_email": "Shaheed Kadri",
+      "ip_country": "kuwait",
+      "hs_object_id": "219757237427",
+      "createdate": "2026-05-05T08:17:55.644Z",
+      "lastname": "Kadri"
+    },
+    "displayName": "Shaheed Kadri"
+  },
+  {
+    "id": 219809514760,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/#open-loyalty.co",
+      "firstname": "David",
+      "ip_country_code": "rs",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:08.195Z",
+      "self_reported_attribution": "Hi,\r\n\r\nWe wanted to let you know that the domain nekama.net is now available for purchase. If you are interested in acquiring this domain, please follow the link below to get more information and express your interest.\r\n\r\nhttps://domainlions.net/domains/nekama.net?id=6jim\r\n\r\nYou can find more information about this domain on our website, but if you have any questions or need assistance, please don't hesitate to reply to this email. We would be happy to help.\r\n\r\nBest regards,\r\nDavid Pavel\r\n\r\n--\r\nDomain Lions LLC\r\nT: +1 559 316 5695",
+      "hs_full_name_or_email": "David Pavel",
+      "ip_country": "serbia",
+      "hs_object_id": "219809514760",
+      "createdate": "2026-05-05T13:10:22.995Z",
+      "lastname": "Pavel"
+    },
+    "displayName": "David Pavel"
+  },
+  {
+    "id": 220008104783,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Piyush",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-13T14:42:52.997Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Piyush Patil",
+      "ip_country": "india",
+      "hs_object_id": "220008104783",
+      "createdate": "2026-05-06T11:49:51.849Z",
+      "lastname": "Patil"
+    },
+    "displayName": "Piyush Patil"
+  },
+  {
+    "id": 220107658293,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Nassief",
+      "ip_country_code": "za",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-25T13:40:56.226Z",
+      "self_reported_attribution": "A member of my development team was the Solution Architect for the Standard Bank/Wigroup/Yoyo project and recommended Open Loyalty, as the use case is similar.",
+      "hs_full_name_or_email": "Nassief Mohamed",
+      "ip_country": "south africa",
+      "hs_object_id": "220107658293",
+      "createdate": "2026-05-06T21:35:14.127Z",
+      "lastname": "Mohamed"
+    },
+    "displayName": "Nassief Mohamed"
+  },
+  {
+    "id": 220182246503,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Sanjay",
+      "ip_country_code": "za",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-11T12:14:05.434Z",
+      "self_reported_attribution": "Internet",
+      "hs_full_name_or_email": "Sanjay Maharajh",
+      "ip_country": "south africa",
+      "hs_object_id": "220182246503",
+      "createdate": "2026-05-07T12:36:34.181Z",
+      "lastname": "Maharajh"
+    },
+    "displayName": "Sanjay Maharajh"
+  },
+  {
+    "id": 220258626348,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/es",
+      "firstname": "Oscar Alejandro",
+      "ip_country_code": "hn",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-20T20:07:29.363Z",
+      "self_reported_attribution": "Chatgpt",
+      "hs_full_name_or_email": "Oscar Alejandro Flamenco Rivera",
+      "ip_country": "honduras",
+      "hs_object_id": "220258626348",
+      "createdate": "2026-05-07T15:20:31.699Z",
+      "lastname": "Flamenco Rivera"
+    },
+    "displayName": "Oscar Alejandro Flamenco Rivera"
+  },
+  {
+    "id": 220437136923,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/about",
+      "firstname": "Sharath",
+      "ip_country_code": "in",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:42:55.953Z",
+      "self_reported_attribution": "search",
+      "hs_full_name_or_email": "Sharath Kumar",
+      "ip_country": "india",
+      "hs_object_id": "220437136923",
+      "createdate": "2026-05-08T09:50:59.670Z",
+      "lastname": "Kumar"
+    },
+    "displayName": "Sharath Kumar"
+  },
+  {
+    "id": 220590863214,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "Mazen",
+      "ip_country_code": "ro",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-13T14:43:06.508Z",
+      "self_reported_attribution": "chatgpt",
+      "hs_full_name_or_email": "Mazen Bahashwan",
+      "ip_country": "romania",
+      "hs_object_id": "220590863214",
+      "createdate": "2026-05-09T06:17:16.162Z",
+      "lastname": "Bahashwan"
+    },
+    "displayName": "Mazen Bahashwan"
+  },
+  {
+    "id": 221008188192,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Ricardo",
+      "ip_country_code": "do",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-25T09:20:41.258Z",
+      "self_reported_attribution": "ChatGPT",
+      "hs_full_name_or_email": "Ricardo Taveras",
+      "ip_country": "dominican republic",
+      "hs_object_id": "221008188192",
+      "createdate": "2026-05-11T20:39:44.051Z",
+      "lastname": "Taveras"
+    },
+    "displayName": "Ricardo Taveras"
+  },
+  {
+    "id": 221026568494,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Max",
+      "ip_country_code": "ua",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-25T09:20:40.894Z",
+      "self_reported_attribution": "from ChatGPT",
+      "hs_full_name_or_email": "Max Volkov",
+      "ip_country": "ukraine",
+      "hs_object_id": "221026568494",
+      "createdate": "2026-05-11T22:41:48.062Z",
+      "lastname": "Volkov"
+    },
+    "displayName": "Max Volkov"
+  },
+  {
+    "id": 215505059231,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/",
+      "firstname": "Christian",
+      "ip_country_code": "mt",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-25T09:23:29.699Z",
+      "self_reported_attribution": "Google",
+      "hs_full_name_or_email": "Christian Camilleri",
+      "ip_country": "malta",
+      "hs_object_id": "215505059231",
+      "createdate": "2026-05-12T07:35:09.147Z",
+      "lastname": "Camilleri"
+    },
+    "displayName": "Christian Camilleri"
+  },
+  {
+    "id": 221086925210,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/pricing",
+      "firstname": "George",
+      "ip_country_code": "gr",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-14T12:39:13.983Z",
+      "self_reported_attribution": "Reddit,Linkedin and Google Search",
+      "hs_full_name_or_email": "George Androulakis",
+      "ip_country": "greece",
+      "hs_object_id": "221086925210",
+      "createdate": "2026-05-12T09:50:21.182Z",
+      "lastname": "Androulakis"
+    },
+    "displayName": "George Androulakis"
+  },
+  {
+    "id": 221250543207,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/applications/saas-enrichment",
+      "firstname": "Eduardo",
+      "ip_country_code": "br",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "lastmodifieddate": "2026-05-21T00:41:59.462Z",
+      "self_reported_attribution": "I came across your company online",
+      "hs_full_name_or_email": "Eduardo Crist\u00f3v\u00e3o",
+      "ip_country": "brazil",
+      "hs_object_id": "221250543207",
+      "createdate": "2026-05-13T02:05:39.934Z",
+      "lastname": "Crist\u00f3v\u00e3o"
+    },
+    "displayName": "Eduardo Crist\u00f3v\u00e3o"
+  },
+  {
+    "id": 221711975438,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/ab/11b",
+      "firstname": "Taleem",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-18T09:07:26.503Z",
+      "self_reported_attribution": "Online",
+      "hs_full_name_or_email": "Taleem Mandinka",
+      "ip_country": "united states",
+      "hs_object_id": "221711975438",
+      "createdate": "2026-05-15T03:17:39.021Z",
+      "lastname": "Mandinka"
+    },
+    "displayName": "Taleem Mandinka"
+  },
+  {
+    "id": 193002170449,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/insider/best-loyalty-software-comparison-guide",
+      "firstname": "Test",
+      "ip_country_code": "in",
+      "hs_analytics_source": "ORGANIC_SEARCH",
+      "self_reported_attribution": "G",
+      "lastmodifieddate": "2026-05-25T09:21:57.834Z",
+      "hs_full_name_or_email": "Test test",
+      "ip_country": "india",
+      "hs_object_id": "193002170449",
+      "createdate": "2026-05-15T07:28:02.983Z",
+      "lastname": "test"
+    },
+    "displayName": "Test test"
+  },
+  {
+    "id": 221837697882,
+    "properties": {
+      "hs_analytics_first_url": "https://www.openloyalty.io/book-a-demo-contact",
+      "firstname": "howy",
+      "ip_country_code": "dz",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-22T09:03:25.076Z",
+      "self_reported_attribution": "google",
+      "hs_full_name_or_email": "howy joy",
+      "ip_country": "algeria",
+      "hs_object_id": "221837697882",
+      "createdate": "2026-05-15T15:26:21.433Z",
+      "lastname": "joy"
+    },
+    "displayName": "howy joy"
+  },
+  {
+    "id": 222353664307,
+    "properties": {
+      "hs_analytics_first_url": "https://share.hsforms.com/7d48c80bec23467fb47c39",
+      "firstname": "Julien",
+      "ip_country_code": "ie",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-25T09:22:21.379Z",
+      "self_reported_attribution": "J\u2019ai d\u00e9couvert votre solution via le site openloyalty.io en recherchant des outils adapt\u00e9s aux audits \u00e9nerg\u00e9tiques et \u00e0 la RT2020.",
+      "hs_full_name_or_email": "Julien",
+      "ip_country": "ireland",
+      "hs_object_id": "222353664307",
+      "createdate": "2026-05-18T19:11:54.284Z"
+    },
+    "displayName": "Julien"
+  },
+  {
+    "id": 222720954218,
+    "properties": {
+      "hs_analytics_first_url": "https://share.hsforms.com/bd0d9819b05c478e9d828f",
+      "firstname": "Julien",
+      "ip_country_code": "ie",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-20T20:06:41.626Z",
+      "self_reported_attribution": "J\u2019ai d\u00e9couvert votre offre en visitant le site openloyalty.io, o\u00f9 votre solution a retenu mon attention pour son approche adapt\u00e9e aux enjeux \u00e9nerg\u00e9tiques actuels.",
+      "hs_full_name_or_email": "Julien Carpentier",
+      "ip_country": "ireland",
+      "hs_object_id": "222720954218",
+      "createdate": "2026-05-20T10:20:03.828Z",
+      "lastname": "Carpentier"
+    },
+    "displayName": "Julien Carpentier"
+  },
+  {
+    "id": 223054721642,
+    "properties": {
+      "hs_analytics_first_url": "https://openloyalty.io/",
+      "firstname": "Danielle",
+      "ip_country_code": "us",
+      "hs_analytics_source": "DIRECT_TRAFFIC",
+      "lastmodifieddate": "2026-05-25T15:10:46.576Z",
+      "self_reported_attribution": "Exploring all option online. \r\n\r\nPlease email me - do not call.",
+      "hs_full_name_or_email": "Danielle Lutrick",
+      "ip_country": "united states",
+      "hs_object_id": "223054721642",
+      "createdate": "2026-05-21T16:37:56.411Z",
+      "lastname": "Lutrick"
+    },
+    "displayName": "Danielle Lutrick"
+  }
+]
