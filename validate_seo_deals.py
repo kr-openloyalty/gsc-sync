@@ -71,7 +71,7 @@ DEALS = [
         "deal":        "Gjensidige",
         "contact":     "Simon Andersen",
         "lifecycle":   "opportunity",
-        "first_url":   "https://openloyalty.io/ab/11a",
+        "first_url":   "https://www.openloyalty.io/",   # /ab/11a is A/B variant of homepage
         "created":     date(2026, 5, 22),
     },
     {
