@@ -117,19 +117,30 @@ def _gsc_post(session: AuthorizedSession, payload: dict, retries: int = 4) -> li
     return []
 
 
-def find_best_page(
+def get_week_position(
     session: AuthorizedSession,
     keyword: str,
-    start_date: str,
-    end_date: str,
-) -> tuple | None:
+    start: str,
+    end: str,
+) -> tuple[float, str] | tuple[None, None]:
     """
-    Return (page_url, clicks, impressions) for the US page that earned the most
-    clicks for *keyword* over the period, or None if GSC has no data.
+    For the given week, query all US pages that ranked for *keyword*,
+    pick the best-performing one (most clicks; ties broken by impressions),
+    and return (position, page_url).
+
+    Using a per-week best page avoids stale selection: the page that
+    dominated over the full period may not rank in every individual week,
+    causing ghost rows (impr=0, pos=0).  Selecting the best page per week
+    ensures we always track a page that actually appeared in search results.
+
+    One API call covers both best-page discovery and position retrieval.
+    Ghost rows (impressions=0) are filtered out before selection.
+
+    Returns (None, None) when there are no impressions at all that week.
     """
     rows = _gsc_post(session, {
-        "startDate":  start_date,
-        "endDate":    end_date,
+        "startDate":  start,
+        "endDate":    end,
         "dimensions": ["page"],
         "dimensionFilterGroups": [{
             "filters": [
@@ -140,46 +151,16 @@ def find_best_page(
         "rowLimit": 25,
     })
     time.sleep(API_SLEEP)
-    if not rows:
-        return None
-    best = max(rows, key=lambda r: (r["clicks"], r["impressions"]))
-    return best["keys"][0], best["clicks"], best["impressions"]
 
+    # Drop ghost rows (impressions=0, position=0) the API occasionally returns
+    valid = [r for r in rows if r["impressions"] > 0]
+    if not valid:
+        return None, None
 
-def get_weekly_position(
-    session: AuthorizedSession,
-    keyword: str,
-    page_url: str,
-    start: str,
-    end: str,
-) -> float | None:
-    """
-    Aggregate average position for keyword + page (US) across [start, end].
-    Returns a float rounded to 1 decimal, or None when GSC has no impressions.
-    """
-    rows = _gsc_post(session, {
-        "startDate":  start,
-        "endDate":    end,
-        "dimensions": [],   # no breakdown → single aggregate row
-        "dimensionFilterGroups": [{
-            "filters": [
-                {"dimension": "query",   "operator": "equals", "expression": keyword},
-                {"dimension": "page",    "operator": "equals", "expression": page_url},
-                {"dimension": "country", "operator": "equals", "expression": COUNTRY},
-            ]
-        }],
-    })
-    time.sleep(API_SLEEP)
-    if not rows or rows[0]["impressions"] == 0:
-        # impressions=0 means the page simply had no search appearances that week.
-        # The GSC API sometimes returns a ghost row (clicks=0, impr=0, pos=0)
-        # instead of an empty result — treat both as "no data" so the cell is
-        # left blank and excluded from cluster AVERAGEIF formulas.
-        return None
-    # Truncate (floor) to 1 decimal — matches how GSC UI displays positions.
-    # round() diverges when the raw value is just above a .X5 boundary,
-    # e.g. raw=2.768 → round=2.8, floor=2.7 (GSC shows 2.7).
-    return math.floor(rows[0]["position"] * 10) / 10
+    best = max(valid, key=lambda r: (r["clicks"], r["impressions"]))
+    # Truncate (floor) to 1 decimal — matches how GSC UI displays positions
+    pos = math.floor(best["position"] * 10) / 10
+    return pos, best["keys"][0]
 
 
 # ── Date parsing ──────────────────────────────────────────────────────────────
@@ -263,10 +244,6 @@ def main() -> None:
         status = "(current)" if s <= today <= e else ""
         print(f"  col {col_idx + 1:2d}  {s}  →  {e}  {status}")
 
-    # Full date range (for the best-page query)
-    full_start = week_cols[0][1].isoformat()
-    full_end   = week_cols[-1][2].isoformat()
-
     # ── Collect keyword rows ───────────────────────────────────────────────────
     keyword_rows: list[tuple[int, str]] = []  # (0-indexed row, keyword)
     for row_idx, row in enumerate(all_values):
@@ -289,27 +266,18 @@ def main() -> None:
         print(f"\n{'─' * 64}")
         print(f"Keyword: '{keyword}'")
 
-        result = find_best_page(gsc, keyword, full_start, full_end)
-        if not result:
-            print("  ⚠  No US GSC data found. Skipping.")
-            continue
-
-        best_page, clicks, impressions = result
-        print(f"  Best page : {best_page}")
-        print(f"  Totals    : {int(clicks):,} clicks | {int(impressions):,} impressions (US, full period)")
-
         found = 0
         for col_idx, week_start, week_end in week_cols:
-            pos = get_weekly_position(
-                gsc, keyword, best_page,
+            pos, page = get_week_position(
+                gsc, keyword,
                 week_start.isoformat(), week_end.isoformat(),
             )
             if pos is not None:
                 found += 1
-                print(f"    {week_start} → {week_end}  :  {pos:.1f}")
+                print(f"    {week_start}  :  {pos:.1f}  [{page}]")
                 updates[(row_idx + 1, col_idx + 1)] = pos   # 1-indexed for gspread
             else:
-                print(f"    {week_start} → {week_end}  :  (no data)")
+                print(f"    {week_start}  :  (no data)")
 
         print(f"  ✓ {found}/{len(week_cols)} weeks have data")
 
