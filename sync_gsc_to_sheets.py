@@ -170,7 +170,11 @@ def get_weekly_position(
         }],
     })
     time.sleep(API_SLEEP)
-    if not rows:
+    if not rows or rows[0]["impressions"] == 0:
+        # impressions=0 means the page simply had no search appearances that week.
+        # The GSC API sometimes returns a ghost row (clicks=0, impr=0, pos=0)
+        # instead of an empty result — treat both as "no data" so the cell is
+        # left blank and excluded from cluster AVERAGEIF formulas.
         return None
     # Truncate (floor) to 1 decimal — matches how GSC UI displays positions.
     # round() diverges when the raw value is just above a .X5 boundary,
