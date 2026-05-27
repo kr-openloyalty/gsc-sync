@@ -157,7 +157,22 @@ def get_week_position(
     if not valid:
         return None, None
 
-    best = max(valid, key=lambda r: (r["clicks"], r["impressions"]))
+    # Selection rule — we want the best RANKING signal, not the most-clicked page
+    # (CTR reflects snippet quality / user intent, not position alone).
+    #
+    # "Comparable" pages = those whose impressions are within 200% of the
+    # highest-impression page, i.e. impr >= max_impr / 3.
+    # This discards low-sample noise (e.g. 2 impressions at pos=1.0) before
+    # picking the best position.
+    #
+    # Example — W21 "loyalty program management software":
+    #   /product/reward-management-system  impr=48  pos=11.5  (max impressions)
+    #   openloyalty.io/                    impr=47  pos=2.4   (comparable → ✓ selected)
+    #   /insider/best-gamification-software impr=2  pos=1.0   (< 48/3=16 → filtered out)
+    max_impr   = max(r["impressions"] for r in valid)
+    comparable = [r for r in valid if r["impressions"] * 3 >= max_impr]
+    best       = min(comparable, key=lambda r: r["position"])
+
     # Truncate (floor) to 1 decimal — matches how GSC UI displays positions
     pos = math.floor(best["position"] * 10) / 10
     return pos, best["keys"][0]
