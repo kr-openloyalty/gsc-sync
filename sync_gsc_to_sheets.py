@@ -30,6 +30,7 @@ Logic per keyword:
 """
 
 import json
+import math
 import sys
 import time
 import warnings
@@ -52,6 +53,11 @@ SPREADSHEET_ID = "1-93tOhuhxSqYwl8bLfzXzwj0JgoQuVqbD9VJNvcymbg"
 
 COUNTRY    = "usa"   # GSC ISO 3166-1 alpha-3 (lowercase)
 API_SLEEP  = 0.35    # seconds between GSC API calls
+
+# Positions are stored as plain numbers (e.g. 2.7).
+# To display them with a comma decimal separator (e.g. 2,7) set the
+# spreadsheet locale to Polish / any European locale via:
+# Plik → Ustawienia arkusza kalkulacyjnego → Ustawienia regionalne → Polska
 
 # Rows whose column-A value starts with these strings are formula/header rows
 # — the script will skip writing positions to them.
@@ -166,7 +172,10 @@ def get_weekly_position(
     time.sleep(API_SLEEP)
     if not rows:
         return None
-    return round(rows[0]["position"], 1)
+    # Truncate (floor) to 1 decimal — matches how GSC UI displays positions.
+    # round() diverges when the raw value is just above a .X5 boundary,
+    # e.g. raw=2.768 → round=2.8, floor=2.7 (GSC shows 2.7).
+    return math.floor(rows[0]["position"] * 10) / 10
 
 
 # ── Date parsing ──────────────────────────────────────────────────────────────
