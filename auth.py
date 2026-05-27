@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-"""OAuth flow for Google Search Console + Google Sheets API. Run once to generate token.json.
+"""OAuth flow for Google Search Console API. Run once to generate token.json.
 
 Usage:
   python3 auth.py              → prints the authorization URL
   python3 auth.py <redirect>   → completes token exchange with the redirect URL
-
-NOTE: If you previously generated a token.json with only the GSC scope,
-delete it and re-run this script so the new Sheets scope is granted.
 """
 
 import json
@@ -19,10 +16,7 @@ from google_auth_oauthlib.flow import Flow
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
-SCOPES = [
-    "https://www.googleapis.com/auth/webmasters.readonly",
-    "https://www.googleapis.com/auth/spreadsheets",
-]
+SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 CLIENT_SECRET_FILE = "client_secret.json"
 TOKEN_FILE = "token.json"
 STATE_FILE = ".auth_state.json"
