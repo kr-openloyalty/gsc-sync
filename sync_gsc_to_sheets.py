@@ -281,20 +281,40 @@ def main() -> None:
         print(f"\n{'─' * 64}")
         print(f"Keyword: '{keyword}'")
 
-        found = 0
+        # Collect raw results for all weeks first
+        # Each entry: (col_idx, week_start, week_end, pos_or_None, page_or_None)
+        week_results: list[tuple[int, date, date, "float | None", "str | None"]] = []
         for col_idx, week_start, week_end in week_cols:
             pos, page = get_week_position(
                 gsc, keyword,
                 week_start.isoformat(), week_end.isoformat(),
             )
+            week_results.append((col_idx, week_start, week_end, pos, page))
+
+        # Forward-fill: carry last known position into blank weeks.
+        # page=None signals that the value was forward-filled (no real page for that week).
+        last_known: "float | None" = None
+        for i, (col_idx, week_start, week_end, pos, page) in enumerate(week_results):
+            if pos is not None:
+                last_known = pos
+            elif last_known is not None:
+                week_results[i] = (col_idx, week_start, week_end, last_known, None)
+
+        found = filled = 0
+        for col_idx, week_start, week_end, pos, page in week_results:
             if pos is not None:
                 found += 1
-                print(f"    {week_start}  :  {pos:.1f}  [{page}]")
                 updates[(row_idx + 1, col_idx + 1)] = pos   # 1-indexed for gspread
+                if page is None:
+                    filled += 1
+                    print(f"    {week_start}  :  {pos:.1f}  [↑ forward-filled]")
+                else:
+                    print(f"    {week_start}  :  {pos:.1f}  [{page}]")
             else:
                 print(f"    {week_start}  :  (no data)")
 
-        print(f"  ✓ {found}/{len(week_cols)} weeks have data")
+        fill_note = f"  ({filled} forward-filled)" if filled else ""
+        print(f"  ✓ {found}/{len(week_cols)} weeks have data{fill_note}")
 
     # ── Write to the sheet ─────────────────────────────────────────────────────
     print(f"\n{'═' * 64}")
