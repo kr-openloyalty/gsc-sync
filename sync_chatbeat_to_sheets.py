@@ -103,31 +103,58 @@ def load_weekly_averages(csv_files: list[str]) -> dict[str, dict[date, float]]:
     """
     Returns {prompt: {week_start_date: avg_position}} for GPT + Open Loyalty rows.
 
-    Multiple readings on the same day for the same prompt are averaged first
-    (daily average), then daily values are averaged into a weekly average.
+    Strategy mirrors the GSC forward-fill approach:
+      1. Track every scrape day for each prompt (all brands, not just OL).
+      2. Record OL's position on days it appeared.
+      3. Forward-fill OL's last known position onto scrape days where it was
+         absent — same logic as GSC's "carry previous week" rule, but at
+         day granularity within the CSV.
+      4. Average all scrape-day positions (filled + real) per week.
     """
-    # {prompt: {date_str: [positions]}}
-    daily: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
+    # All GPT scrape days per prompt: {prompt: {date_str}}
+    scrape_days: dict[str, set[str]] = defaultdict(set)
+    # OL positions on days it appeared: {prompt: {date_str: avg_position}}
+    ol_pos: dict[str, dict[str, float]] = defaultdict(lambda: defaultdict(list))
 
     for path in csv_files:
         with open(path, newline="") as fh:
             for row in csv.DictReader(fh):
                 if row["llm"] != LLM_FILTER:
                     continue
-                if row["keyword"].lower() not in OL_KEYWORDS:
-                    continue
-                d    = row["date"][:10]
-                pos  = float(row["position"])
-                daily[row["prompt"]][d].append(pos)
+                prompt = row["prompt"]
+                d      = row["date"][:10]
+                scrape_days[prompt].add(d)
+                if row["keyword"].lower() in OL_KEYWORDS:
+                    ol_pos[prompt][d].append(float(row["position"]))
 
-    # Aggregate: day average → week average
+    # Collapse multiple same-day OL readings to a daily average
+    ol_daily: dict[str, dict[str, float]] = {
+        prompt: {d: sum(v) / len(v) for d, v in days.items()}
+        for prompt, days in ol_pos.items()
+    }
+
+    # Forward-fill OL position across all scrape days (chronological order)
+    filled: dict[str, dict[str, float]] = {}
+    for prompt in scrape_days:
+        sorted_days = sorted(scrape_days[prompt])
+        last_known: float | None = None
+        result: dict[str, float] = {}
+        for d in sorted_days:
+            if d in ol_daily.get(prompt, {}):
+                last_known = ol_daily[prompt][d]
+                result[d]  = last_known
+            elif last_known is not None:
+                result[d] = last_known   # carry last known position
+            # if no OL position seen yet, day stays absent (no entry)
+        filled[prompt] = result
+
+    # Aggregate filled daily values → weekly averages
     weekly: dict[str, dict[date, float]] = {}
-    for prompt, day_map in daily.items():
+    for prompt, day_map in filled.items():
         by_week: dict[date, list[float]] = defaultdict(list)
-        for d_str, positions in day_map.items():
-            day_avg = sum(positions) / len(positions)
+        for d_str, pos in day_map.items():
             ws = week_start(datetime.strptime(d_str, "%Y-%m-%d").date())
-            by_week[ws].append(day_avg)
+            by_week[ws].append(pos)
         weekly[prompt] = {
             ws: round(sum(vals) / len(vals), 1)
             for ws, vals in by_week.items()
