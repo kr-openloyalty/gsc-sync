@@ -247,7 +247,7 @@ def main() -> None:
         e_raw = end_row[col_idx]   if col_idx < len(end_row)   else ""
         s = parse_date(s_raw)
         e = parse_date(e_raw)
-        if s and e and s <= today:   # only include weeks that have started
+        if s and e and s <= today:   # include started weeks, even partial/current ones
             week_cols.append((col_idx, s, e))
 
     if not week_cols:
