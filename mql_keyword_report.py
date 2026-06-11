@@ -2,52 +2,39 @@
 """
 MQL contact keyword report
 
-Pulls MQL contacts live from HubSpot, queries GSC for the top keyword on
-the contact's first visit date (falls back to createdate), and writes a CSV.
+Reads MQL contacts from mql_contacts.json, queries GSC for the top keyword
+on the contact's first visit date (falls back to createdate), and writes a CSV.
 
 Requirements:
-  HUBSPOT_TOKEN env var  — HubSpot Private App token
-  token.json             — GSC OAuth token (run auth.py once)
+  token.json  — GSC OAuth token (run auth.py once)
+  mql_contacts.json — exported HubSpot MQL contacts
 
 Usage:
-  HUBSPOT_TOKEN=pat-xxx python3 mql_keyword_report.py \
-      --start 2026-05-01 --end 2026-05-31 --output may_mqls.csv
+  python3 mql_keyword_report.py \
+      --start 2026-01-01 --end 2026-05-22 --output mqls.csv
 """
 
 import argparse
 import csv
 import json
-import os
 import re
 import warnings
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 from urllib.parse import urlparse, urlunparse
 
-import requests
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
-HUBSPOT_TOKEN = os.environ.get("HUBSPOT_TOKEN")
 TOKEN_FILE    = "token.json"
+CONTACTS_FILE = "mql_contacts.json"
 SITE          = "sc-domain:openloyalty.io"
 GSC_API       = "https://www.googleapis.com/webmasters/v3"
-HS_API        = "https://api.hubapi.com"
 
 AB_RE = re.compile(r"^/ab/", re.IGNORECASE)
-
-CONTACT_PROPS = [
-    "firstname", "lastname",
-    "hs_analytics_source",
-    "hs_analytics_first_url",
-    "hs_analytics_first_visit_timestamp",
-    "ip_country_code", "ip_country",
-    "self_reported_attribution",
-    "createdate",
-]
 
 # ISO 3166-1 alpha-2 → alpha-3  (GSC uses 3-letter lowercase)
 A2_TO_A3 = {
@@ -146,56 +133,25 @@ def categorise_sra(val: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# HubSpot
+# Contacts loader
 # ---------------------------------------------------------------------------
-def date_to_ms(d: date) -> int:
-    return int(datetime(d.year, d.month, d.day, tzinfo=timezone.utc).timestamp() * 1000)
-
-
-def fetch_mql_contacts(start: date, end: date) -> list:
-    if not HUBSPOT_TOKEN:
-        raise SystemExit("HUBSPOT_TOKEN environment variable not set")
-
-    headers = {
-        "Authorization": f"Bearer {HUBSPOT_TOKEN}",
-        "Content-Type": "application/json",
-    }
-    url = f"{HS_API}/crm/v3/objects/contacts/search"
-
-    body = {
-        "filterGroups": [
-            {
-                "filters": [
-                    {"propertyName": "lifecyclestage",
-                     "operator": "EQ", "value": "marketingqualifiedlead"},
-                    {"propertyName": "createdate",
-                     "operator": "GTE", "value": str(date_to_ms(start))},
-                    {"propertyName": "createdate",
-                     "operator": "LTE", "value": str(date_to_ms(end) + 86_399_999)},
-                    {"propertyName": "hs_analytics_source",
-                     "operator": "IN",
-                     "values": ["ORGANIC_SEARCH", "DIRECT_TRAFFIC"]},
-                ]
-            }
-        ],
-        "properties": CONTACT_PROPS,
-        "limit": 100,
-    }
-
-    contacts = []
-    after = None
-    while True:
-        if after:
-            body["after"] = after
-        resp = requests.post(url, headers=headers, json=body)
-        resp.raise_for_status()
-        data = resp.json()
-        contacts.extend(data.get("results", []))
-        after = data.get("paging", {}).get("next", {}).get("after")
-        if not after:
-            break
-
-    return contacts
+def load_contacts(path: str, start: date, end: date) -> list:
+    with open(path) as f:
+        all_contacts = json.load(f)
+    result = []
+    for c in all_contacts:
+        cdate_str = (c.get("properties", {}).get("createdate") or "")[:10]
+        if not cdate_str:
+            result.append(c)
+            continue
+        try:
+            cdate = date.fromisoformat(cdate_str)
+        except ValueError:
+            result.append(c)
+            continue
+        if start <= cdate <= end:
+            result.append(c)
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -323,9 +279,9 @@ def print_table(rows: list, title: str):
 
 def main():
     parser = argparse.ArgumentParser(description="MQL keyword report")
-    parser.add_argument("--start",  default="2026-05-01",
+    parser.add_argument("--start",  default="2026-01-01",
                         help="Start date YYYY-MM-DD (createdate filter)")
-    parser.add_argument("--end",    default="2026-05-31",
+    parser.add_argument("--end",    default="2026-05-22",
                         help="End date YYYY-MM-DD (createdate filter, inclusive)")
     parser.add_argument("--output", default="",
                         help="CSV output path (default: mql_keywords_<start>_<end>.csv)")
@@ -337,8 +293,8 @@ def main():
 
     warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
-    print(f"Fetching MQL contacts {args.start} → {args.end} from HubSpot...")
-    contacts = fetch_mql_contacts(start_date, end_date)
+    print(f"Loading MQL contacts from {CONTACTS_FILE} ({args.start} → {args.end})...")
+    contacts = load_contacts(CONTACTS_FILE, start_date, end_date)
     print(f"Found {len(contacts)} MQL contacts.\n")
 
     gsc_session = get_gsc_session()
