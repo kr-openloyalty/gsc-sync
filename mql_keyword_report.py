@@ -1,41 +1,53 @@
 #!/usr/bin/env python3
 """
-MQL contact keyword report — 2026 (Jan–May 22)
+MQL contact keyword report
 
-Source: HubSpot MQL contacts (lifecyclestage=marketingqualifiedlead)
-        with hs_analytics_source IN [ORGANIC_SEARCH, DIRECT_TRAFFIC]
-        created 2026-01-01 → 2026-05-22, hs_analytics_first_url set
+Pulls MQL contacts live from HubSpot, queries GSC for the top keyword on
+the contact's first visit date (falls back to createdate), and writes a CSV.
 
-For each contact:
-  - Normalise first page URL (strip UTM, /ab/* → homepage)
-  - Query GSC with page + date + ip_country filter
-  - Fallback: widen to ±1 day; then drop country filter if still empty
-  - Collect top keyword (most clicks; if 0, most impressions)
-  - Also show self_reported_attribution
+Requirements:
+  HUBSPOT_TOKEN env var  — HubSpot Private App token
+  token.json             — GSC OAuth token (run auth.py once)
 
-Outputs:
-  1. 5 monthly tables (Jan–May)
-  2. Self-reported attribution breakdown
+Usage:
+  HUBSPOT_TOKEN=pat-xxx python3 mql_keyword_report.py \
+      --start 2026-05-01 --end 2026-05-31 --output may_mqls.csv
 """
 
+import argparse
+import csv
 import json
+import os
 import re
 import warnings
 from collections import Counter, defaultdict
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from urllib.parse import urlparse, urlunparse
 
+import requests
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
-TOKEN_FILE = "token.json"
-SITE       = "sc-domain:openloyalty.io"
-GSC_API    = "https://www.googleapis.com/webmasters/v3"
+HUBSPOT_TOKEN = os.environ.get("HUBSPOT_TOKEN")
+TOKEN_FILE    = "token.json"
+SITE          = "sc-domain:openloyalty.io"
+GSC_API       = "https://www.googleapis.com/webmasters/v3"
+HS_API        = "https://api.hubapi.com"
 
 AB_RE = re.compile(r"^/ab/", re.IGNORECASE)
+
+CONTACT_PROPS = [
+    "firstname", "lastname",
+    "hs_analytics_source",
+    "hs_analytics_first_url",
+    "hs_analytics_first_visit_timestamp",
+    "ip_country_code", "ip_country",
+    "self_reported_attribution",
+    "createdate",
+]
 
 # ISO 3166-1 alpha-2 → alpha-3  (GSC uses 3-letter lowercase)
 A2_TO_A3 = {
@@ -66,9 +78,16 @@ A2_TO_A3 = {
     "TH":"tha","TL":"tls","TG":"tgo","TO":"ton","TT":"tto","TN":"tun","TR":"tur",
     "TM":"tkm","UG":"uga","UA":"ukr","AE":"are","GB":"gbr","US":"usa","UY":"ury",
     "UZ":"uzb","VU":"vut","VE":"ven","VN":"vnm","YE":"yem","ZM":"zmb","ZW":"zwe",
-    "KR":"kor","KP":"prk","TZ":"tza","MK":"mkd","XK":"xkx","PS":"pse","HK":"hkg",
-    "MO":"mac","TW":"twn","PR":"pri","GU":"gum","VI":"vir",
+    "KR":"kor","KP":"prk","MK":"mkd","XK":"xkx","PS":"pse","HK":"hkg",
+    "MO":"mac","PR":"pri","GU":"gum","VI":"vir",
 }
+
+CSV_FIELDS = [
+    "contact_id", "name", "source", "country", "country_code",
+    "first_page", "visit_date", "date_source", "create_date",
+    "keyword", "clicks", "impressions", "position", "gsc_tier",
+    "sra_category", "sra_raw",
+]
 
 
 # ---------------------------------------------------------------------------
@@ -115,7 +134,7 @@ def categorise_sra(val: str) -> str:
     if any(x in v for x in ["linkedin", "linked in"]):
         return "LinkedIn"
     if any(x in v for x in ["referral", "recommend", "colleague", "word of mouth",
-                              "partner", "team", "friend", "colleague"]):
+                              "partner", "team", "friend"]):
         return "Referral/Word-of-mouth"
     if any(x in v for x in ["blog", "article", "post", "content", "read"]):
         return "Blog/Content"
@@ -127,9 +146,62 @@ def categorise_sra(val: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# HubSpot
+# ---------------------------------------------------------------------------
+def date_to_ms(d: date) -> int:
+    return int(datetime(d.year, d.month, d.day, tzinfo=timezone.utc).timestamp() * 1000)
+
+
+def fetch_mql_contacts(start: date, end: date) -> list:
+    if not HUBSPOT_TOKEN:
+        raise SystemExit("HUBSPOT_TOKEN environment variable not set")
+
+    headers = {
+        "Authorization": f"Bearer {HUBSPOT_TOKEN}",
+        "Content-Type": "application/json",
+    }
+    url = f"{HS_API}/crm/v3/objects/contacts/search"
+
+    body = {
+        "filterGroups": [
+            {
+                "filters": [
+                    {"propertyName": "lifecyclestage",
+                     "operator": "EQ", "value": "marketingqualifiedlead"},
+                    {"propertyName": "createdate",
+                     "operator": "GTE", "value": str(date_to_ms(start))},
+                    {"propertyName": "createdate",
+                     "operator": "LTE", "value": str(date_to_ms(end) + 86_399_999)},
+                    {"propertyName": "hs_analytics_source",
+                     "operator": "IN",
+                     "values": ["ORGANIC_SEARCH", "DIRECT_TRAFFIC"]},
+                ]
+            }
+        ],
+        "properties": CONTACT_PROPS,
+        "limit": 100,
+    }
+
+    contacts = []
+    after = None
+    while True:
+        if after:
+            body["after"] = after
+        resp = requests.post(url, headers=headers, json=body)
+        resp.raise_for_status()
+        data = resp.json()
+        contacts.extend(data.get("results", []))
+        after = data.get("paging", {}).get("next", {}).get("after")
+        if not after:
+            break
+
+    return contacts
+
+
+# ---------------------------------------------------------------------------
 # GSC
 # ---------------------------------------------------------------------------
-def get_session():
+def get_gsc_session():
     with open(TOKEN_FILE) as f:
         creds = Credentials.from_authorized_user_info(json.load(f))
     s = AuthorizedSession(creds)
@@ -138,7 +210,10 @@ def get_session():
 
 
 def gsc_query(session, page: str, visit_date: date,
-              country_a3: str | None) -> list:
+              country_a3: str | None) -> tuple[list, int]:
+    """Return (rows, tier). tier: 0=exact+country, 1=±1day+country,
+    2=exact no-country, 3=±1day no-country, -1=no data."""
+
     def _call(start: str, end: str, with_country: bool) -> list:
         filters = [{"dimension": "page", "operator": "equals", "expression": page}]
         if with_country and country_a3:
@@ -150,25 +225,38 @@ def gsc_query(session, page: str, visit_date: date,
             "dimensionFilterGroups": [{"filters": filters}],
             "rowLimit": 25,
         }
-        r = session.post(f"{GSC_API}/sites/{SITE}/searchAnalytics/query",
-                         json=payload)
+        r = session.post(f"{GSC_API}/sites/{SITE}/searchAnalytics/query", json=payload)
         r.raise_for_status()
         return r.json().get("rows", [])
 
     d = visit_date.isoformat()
+    s = (visit_date - timedelta(days=1)).isoformat()
+    e = (visit_date + timedelta(days=1)).isoformat()
+
     rows = _call(d, d, True)
-    if not rows:
-        s = (visit_date - timedelta(days=1)).isoformat()
-        e = (visit_date + timedelta(days=1)).isoformat()
-        rows = _call(s, e, True)
-    if not rows and country_a3:
-        # Fallback: drop country filter
+    if rows:
+        return rows, 0
+
+    rows = _call(s, e, True)
+    if rows:
+        return rows, 1
+
+    if country_a3:
         rows = _call(d, d, False)
-        if not rows:
-            s = (visit_date - timedelta(days=1)).isoformat()
-            e = (visit_date + timedelta(days=1)).isoformat()
-            rows = _call(s, e, False)
-    return rows
+        if rows:
+            return rows, 2
+        rows = _call(s, e, False)
+        if rows:
+            return rows, 3
+    else:
+        rows = _call(d, d, False)
+        if rows:
+            return rows, 2
+        rows = _call(s, e, False)
+        if rows:
+            return rows, 3
+
+    return [], -1
 
 
 def top_kw(rows: list) -> dict | None:
@@ -181,14 +269,14 @@ def top_kw(rows: list) -> dict | None:
 
 
 # ---------------------------------------------------------------------------
-# Tables
+# Console table helpers
 # ---------------------------------------------------------------------------
 MONTHS = [
     ("2026-01", "January 2026"),
     ("2026-02", "February 2026"),
     ("2026-03", "March 2026"),
     ("2026-04", "April 2026"),
-    ("2026-05", "May 2026 (1–22)"),
+    ("2026-05", "May 2026"),
 ]
 
 W = {"name": 28, "src": 8, "country": 14, "page": 42, "date": 11,
@@ -198,29 +286,30 @@ W = {"name": 28, "src": 8, "country": 14, "page": 42, "date": 11,
 def hdr():
     return (f"{'Contact':<{W['name']}}  {'Src':<{W['src']}}  "
             f"{'Country':<{W['country']}}  {'First Page':<{W['page']}}  "
-            f"{'Date':<{W['date']}}  {'Top Keyword':<{W['kw']}}  "
+            f"{'Date':<{W['date']}}  {'T':1}  {'Top Keyword':<{W['kw']}}  "
             f"{'Self-Reported':<{W['sra']}}  "
             f"{'Clicks':>{W['cl']}}  {'Impr':>{W['im']}}  {'Pos':>{W['pos']}}")
 
 
 def fmt_row(r: dict) -> str:
-    page = r["page"].replace("https://www.openloyalty.io", "")[:W["page"]]
+    page = r["first_page"].replace("https://www.openloyalty.io", "")[:W["page"]]
     kw   = (r["keyword"] or "—")[:W["kw"]]
-    sra  = r["sra_cat"][:W["sra"]]
+    sra  = r["sra_category"][:W["sra"]]
     cl   = str(r["clicks"]) if isinstance(r["clicks"], int) else "—"
     im   = str(r["impressions"]) if isinstance(r["impressions"], int) else "—"
     pos  = str(r["position"]) if isinstance(r["position"], float) else "—"
+    tier = str(r["gsc_tier"]) if isinstance(r["gsc_tier"], int) else "—"
     return (f"{r['name']:<{W['name']}}  {r['source']:<{W['src']}}  "
             f"{r['country']:<{W['country']}}  {page:<{W['page']}}  "
-            f"{r['date']:<{W['date']}}  {kw:<{W['kw']}}  "
+            f"{r['visit_date']:<{W['date']}}  {tier:1}  {kw:<{W['kw']}}  "
             f"{sra:<{W['sra']}}  "
             f"{cl:>{W['cl']}}  {im:>{W['im']}}  {pos:>{W['pos']}}")
 
 
 def print_table(rows: list, title: str):
-    print(f"\n{'='*140}")
+    print(f"\n{'='*155}")
     print(f"  {title}  ({len(rows)} MQLs)")
-    print(f"{'='*140}")
+    print(f"{'='*155}")
     h = hdr()
     print(h)
     print("-" * len(h))
@@ -233,60 +322,116 @@ def print_table(rows: list, title: str):
 # ---------------------------------------------------------------------------
 
 def main():
+    parser = argparse.ArgumentParser(description="MQL keyword report")
+    parser.add_argument("--start",  default="2026-05-01",
+                        help="Start date YYYY-MM-DD (createdate filter)")
+    parser.add_argument("--end",    default="2026-05-31",
+                        help="End date YYYY-MM-DD (createdate filter, inclusive)")
+    parser.add_argument("--output", default="",
+                        help="CSV output path (default: mql_keywords_<start>_<end>.csv)")
+    args = parser.parse_args()
+
+    start_date = date.fromisoformat(args.start)
+    end_date   = date.fromisoformat(args.end)
+    csv_path   = args.output or f"mql_keywords_{args.start}_{args.end}.csv"
+
     warnings.filterwarnings("ignore", message="Unverified HTTPS request")
-    session = get_session()
 
-    with open("mql_contacts.json") as f:
-        contacts = json.load(f)
+    print(f"Fetching MQL contacts {args.start} → {args.end} from HubSpot...")
+    contacts = fetch_mql_contacts(start_date, end_date)
+    print(f"Found {len(contacts)} MQL contacts.\n")
 
-    print(f"Processing {len(contacts)} MQL contacts...\n")
+    gsc_session = get_gsc_session()
 
-    by_month = defaultdict(list)
-    sra_cats = Counter()
+    by_month  = defaultdict(list)
+    sra_cats  = Counter()
+    all_rows  = []
 
     for i, c in enumerate(contacts, 1):
-        p = c["properties"]
-        name    = (p.get("firstname") or "") + " " + (p.get("lastname") or "")
-        name    = name.strip() or c.get("displayName", str(c["id"]))
-        source  = "ORGANIC" if p.get("hs_analytics_source") == "ORGANIC_SEARCH" else "DIRECT"
-        raw_url = p.get("hs_analytics_first_url", "")
+        p    = c.get("properties", {})
+        cid  = c.get("id", "")
+        name = ((p.get("firstname") or "") + " " + (p.get("lastname") or "")).strip() or cid
+
+        source      = "ORGANIC" if p.get("hs_analytics_source") == "ORGANIC_SEARCH" else "DIRECT"
+        raw_url     = p.get("hs_analytics_first_url") or ""
         country_a2  = (p.get("ip_country_code") or "").upper()
         country_name = (p.get("ip_country") or country_a2 or "—").title()[:W["country"]]
-        country_a3  = A2_TO_A3.get(country_a2, "").lower() or None
-        sra_raw = p.get("self_reported_attribution") or ""
-        sra_cat = categorise_sra(sra_raw)
+        country_a3  = A2_TO_A3.get(country_a2) or None
+        sra_raw     = p.get("self_reported_attribution") or ""
+        sra_cat     = categorise_sra(sra_raw)
         sra_cats[sra_cat] += 1
 
-        cdate_str = p.get("createdate", "")[:10]
-        month_key = cdate_str[:7]
+        create_date_str = (p.get("createdate") or "")[:10]
+        month_key = create_date_str[:7]
+
+        # Prefer first_visit_timestamp for accurate GSC date matching
+        first_visit_ts = p.get("hs_analytics_first_visit_timestamp")
+        if first_visit_ts:
+            try:
+                visit_date  = datetime.fromtimestamp(int(first_visit_ts) / 1000,
+                                                     tz=timezone.utc).date()
+                date_source = "first_visit"
+            except (ValueError, OSError):
+                visit_date  = date.fromisoformat(create_date_str) if create_date_str else None
+                date_source = "createdate"
+        elif create_date_str:
+            visit_date  = date.fromisoformat(create_date_str)
+            date_source = "createdate"
+        else:
+            visit_date  = None
+            date_source = "none"
 
         norm_url = normalise_url(raw_url)
+
         row = {
-            "name": name[:W["name"]], "source": source,
-            "country": country_name, "page": norm_url or raw_url[:W["page"]] or "—",
-            "date": cdate_str, "keyword": "—",
-            "clicks": "—", "impressions": "—", "position": "—",
-            "sra_raw": sra_raw, "sra_cat": sra_cat,
+            "contact_id":   cid,
+            "name":         name[:W["name"]],
+            "source":       source,
+            "country":      country_name,
+            "country_code": country_a2,
+            "first_page":   norm_url or raw_url[:W["page"]] or "—",
+            "visit_date":   visit_date.isoformat() if visit_date else "—",
+            "date_source":  date_source,
+            "create_date":  create_date_str,
+            "keyword":      "—",
+            "clicks":       "—",
+            "impressions":  "—",
+            "position":     "—",
+            "gsc_tier":     "—",
+            "sra_category": sra_cat,
+            "sra_raw":      sra_raw,
         }
 
-        if norm_url and cdate_str:
-            visit_date = date.fromisoformat(cdate_str)
-            rows = gsc_query(session, norm_url, visit_date, country_a3)
-            best = top_kw(rows)
+        if norm_url and visit_date:
+            gsc_rows, tier = gsc_query(gsc_session, norm_url, visit_date, country_a3)
+            best = top_kw(gsc_rows)
             if best:
-                row.update({"keyword": best["keyword"], "clicks": best["clicks"],
-                             "impressions": best["impressions"], "position": best["position"]})
+                row.update({
+                    "keyword":     best["keyword"],
+                    "clicks":      best["clicks"],
+                    "impressions": best["impressions"],
+                    "position":    best["position"],
+                    "gsc_tier":    tier,
+                })
             else:
-                row["keyword"] = "no GSC data"
-        else:
+                row["keyword"]  = "no GSC data"
+                row["gsc_tier"] = tier
+        elif not norm_url:
             row["keyword"] = "no URL"
+        else:
+            row["keyword"] = "no date"
 
         print(f"  [{i:3d}/{len(contacts)}] {name[:28]:<28} {country_a2:<3} "
-              f"{row['keyword'][:40]}", flush=True)
+              f"t={row['gsc_tier']}  {row['keyword'][:40]}", flush=True)
+
+        all_rows.append(row)
         by_month[month_key].append(row)
 
-    # --- Monthly tables ---
-    for mk, title in MONTHS:
+    # --- Console monthly tables ---
+    seen_months = sorted({r["create_date"][:7] for r in all_rows if r["create_date"]})
+    month_labels = dict(MONTHS)
+    for mk in seen_months:
+        title = month_labels.get(mk, mk)
         print_table(by_month.get(mk, []), title)
 
     # --- Self-reported attribution breakdown ---
@@ -300,18 +445,13 @@ def main():
         print(f"{cat:<30}  {cnt:>6}  {cnt/total*100:>4.1f}%")
     print(f"{'TOTAL':<30}  {total:>6}")
 
-    # --- Notable raw attributions ---
-    print(f"\n{'='*60}")
-    print("  Notable / Unusual Self-Reported Values")
-    print(f"{'='*60}")
-    shown = set()
-    for c in contacts:
-        val = (c["properties"].get("self_reported_attribution") or "").strip()
-        cat = categorise_sra(val)
-        if cat == "Other" and val and val.lower() not in ("-","") and val not in shown:
-            if len(val) > 20:   # only show meaningful ones
-                print(f"  [{cat}] {val[:120]}")
-                shown.add(val)
+    # --- CSV output ---
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)
+        writer.writeheader()
+        writer.writerows(all_rows)
+
+    print(f"\nCSV written → {csv_path}  ({len(all_rows)} rows)")
 
 
 if __name__ == "__main__":
