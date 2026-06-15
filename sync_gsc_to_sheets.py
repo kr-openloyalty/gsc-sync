@@ -37,14 +37,12 @@ import warnings
 from datetime import date, timedelta, datetime
 
 import gspread
-from google.oauth2 import service_account
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 
-TOKEN_FILE           = "token.json"           # GSC OAuth token (auth.py)
-SERVICE_ACCOUNT_FILE = "service_account.json" # Google service account (Sheets)
+TOKEN_FILE = "token.json"   # OAuth token covering both GSC and Sheets (auth.py)
 
 SITE          = "sc-domain:openloyalty.io"
 GSC_ENDPOINT  = "https://www.googleapis.com/webmasters/v3"
@@ -86,10 +84,8 @@ def get_gsc_session() -> AuthorizedSession:
 
 
 def get_worksheet() -> gspread.Worksheet:
-    creds = service_account.Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE,
-        scopes=["https://www.googleapis.com/auth/spreadsheets"],
-    )
+    with open(TOKEN_FILE) as f:
+        creds = Credentials.from_authorized_user_info(json.load(f))
     gc = gspread.authorize(creds)
     sh = gc.open_by_key(SPREADSHEET_ID)
     return sh.get_worksheet(0)  # first tab

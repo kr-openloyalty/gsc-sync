@@ -44,13 +44,15 @@ import sys
 from collections import defaultdict
 from datetime import date, datetime, timedelta
 
+import json
+
 import gspread
-from google.oauth2 import service_account
+from google.oauth2.credentials import Credentials
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 
-SERVICE_ACCOUNT_FILE = "service_account.json"
-SPREADSHEET_ID       = "1-93tOhuhxSqYwl8bLfzXzwj0JgoQuVqbD9VJNvcymbg"
+TOKEN_FILE     = "token.json"
+SPREADSHEET_ID = "1-93tOhuhxSqYwl8bLfzXzwj0JgoQuVqbD9VJNvcymbg"
 
 OL_KEYWORDS  = {"open loyalty", "openloyalty"}
 LLM_FILTER   = "GPT"
@@ -87,10 +89,8 @@ def week_start(d: date) -> date:
 
 
 def get_worksheet() -> gspread.Worksheet:
-    creds = service_account.Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE,
-        scopes=["https://www.googleapis.com/auth/spreadsheets"],
-    )
+    with open(TOKEN_FILE) as f:
+        creds = Credentials.from_authorized_user_info(json.load(f))
     gc = gspread.authorize(creds)
     sh = gc.open_by_key(SPREADSHEET_ID)
     return sh.get_worksheet(0)

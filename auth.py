@@ -16,7 +16,10 @@ from google_auth_oauthlib.flow import Flow
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
-SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
+SCOPES = [
+    "https://www.googleapis.com/auth/webmasters.readonly",
+    "https://www.googleapis.com/auth/spreadsheets",
+]
 CLIENT_SECRET_FILE = "client_secret.json"
 TOKEN_FILE = "token.json"
 STATE_FILE = ".auth_state.json"
