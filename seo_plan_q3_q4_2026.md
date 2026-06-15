@@ -2,7 +2,7 @@
 
 **Prepared:** 2026-06-15  
 **Goal:** Double MQL leads from organic traffic (~31/month → 62+/month)  
-**Data sources:** GSC Jan–May 2026, Ahrefs June 2026, HubSpot 157 MQL contacts
+**Data sources:** GSC Jan–May 2026, Ahrefs June 2026, HubSpot 157 MQL contacts (mql_keywords_20260101_20260522.csv)
 
 ---
 
@@ -47,29 +47,52 @@
 
 ## Core Diagnosis: The Conversion Gap
 
-The fundamental problem is a **mismatch between traffic pages and conversion pages**:
+The fundamental problem is a **mismatch between traffic pages and conversion pages**.
 
-### Pages with most organic traffic (Ahrefs):
-| Page | Monthly Traffic | Top Keyword | Commercial Intent |
-|------|----------------|-------------|-------------------|
-| /insider/restaurant-loyalty-programs | 1,692 | restaurant rewards programs | Low |
-| / (homepage) | 1,714 | retail loyalty program software | High |
-| /insider/sephora-beauty-insider | 514 | sephora tiers | Very Low |
-| /insider/bank-loyalty-programs | 469 | bank loyalty programs | Low |
-| /resources/10-best-mobile-loyalty-program-apps | 446 | loyalty app | Low |
-| /insider/best-retail-loyalty-programs | 416 | loyalty program retail | Medium |
-| /resources/10-best-gamification-loyalty-programs | 392 | gamification rewards program | Low |
+### Actual MQL count per first page (HubSpot CSV, 157 contacts)
 
-### Pages where MQLs actually come from (HubSpot):
-| Page | MQL Count | Organic Traffic |
-|------|-----------|-----------------|
-| / (homepage) | ~60+ | 1,714 ✅ |
-| /pricing | ~8 | Low ⚠ |
-| /applications/white-label-loyalty | ~6 | 119 ⚠ |
-| /technology/loyalty-program-api | ~4 | 90 ⚠ |
-| /insider/best-loyalty-software-comparison-guide | ~4 | 107 ⚠ |
+| Page | Total MQLs | Organic | Direct | Conv. Rate* | In Plan? |
+|------|-----------|---------|--------|-------------|----------|
+| / (homepage) | **75** | 45 | 30 | ~2.6% | ✅ Initiative 1 |
+| /pricing | **18** | 4 | 14 | — | ⚠ GAP — see below |
+| /book-a-demo-contact | **9** | 0 | 9 | n/a | — |
+| /applications/white-label-loyalty | **8** | 5 | 3 | **~4.2%** 🔥 | ✅ Needs elevation |
+| /technology/loyalty-program-api | **6** | 5 | 1 | **~5.6%** 🔥 | ✅ Needs elevation |
+| /es (Spanish homepage) | **6** | 6 | 0 | — | ✅ Initiative 3 |
+| /insider/best-loyalty-software-comparison-guide | **5** | 4 | 1 | ~3.7% | ✅ Initiative 2 |
+| /insider/rewards-program-software | 2 | 2 | 0 | — | ❌ Missing |
+| /insider/sephora-beauty-insider | 2 | 2 | 0 | ~0.4% | Low priority |
 
-**The opportunity:** The pages that convert MQLs get very little organic traffic. The pages with lots of organic traffic convert almost nothing. The fastest path to 2× MQLs is routing more commercial-intent traffic to high-converting pages — not just growing overall traffic.
+*Conversion rate = organic MQLs ÷ Ahrefs monthly organic traffic for that page.
+
+### Keyword split (HubSpot CSV, 157 contacts)
+- **Branded** ("open loyalty", "openloyalty"): 68 MQLs — **43%**
+- **Non-branded**: 74 MQLs — **47%**
+- No GSC data / no URL: 15 MQLs — 10%
+
+Top non-branded keywords generating MQLs: `loyalty program` (9×), `loyalty` (7×), `loyalty program software` (6×), `customer loyalty software` (3×), `loyalty platform` (2×), `white label loyalty rewards program`, `loyalty api`, `plataforma de fidelización`, `b2b loyalty platform`, `ai-powered loyalty management software`
+
+### Two critical gaps added after CSV analysis
+
+**Gap 1 — /pricing page has no non-branded organic strategy.**
+18 MQLs come via /pricing, but only 4 are organic — and all 4 arrived via branded "open loyalty" searches. Nobody is reaching the pricing page through non-branded queries like "loyalty software pricing" or "loyalty platform cost". This page has zero reach for pricing-intent keywords despite being a natural destination for deep-funnel buyers. Added as Initiative 2b.
+
+**Gap 2 — /white-label-loyalty and /loyalty-program-api convert 2× better than the homepage but get 15× less traffic.**
+Both pages convert ~1 in 17 organic visitors to an MQL (6–7%), vs ~1 in 38 for the homepage. Yet they receive 90–119 monthly visits vs 1,714. Growing traffic to these two pages is the single highest-leverage SEO action in the plan. Elevated to Initiative 1b (from buried mention).
+
+### Traffic vs MQL reality (updated)
+| Page | Monthly Organic Traffic | Organic MQLs | MQL/visit |
+|------|------------------------|-------------|-----------|
+| /insider/restaurant-loyalty-programs | 1,692 | 0 | 0% |
+| / (homepage) | 1,714 | 45 | **2.6%** |
+| /insider/sephora-beauty-insider | 514 | 2 | 0.4% |
+| /insider/bank-loyalty-programs | 469 | 0 | 0% |
+| /resources/10-best-mobile-loyalty-apps | 446 | 1 | 0.2% |
+| /insider/best-loyalty-software-comparison-guide | 107 | 4 | **3.7%** |
+| /applications/white-label-loyalty | 119 | 5 | **4.2%** |
+| /technology/loyalty-program-api | 90 | 5 | **5.6%** |
+
+**The opportunity:** Growing organic traffic to the three highest-converting pages (/white-label-loyalty, /loyalty-program-api, /comparison-guide) by 5× would yield more MQLs than doubling the traffic to the entire blog.
 
 ---
 
@@ -110,6 +133,48 @@ Site Audit flagged 34 "pages to submit to IndexNow" — this accelerates recrawl
 
 **Q3 Goal:** 40 MQL/month by September (from 31 baseline)  
 **Primary lever:** Improve conversion rate on existing traffic + quick-win rankings
+
+---
+
+### Initiative 1b: Grow Traffic to Highest-Converting Pages (July — TOP PRIORITY)
+
+**Added after CSV analysis.** /applications/white-label-loyalty and /technology/loyalty-program-api have the highest MQL conversion rates on the site (~4–6%) but almost no organic traffic. These pages deserve to be the #1 SEO traffic-growth priority — more than any blog post.
+
+| Page | Organic MQLs | Monthly Traffic | Conv. Rate | Gap |
+|------|-------------|----------------|------------|-----|
+| /applications/white-label-loyalty | 5 | 119 | 4.2% | 2× traffic = +5 MQLs/month |
+| /technology/loyalty-program-api | 5 | 90 | 5.6% | 2× traffic = +5 MQLs/month |
+| /insider/best-loyalty-software-comparison-guide | 4 | 107 | 3.7% | 2× traffic = +4 MQLs/month |
+
+**Actions for /applications/white-label-loyalty:**
+- [ ] Target keywords: "white label loyalty platform" (not yet ranking), "white label loyalty program software", "white label rewards platform"
+- [ ] Expand page content: add pricing section, case study, FAQ schema (current page is likely a thin landing page)
+- [ ] Build 5+ internal links from high-traffic blog posts (restaurant, retail, bank loyalty articles) to this page using anchor text "white label loyalty platform"
+- [ ] Run a targeted link-building campaign specifically for this URL — even 3–5 quality backlinks can push it significantly given the low competition
+
+**Actions for /technology/loyalty-program-api:**
+- [ ] Target keywords: "loyalty API", "loyalty program API", "loyalty engine API", "headless loyalty platform"
+- [ ] Expand page with: API documentation overview, integration examples, code snippet previews, FAQ schema
+- [ ] Write a dedicated technical blog post: "How to integrate a loyalty engine API with your tech stack" → link back to this page
+- [ ] Internal links from all product pages and blog posts discussing headless/API architecture
+
+### Initiative 2b: /pricing Page — Non-Branded Organic Strategy (July — NEW)
+
+**Added after CSV analysis.** 18 MQLs come via /pricing but only 4 are organic, and all 4 searched branded "open loyalty" terms. The pricing page has zero organic reach for pricing-intent queries, despite being a natural deep-funnel destination.
+
+Target keywords to add to the pricing page:
+- "loyalty software pricing" (buyers comparing costs)
+- "loyalty platform cost" / "loyalty program software cost"
+- "loyalty program ROI" (link from /resources/loyalty-program-roi)
+- "open source loyalty platform" (if applicable to your model)
+- "loyalty platform pricing comparison"
+
+**Actions:**
+- [ ] Add a page section: "How loyalty platform pricing works" — explain tiers, per-API-call vs flat, enterprise vs SMB
+- [ ] Add FAQ schema: "How much does loyalty software cost?", "What affects loyalty platform pricing?", "Is there a free trial?"
+- [ ] Add a comparison table: Open Loyalty vs Antavo vs LoyaltyLion pricing models
+- [ ] Target meta title: "Loyalty Platform Pricing | Open Loyalty" (currently likely not optimised for pricing keywords)
+- [ ] Build internal links from blog posts and product pages to /pricing with anchors like "loyalty platform pricing" or "see pricing"
 
 ---
 
