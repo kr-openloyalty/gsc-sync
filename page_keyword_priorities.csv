@@ -1,0 +1,94 @@
+# SECTION 1: PAGE PRIORITIZATION (sorted by priority then lifecycle score)
+# lifecycle_score = MQL×1 + SQL×3 + Opportunity×5 + Customer×10
+# Traffic comparison: November 2025 vs May 2026
+
+priority,page_path,lifecycle_score,total_contacts,MQL,SQL,Opportunity,Customer,nov_clicks,may_clicks,delta_clicks,delta_pct,nov_position,may_position,focus_keyword_1,focus_keyword_2,focus_keyword_3
+P0 — CRITICAL (high value + major traffic loss),/,1464,670,466,31,165,8,1310,731,-579,-44%,10.6,11.1,loyalty program,loyalty,customer loyalty software
+P0 — CRITICAL (high value + major traffic loss),/pricing,152,96,81,2,13,0,58,27,-31,-53%,3.6,5.0,digital loyalty platform cost per user,customer loyalty card software,loyalty cost
+P0 — CRITICAL (high value + major traffic loss),/applications/white-label-loyalty,72,42,34,1,7,0,64,34,-30,-47%,8.0,16.6,best white label loyalty app,white label loyalty,white label loyalty program
+P0 — CRITICAL (high value + major traffic loss),/book-a-demo,69,51,45,3,3,0,2,0,-2,-100%,6.5,0,best customer loyalty software,customer rewards platform,#loyalty
+P0 — CRITICAL (high value + major traffic loss),/insider/best-loyalty-software-comparison-guide,68,32,21,4,7,0,137,70,-67,-49%,9.7,10.0,"""customer loyalty email program management service""",(automated loyalty compliance auditing) and (it consulting and other services) after:2022-12-01 before:2025-11-30,best ai-powered customer loyalty platforms 2025 2026
+P0 — CRITICAL (high value + major traffic loss),/technology/loyalty-program-api,63,37,30,1,6,0,121,41,-80,-66%,5.0,6.1,customer loyalty program software,loyalty api,affordable rewards program software with api integration
+"P1 — HIGH (high value, protect traffic)",/book-a-demo-contact,120,32,10,0,22,0,0,0,0,new,0,0,,,
+"P1 — HIGH (high value, protect traffic)",/es,50,22,15,0,7,0,39,37,-2,-5%,10.4,11.9,loyalty,plataforma de loyalty,plataforma erp fácil fidelizar clientes
+P1 — HIGH (good value + significant loss),/product/loyalty-points-system,30,18,15,0,3,0,140,43,-97,-69%,7.1,21.7,loyalty points,loyalty,can i combine points from multiple reward programs for my order?
+P1 — HIGH (good value + significant loss),/resources/10-best-gamification-loyalty-programs,25,9,5,0,4,0,138,64,-74,-54%,4.8,5.7,gamification in loyalty programs,gamification rewards program,game based rewards
+P1 — HIGH (good value + significant loss),/product/coupon-software,23,13,10,1,2,0,69,9,-60,-87%,8.5,20.7,coupon maker software,coupon code generator software,best software for voucher delivery
+P1 — HIGH (good value + significant loss),/resources/10-best-mobile-loyalty-program-apps,21,13,11,0,2,0,220,66,-154,-70%,8.3,13.4,loyalty program app,all-in-one loyalty referral review apps,app based loyalty programs
+"P2 — GROWING (new traffic, capitalise)",/insider/coupon-management-software,17,5,2,0,3,0,0,41,41,new,0,7.0,are there popular tools that automatically apply coupons?,automatic coupon distribution methods,b2c crm with built-in coupon discount code support
+P2 — GROWING (traffic gaining),/product/loyalty-card-system,13,5,3,0,2,0,42,57,15,+36%,12.8,14.0,#loyaltycard,loyalty cards software,loyalty card system
+P2 — GROWING (traffic gaining),/insider/healthcare-loyalty-programs,12,4,2,0,2,0,15,24,9,+60%,6.7,8.6,identify brands in ehr systems that have a strong track record of customer loyalty and high retention rates.,affordable patient loyalty programs,healthcare loyalty programs
+P2 — GROWING (traffic gaining),/insider/10-best-gamification-loyalty-programs-full-report,11,3,1,0,2,0,5,10,5,+100%,6.4,6.5,gamification rewards program,"campaign gamification,10",
+"P2 — MEDIUM (moderate value, high loss)",/product/loyalty-program-crm-software,10,6,5,0,1,0,24,7,-17,-71%,6.7,38.0,crm and customer loyalty,crm & loyalty services,channel loyalty software
+"P2 — MEDIUM (moderate value, high loss)",/insider/best-referral-software,10,6,5,0,1,0,69,16,-53,-77%,12.8,13.2,best referral programs,affiliate referral program software,affiliate referral software
+P3 — MONITOR,/resources/loyalty-program-trends,33,8,3,0,4,1,144,97,-47,-33%,8.8,8.9,customer loyalty program trends 2026,key features to look for in retail loyalty program app 2025 or 2026,loyalty programs
+P3 — MONITOR,/applications/saas-enrichment,32,12,6,2,4,0,42,35,-7,-17%,16.1,48.0,loyalty program saas,loyalty platform,customer loyalty saas
+P3 — MONITOR,/insider/restaurant-loyalty-programs-10-successful-examples,22,14,12,0,2,0,390,203,-187,-48%,7.0,6.0,are loyalty rewards automatically applied to repeat pizza orders?,are there restaurant delivery platforms with loyalty rewards?,loyalty program software for restaurants
+P3 — MONITOR,/product/vouchers,19,11,9,0,2,0,58,32,-26,-45%,7.7,13.9,free voucher system,voucher system,voucher management system
+P3 — MONITOR,/product/reward-management-system,17,9,7,0,2,0,19,13,-6,-32%,7.5,16.9,digital reward catalog for loyalty programs,customer loyalty platform,loyalty rewards management system
+P3 — MONITOR,/product/code-scanning,15,7,5,0,2,0,11,9,-2,-18%,9.9,11.5,loyalty program qr codes,barcode scanning for loyalty programs,loyalty program receipt scanning
+P3 — MONITOR,/insider/bank-loyalty-programs-10-successful-examples-2022,12,4,2,0,2,0,212,104,-108,-51%,7.7,7.3,banks with reward points,banking rewards program,banking loyalty programs
+P3 — MONITOR,/insider/ecommerce-loyalty-programs,12,4,2,0,2,0,77,38,-39,-51%,7.0,8.9,best ecommerce loyalty programs,"""e-shop.gr"" ""loyalty""",apparel loyalty and reward solution
+P3 — MONITOR,/insider/best-gamification-software,10,4,2,1,1,0,22,14,-8,-36%,11.4,10.9,based on reviews centrical vs. drimify,are there services that allow brands to create and manage gamified customer engagement campaigns?,
+P3 — MONITOR,/product/referral-program-software,10,4,2,1,1,0,12,7,-5,-42%,33.7,18.8,referral programme,referral and loyalty programs,
+P3 — MONITOR,/clients,10,2,0,0,2,0,4,5,1,+25%,9.8,8.3,loyalty program case studies,,
+P3 — MONITOR,/insider/gamification-case-studies,10,1,0,0,0,1,26,12,-14,-54%,6.1,8.9,,,
+P3 — MONITOR,/insider/coffee-loyalty-programs-successful-examples,8,4,3,0,1,0,148,86,-62,-42%,5.5,6.2,best coffee shop loyalty programs,apps for coffee shop owners,coffee card
+P3 — MONITOR,/de,8,4,3,0,1,0,23,8,-15,-65%,20.5,18.5,,,
+P3 — MONITOR,/industries/ecommerce,8,2,0,1,1,0,0,0,0,new,0,0,api-basierte loyality plattform für retail-pos- und e-commerce-systeme,boost loyalty io,
+P3 — MONITOR,/product/cashback,7,7,7,0,0,0,20,11,-9,-45%,15.5,19.4,loyalty cashback,cashback software,cashback processing automation
+P3 — MONITOR,/product/loyalty-campaign-software,7,3,2,0,1,0,5,1,-4,-80%,4.6,10.7,loyalty program software,customer loyalty software in us,
+P3 — MONITOR,/insider/top-10-loyalty-programs-for-sports-clubs,7,3,2,0,1,0,81,33,-48,-59%,6.5,6.6,top rated fan loyalty programs for football clubs,best fan loyalty tool,sports loyalty programs
+P3 — MONITOR,/insider/10-best-mobile-loyalty-program-apps-full-report,7,3,2,0,1,0,42,7,-35,-83%,7.7,10.5,"""comparable business models"" ""starbucks mobile app & loyalty"" ""disney magicband""",android loyalty card app,aplikasi loyalty program
+P3 — MONITOR,/resources/the-top-40-best-rewards-programs-for-customers-report,7,3,2,0,1,0,62,30,-32,-52%,12.7,15.6,10% cash back purchase rewards programs similar to trick or treat,best bulk digital reward platforms for customer survey incentives 2025,best rewards
+P3 — MONITOR,/insider/sephora-beauty-insider,7,3,2,0,1,0,331,98,-233,-70%,4.7,7.9,beauty insider,beauty account,
+P3 — MONITOR,/role/developers,7,3,2,0,1,0,3,2,-1,-33%,28.6,8.7,,,
+P3 — MONITOR,/insider/best-retail-loyalty-programs,6,6,6,0,0,0,109,25,-84,-77%,8.5,11.7,10-benefits-outsourcing-customer-loyalty-retail-programs,company rewards program,retail loyalty programs
+P3 — MONITOR,/insider/headless-loyalty-software,6,2,1,0,1,0,4,4,0,+0%,19.2,7.2,headless loyalty software,api driven loyalty platform,
+P3 — MONITOR,/insider/gamification-healthcare,6,2,1,0,1,0,22,10,-12,-54%,11.2,12.9,digital health gamification,gamification news 2025,
+P3 — MONITOR,/resources/loyalty-program-roi,6,2,1,0,1,0,24,3,-21,-88%,9.0,14.2,how to calculate roi for loyalty programs,card offer roi analysis,
+P3 — MONITOR,/insider/loyalty-program-metrics-measuring-the-health-of-your-loyalty-program,6,2,1,0,1,0,66,38,-28,-42%,6.2,7.0,"""assess whether an account is engaged"" loyalty program",loyalty program metrics,
+P3 — MONITOR,/product/leaderboard-software,6,2,1,0,1,0,6,6,0,+0%,9.8,12.4,cost of implementing live leaderboard software,leaderboard software,
+P3 — MONITOR,/technology/cloud-loyalty,6,2,1,0,1,0,4,4,0,+0%,6.5,9.3,cloud based loyalty,cloud loyalty software,
+P3 — MONITOR,/book-a-demo-with-us,6,2,1,0,1,0,0,0,0,new,0,0,,,
+P3 — MONITOR,/product/customer-gamification-software,5,5,5,0,0,0,2,1,-1,-50%,5.2,20.0,gamification platform,,
+P3 — MONITOR,/resources/loyalty-program-implementation-a-step-by-step-guide,5,3,2,1,0,0,135,26,-109,-81%,10.6,16.8,apparel loyalty and reward solution,loylaty program,
+P3 — MONITOR,/clients/u-s-soccer,5,1,0,0,1,0,5,1,-4,-80%,16.4,12.5,,,
+P3 — MONITOR,/insider/how-duolingos-gamification-mechanics-drive-customer-loyalty,5,1,0,0,1,0,37,29,-8,-22%,8.2,7.8,duolingo engagement,,
+P3 — MONITOR,/webinars/webinar-product-managers-guide-to-loyalty-program-implementation,5,1,0,0,1,0,0,0,0,new,0,0,,,
+P3 — MONITOR,/role/loyalty-marketer,5,1,0,0,1,0,0,0,0,new,0,0,limango marketing,,
+P3 — MONITOR,/insider/gift-cards,5,1,0,0,1,0,4,1,-3,-75%,7.7,11.5,gift card reward programs,,
+P3 — MONITOR,/insider/how-to-solve-the-build-vs-buy-dilemma-when-building-a-loyalty-solution,5,1,0,0,1,0,0,0,0,new,0,0,,,
+P3 — MONITOR,/clients/club-brugge,5,1,0,0,1,0,0,9,9,new,0,9.7,,,
+P3 — MONITOR,/product/customer-retention-software,5,1,0,0,1,0,0,1,1,new,0,28.0,,,
+P3 — MONITOR,/applications,5,1,0,0,1,0,2,2,0,+0%,25.6,7.9,,,
+P3 — MONITOR,/ai-labs,5,1,0,0,1,0,0,0,0,new,0,0,,,
+P3 — MONITOR,/insider/effective-tiered-loyalty-programs,5,1,0,0,1,0,81,39,-42,-52%,7.6,8.7,benefits of tiered loyalty program,,
+P3 — MONITOR,/insider/business-gamification,5,1,0,0,1,0,0,11,11,new,0,7.8,best platforms for support team gamification,,
+P3 — MONITOR,/insider/loyalty-program-liability-with-len-llaguno,5,1,0,0,1,0,6,1,-5,-83%,6.9,6.8,acturial loyalty programs,,
+
+
+# SECTION 2: TOP 20 BUSINESS-OUTCOME KEYWORDS (excluding brand terms)
+# Sorted by lifecycle score. Assigned pages = pages where keyword drove highest-value contacts.
+
+keyword,lifecycle_score,total_contacts,MQL,SQL,Opportunity,Customer,nov_clicks,may_clicks,delta_pct,nov_position,may_position,best_page_1,best_page_2
+loyalty,54,26,19,0,7,0,8,7,-12%,17.6,13.8,/,/es
+loyalty program,44,24,17,4,3,0,21,19,-10%,15.0,16.2,/,/technology/loyalty-program-api
+customer loyalty software,33,10,5,1,3,1,9,0,-100%,4.0,0,/,/insider/best-loyalty-software-comparison-guide
+best white label loyalty app,20,10,7,1,2,0,0,0,no GSC clicks,0,0,/applications/white-label-loyalty,
+best customer loyalty software,19,7,3,2,2,0,0,0,no GSC clicks,0,0,/book-a-demo,/
+customer loyalty program software,18,12,10,1,1,0,2,1,-50%,5.1,9.0,/,/technology/loyalty-program-api
+loyalty program software,18,10,7,2,1,0,23,11,-52%,5.1,8.4,/,/product/loyalty-campaign-software
+customer loyalty platform,16,8,6,0,2,0,1,0,-100%,6.3,0,/,/product/reward-management-system
+loyalty platforms,16,8,6,0,2,0,4,3,-25%,6.4,4.9,/,/insider/best-loyalty-software-comparison-guide
+loyalty system,16,8,6,0,2,0,22,6,-73%,6.5,11.6,/,
+customer rewards platform,14,6,4,0,2,0,0,0,no GSC clicks,0,0,/book-a-demo,/
+white label loyalty,13,9,8,0,1,0,3,1,-67%,6.4,5.1,/applications/white-label-loyalty,
+api driven loyalty platform,11,7,6,0,1,0,0,0,no GSC clicks,0,0,/,/technology/loyalty-program-api
+customer loyalty card software,11,7,6,0,1,0,0,0,no GSC clicks,0,0,/pricing,/
+digital loyalty platform cost per user,11,3,1,0,2,0,0,0,no GSC clicks,0,0,/pricing,
+customer loyalty programs software,10,4,2,1,1,0,0,0,no GSC clicks,0,0,/,
+white label loyalty program,10,2,0,0,2,0,6,0,-100%,2.3,0,/applications/white-label-loyalty,
+gamification rewards program,10,2,0,0,2,0,0,0,no GSC clicks,0,0,/insider/10-best-gamification-loyalty-programs-full-report,/resources/10-best-gamification-loyalty-programs
+customer loyalty rewards management solutions,10,1,0,0,0,1,0,0,no GSC clicks,0,0,/,
+loyalty program platforms,10,2,0,0,2,0,0,2,new,0,8.9,/insider/best-loyalty-software-comparison-guide,/
