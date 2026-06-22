@@ -128,11 +128,11 @@ KEYWORDS = [
     {
         "id": 1,
         "keyword": "customer loyalty software",
-        "focus_page": "/insider/best-loyalty-software-comparison-guide",
+        "focus_page": "/ (homepage)",
         "our_position_may": "dropped off",
-        "our_page_rd": 2,
-        "our_url_in_serp": "openloyalty.io/",          # homepage ranks, not focus page
-        "our_pos_in_serp": "not ranking (homepage at pos 2)",
+        "our_page_rd": 728,
+        "our_url_in_serp": "openloyalty.io/",
+        "our_pos_in_serp": 2,
     },
     {
         "id": 2,
@@ -164,11 +164,11 @@ KEYWORDS = [
     {
         "id": 5,
         "keyword": "customer loyalty program software",
-        "focus_page": "/technology/loyalty-program-api",
+        "focus_page": "/ (homepage)",
         "our_position_may": "~9",
-        "our_page_rd": 0,
-        "our_url_in_serp": "openloyalty.io/",   # homepage ranking, not focus page
-        "our_pos_in_serp": "not ranking (homepage at pos 4)",
+        "our_page_rd": 728,
+        "our_url_in_serp": "openloyalty.io/",
+        "our_pos_in_serp": 4,
     },
     {
         "id": 6,
