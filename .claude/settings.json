@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__doc",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__serp-overview",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__gsc-keywords",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__gsc-pages",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__gsc-performance-history",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__management-projects",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-metrics",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-organic-keywords",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-organic-competitors",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-top-pages",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-keywords-history",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-domain-rating-history",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-backlinks-stats",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-referring-domains",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-all-backlinks",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-explorer-pages-by-backlinks",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__keywords-explorer-overview",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-audit-projects",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-audit-issues",
+      "mcp__b3d16398-01c1-49a8-a477-d7f519de6a0c__site-audit-page-explorer",
+      "mcp__3b1f834f-2909-4ed4-b464-171b515d023b__search_crm_objects",
+      "mcp__3b1f834f-2909-4ed4-b464-171b515d023b__get_crm_objects",
+      "mcp__3b1f834f-2909-4ed4-b464-171b515d023b__get_properties",
+      "mcp__3b1f834f-2909-4ed4-b464-171b515d023b__search_properties",
+      "mcp__3b1f834f-2909-4ed4-b464-171b515d023b__get_user_details"
+    ]
+  }
+}
