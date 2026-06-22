@@ -22,6 +22,54 @@ GREEN      = RGBColor(0x05, 0x96, 0x69)
 WHITE      = RGBColor(0xFF, 0xFF, 0xFF)
 FONT_NAME  = "Calibri"
 
+# ── DR50+ referring domains (from Ahrefs site-explorer-referring-domains) ────
+# Collected June 2026. Keys = URL fragment (no trailing slash).
+OUR_PAGE_RD_DR50 = {
+    "openloyalty.io/":                                         100,
+    "openloyalty.io/applications/white-label-loyalty":           0,
+    "openloyalty.io/insider/best-loyalty-software-comparison-guide": 0,
+    "openloyalty.io/product/reward-management-system":           0,
+    "openloyalty.io/technology/loyalty-program-api":             0,
+    "openloyalty.io/resources/10-best-gamification-loyalty-programs": 0,
+    "openloyalty.io/product/loyalty-points-system":              0,
+}
+
+COMP_RD_DR50 = {
+    "smile.io/":                                                100,
+    "loopyloyalty.com/":                                        100,
+    "yotpo.com/platform/loyalty/":                               1,
+    "en.wikipedia.org/wiki/Loyalty_program":                    100,
+    "whitelabel-loyalty.com/":                                  100,
+    "squareup.com/us/en/software/loyalty":                      100,
+    "epsilon.com/us/products-and-services/epsilon-peoplecloud/loyalty": 100,
+    "aa.com/web/i18n/aadvantage-program/discover/loyalty-points-status.html": 2,
+    "aa.com/i18n/aadvantage-program/aadvantage-status/loyalty-point-rewards": 0,
+    "loyaltylion.com/blog/calculating-loyalty-point-value":      0,
+    "mastercard.com/us/en/news-and-trends/Insights/2023/impact-gamification-loyalty-strategies.html": 0,
+    "antavo.com/blog/gamification-in-loyalty-programs/":         0,
+    "gartner.com/reviews/market/loyalty-program-vendors":        0,
+    "g2.com/categories/loyalty-management":                      0,
+    "zendesk.com/service/customer-experience/customer-loyalty-software/": 0,
+    "brierley.com/blog/the-best-loyalty-software-vendors-for-2025": 0,
+    "yotpo.com/blog/loyalty-platform-providers/":                0,
+    "enable3.io/white-label-loyalty":                            0,
+    "optimove.com/resources/blog/gamification-in-loyalty-programs": 0,
+    "developer.squareup.com/docs/loyalty-api/overview":          5,
+    "developer.squareup.com/reference/square/loyalty-api":      11,
+    "voucherify.io/loyalty-software":                            0,
+    "squarespace.com/blog/customer-loyalty-programs":            0,
+}
+
+
+def _lookup_comp_dr50(url):
+    """Return DR50+ RD count for a competitor URL, matching on partial path."""
+    url_clean = url.split("?")[0].rstrip("/")
+    for key, val in COMP_RD_DR50.items():
+        if key.rstrip("/") in url_clean or url_clean in key.rstrip("/"):
+            return val
+    return 0
+
+
 # ── GSC positions (May 2026, US, avg position) ───────────────────────────────
 GSC_POSITIONS = {
     "customer loyalty software":          6.8,
@@ -305,6 +353,45 @@ def median(values):
     return statistics.median(v)
 
 
+def compute_gap_dr50(kw_meta, serp_rows):
+    """Same logic as compute_gap but using DR50+ referring-domain counts."""
+    our_url_key = (kw_meta.get("our_url_in_serp") or "").rstrip("/")
+    # map our focus page URL to DR50+ count — use exact match, then prefix match
+    our_rd50 = 0
+    if our_url_key:
+        # Try exact match first
+        for key, val in OUR_PAGE_RD_DR50.items():
+            if our_url_key == key.rstrip("/"):
+                our_rd50 = val
+                break
+        else:
+            # Fall back to substring (longer key wins to avoid homepage matching everything)
+            best_key, best_val = "", 0
+            for key, val in OUR_PAGE_RD_DR50.items():
+                if key.rstrip("/") in our_url_key and len(key) > len(best_key):
+                    best_key, best_val = key, val
+            if best_key:
+                our_rd50 = best_val
+
+    seen = set()
+    top5_rds = []
+    for pos, url, dr, ur, rd, traffic in sorted(serp_rows, key=lambda r: r[0]):
+        url_clean = url.split("?")[0].rstrip("/")
+        if url_clean in seen:
+            continue
+        seen.add(url_clean)
+        if our_url_key and our_url_key in url_clean:
+            continue
+        if len(top5_rds) < 5:
+            top5_rds.append(_lookup_comp_dr50(url_clean))
+
+    med = median(top5_rds)
+    if med is None:
+        return None, None
+    gap = max(0, round(med) - our_rd50)
+    return our_rd50, round(med), gap
+
+
 def compute_gap(kw_meta, serp_rows):
     our_rd = kw_meta["our_page_rd"]
     our_url_fragment = kw_meta.get("our_url_in_serp", "")
@@ -337,6 +424,7 @@ def build_rows():
     for kw in KEYWORDS:
         serp_rows = SERP[kw["keyword"]]
         med, gap, target = compute_gap(kw, serp_rows)
+        our_rd50, med50, gap50 = compute_gap_dr50(kw, serp_rows)
         rows.append({
             "id":          kw["id"],
             "keyword":     kw["keyword"],
@@ -348,6 +436,9 @@ def build_rows():
             "gap":         gap,
             "target_rd":   target,
             "new_bl":      gap if gap and gap > 0 else 0,
+            "our_rd50":    our_rd50,
+            "median_rd50": med50,
+            "gap50":       gap50,
             "note":        SERP_NOTES[kw["keyword"]],
         })
     return rows
@@ -360,7 +451,10 @@ def write_csv(rows, path):
         "id", "keyword", "focus_page",
         "our_position_ahrefs", "our_position_gsc_may2026",
         "our_page_refdomains", "median_competitor_refdomains_top5",
-        "gap", "recommended_target_refdomains", "new_backlinks_to_acquire",
+        "gap",
+        "our_page_refdomains_dr50plus", "median_competitor_refdomains_dr50plus",
+        "gap_dr50plus",
+        "recommended_target_refdomains", "new_backlinks_to_acquire",
         "serp_character_notes",
     ]
     with open(path, "w", newline="", encoding="utf-8") as f:
@@ -368,17 +462,20 @@ def write_csv(rows, path):
         writer.writeheader()
         for r in rows:
             writer.writerow({
-                "id":                                   r["id"],
-                "keyword":                              r["keyword"],
-                "focus_page":                           r["focus_page"],
-                "our_position_ahrefs":                  r["our_pos"],
-                "our_position_gsc_may2026":             r["our_pos_gsc"] if r["our_pos_gsc"] else "—",
-                "our_page_refdomains":                  r["our_rd"],
-                "median_competitor_refdomains_top5":    r["median_rd"],
-                "gap":                                  r["gap"],
-                "recommended_target_refdomains":        r["target_rd"],
-                "new_backlinks_to_acquire":             r["new_bl"],
-                "serp_character_notes":                 r["note"],
+                "id":                                      r["id"],
+                "keyword":                                 r["keyword"],
+                "focus_page":                              r["focus_page"],
+                "our_position_ahrefs":                     r["our_pos"],
+                "our_position_gsc_may2026":                r["our_pos_gsc"] if r["our_pos_gsc"] else "—",
+                "our_page_refdomains":                     r["our_rd"],
+                "median_competitor_refdomains_top5":       r["median_rd"],
+                "gap":                                     r["gap"],
+                "our_page_refdomains_dr50plus":            r["our_rd50"],
+                "median_competitor_refdomains_dr50plus":   r["median_rd50"],
+                "gap_dr50plus":                            r["gap50"],
+                "recommended_target_refdomains":           r["target_rd"],
+                "new_backlinks_to_acquire":                r["new_bl"],
+                "serp_character_notes":                    r["note"],
             })
     print(f"CSV written → {path}")
 
@@ -524,9 +621,11 @@ def write_docx(rows, path):
 
     col_headers = [
         "#", "Keyword", "Focus Page", "Pos\n(Ahrefs)", "Pos\n(GSC May)",
-        "Our Page RDs", "Median Comp. RDs\n(top 5)", "Gap", "Target RDs", "New BLs\nNeeded",
+        "Our\nRDs", "Median\nRDs\n(top5)", "Gap",
+        "Our\nRDs\nDR50+", "Median\nRDs\nDR50+", "Gap\nDR50+",
+        "Target\nRDs", "New BLs\nNeeded",
     ]
-    col_widths = [Cm(0.6), Cm(3.6), Cm(3.4), Cm(1.5), Cm(1.5), Cm(1.4), Cm(1.8), Cm(1.1), Cm(1.4), Cm(1.4)]
+    col_widths = [Cm(0.5), Cm(3.0), Cm(2.8), Cm(1.3), Cm(1.3), Cm(1.2), Cm(1.5), Cm(1.0), Cm(1.2), Cm(1.5), Cm(1.0), Cm(1.2), Cm(1.2)]
 
     tbl = doc.add_table(rows=1, cols=len(col_headers))
     tbl.alignment = WD_TABLE_ALIGNMENT.LEFT
@@ -558,15 +657,21 @@ def write_docx(rows, path):
             str(row["our_pos"]),
             f"{gsc_pos:.1f}" if gsc_pos else "—",
             str(row["our_rd"]),
-            str(row["median_rd"]) if row["median_rd"] is not None else "n/a",
-            str(row["gap"])       if row["gap"] is not None else "n/a",
-            str(row["target_rd"]) if row["target_rd"] is not None else "n/a",
-            str(row["new_bl"])    if row["gap"] is not None else "n/a",
+            str(row["median_rd"])   if row["median_rd"]   is not None else "n/a",
+            str(row["gap"])         if row["gap"]         is not None else "n/a",
+            str(row["our_rd50"])    if row["our_rd50"]    is not None else "n/a",
+            str(row["median_rd50"]) if row["median_rd50"] is not None else "n/a",
+            str(row["gap50"])       if row["gap50"]       is not None else "n/a",
+            str(row["target_rd"])   if row["target_rd"]   is not None else "n/a",
+            str(row["new_bl"])      if row["gap"]         is not None else "n/a",
         ]
         aligns = [
             WD_ALIGN_PARAGRAPH.CENTER,
             WD_ALIGN_PARAGRAPH.LEFT,
             WD_ALIGN_PARAGRAPH.LEFT,
+            WD_ALIGN_PARAGRAPH.CENTER,
+            WD_ALIGN_PARAGRAPH.CENTER,
+            WD_ALIGN_PARAGRAPH.CENTER,
             WD_ALIGN_PARAGRAPH.CENTER,
             WD_ALIGN_PARAGRAPH.CENTER,
             WD_ALIGN_PARAGRAPH.CENTER,
@@ -584,13 +689,15 @@ def write_docx(rows, path):
             p.paragraph_format.space_before = Pt(2)
             p.paragraph_format.space_after  = Pt(2)
             color = DARK_GRAY
-            if i == 7:  # Gap column (shifted by 1)
+            if i == 7:   # Gap (all RDs)
                 color = gap_color(row["gap"])
+            elif i == 10:  # Gap DR50+
+                color = gap_color(row["gap50"])
             r = p.add_run(val)
             r.font.name  = FONT_NAME
             r.font.size  = Pt(8)
             r.font.color.rgb = color
-            if i == 7 and row["gap"] and row["gap"] > 0:
+            if i in (7, 10) and val not in ("0", "n/a"):
                 r.bold = True
 
     doc.add_paragraph()
