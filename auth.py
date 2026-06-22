@@ -69,7 +69,6 @@ def main():
     with open(STATE_FILE) as f:
         saved = json.load(f)
 
-    import os
     os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
 
     flow = Flow.from_client_secrets_file(

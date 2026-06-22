@@ -22,6 +22,20 @@ GREEN      = RGBColor(0x05, 0x96, 0x69)
 WHITE      = RGBColor(0xFF, 0xFF, 0xFF)
 FONT_NAME  = "Calibri"
 
+# ── GSC positions (May 2026, US, avg position) ───────────────────────────────
+GSC_POSITIONS = {
+    "customer loyalty software":          6.8,
+    "best white label loyalty app":       5.9,
+    "best customer loyalty software":     5.5,
+    "loyalty program software":          12.0,
+    "customer loyalty program software": 13.7,
+    "customer loyalty platform":         12.1,
+    "loyalty system":                    14.4,
+    "loyalty program api":               17.1,
+    "gamification in loyalty programs":  14.4,
+    "loyalty points":                    13.6,
+}
+
 # ── Raw SERP data from Ahrefs (June 2026, US) ────────────────────────────────
 # Each entry: (position, url, domain_rating, url_rating, refdomains, traffic)
 # None = data not available from API (AI overview / PAA slots)
@@ -324,16 +338,17 @@ def build_rows():
         serp_rows = SERP[kw["keyword"]]
         med, gap, target = compute_gap(kw, serp_rows)
         rows.append({
-            "id":         kw["id"],
-            "keyword":    kw["keyword"],
-            "focus_page": kw["focus_page"],
-            "our_pos":    kw["our_pos_in_serp"],
-            "our_rd":     kw["our_page_rd"],
-            "median_rd":  med,
-            "gap":        gap,
-            "target_rd":  target,
-            "new_bl":     gap if gap and gap > 0 else 0,
-            "note":       SERP_NOTES[kw["keyword"]],
+            "id":          kw["id"],
+            "keyword":     kw["keyword"],
+            "focus_page":  kw["focus_page"],
+            "our_pos":     kw["our_pos_in_serp"],
+            "our_pos_gsc": GSC_POSITIONS.get(kw["keyword"]),
+            "our_rd":      kw["our_page_rd"],
+            "median_rd":   med,
+            "gap":         gap,
+            "target_rd":   target,
+            "new_bl":      gap if gap and gap > 0 else 0,
+            "note":        SERP_NOTES[kw["keyword"]],
         })
     return rows
 
@@ -342,7 +357,8 @@ def build_rows():
 
 def write_csv(rows, path):
     fieldnames = [
-        "id", "keyword", "focus_page", "our_current_position",
+        "id", "keyword", "focus_page",
+        "our_position_ahrefs", "our_position_gsc_may2026",
         "our_page_refdomains", "median_competitor_refdomains_top5",
         "gap", "recommended_target_refdomains", "new_backlinks_to_acquire",
         "serp_character_notes",
@@ -355,7 +371,8 @@ def write_csv(rows, path):
                 "id":                                   r["id"],
                 "keyword":                              r["keyword"],
                 "focus_page":                           r["focus_page"],
-                "our_current_position":                 r["our_pos"],
+                "our_position_ahrefs":                  r["our_pos"],
+                "our_position_gsc_may2026":             r["our_pos_gsc"] if r["our_pos_gsc"] else "—",
                 "our_page_refdomains":                  r["our_rd"],
                 "median_competitor_refdomains_top5":    r["median_rd"],
                 "gap":                                  r["gap"],
@@ -506,10 +523,10 @@ def write_docx(rows, path):
     add_heading(doc, "Summary: Backlink Gap by Keyword", level=1)
 
     col_headers = [
-        "#", "Keyword", "Focus Page", "Our Position",
+        "#", "Keyword", "Focus Page", "Pos\n(Ahrefs)", "Pos\n(GSC May)",
         "Our Page RDs", "Median Comp. RDs\n(top 5)", "Gap", "Target RDs", "New BLs\nNeeded",
     ]
-    col_widths = [Cm(0.6), Cm(4.2), Cm(3.8), Cm(2.2), Cm(1.5), Cm(1.9), Cm(1.2), Cm(1.5), Cm(1.5)]
+    col_widths = [Cm(0.6), Cm(3.6), Cm(3.4), Cm(1.5), Cm(1.5), Cm(1.4), Cm(1.8), Cm(1.1), Cm(1.4), Cm(1.4)]
 
     tbl = doc.add_table(rows=1, cols=len(col_headers))
     tbl.alignment = WD_TABLE_ALIGNMENT.LEFT
@@ -533,11 +550,13 @@ def write_docx(rows, path):
         tr = tbl.add_row()
         bg = LIGHT_BG if idx % 2 == 0 else WHITE
 
+        gsc_pos = row["our_pos_gsc"]
         vals = [
             str(row["id"]),
             row["keyword"],
             row["focus_page"],
             str(row["our_pos"]),
+            f"{gsc_pos:.1f}" if gsc_pos else "—",
             str(row["our_rd"]),
             str(row["median_rd"]) if row["median_rd"] is not None else "n/a",
             str(row["gap"])       if row["gap"] is not None else "n/a",
@@ -554,6 +573,7 @@ def write_docx(rows, path):
             WD_ALIGN_PARAGRAPH.CENTER,
             WD_ALIGN_PARAGRAPH.CENTER,
             WD_ALIGN_PARAGRAPH.CENTER,
+            WD_ALIGN_PARAGRAPH.CENTER,
         ]
         for i, (val, align, w) in enumerate(zip(vals, aligns, col_widths)):
             cell = tr.cells[i]
@@ -564,13 +584,13 @@ def write_docx(rows, path):
             p.paragraph_format.space_before = Pt(2)
             p.paragraph_format.space_after  = Pt(2)
             color = DARK_GRAY
-            if i == 6:  # Gap column
+            if i == 7:  # Gap column (shifted by 1)
                 color = gap_color(row["gap"])
             r = p.add_run(val)
             r.font.name  = FONT_NAME
             r.font.size  = Pt(8)
             r.font.color.rgb = color
-            if i == 6 and row["gap"] and row["gap"] > 0:
+            if i == 7 and row["gap"] and row["gap"] > 0:
                 r.bold = True
 
     doc.add_paragraph()
@@ -581,10 +601,11 @@ def write_docx(rows, path):
     for row in rows:
         add_heading(doc, f"#{row['id']} — {row['keyword'].title()}", level=2)
 
+        gsc_pos_str = f"{row['our_pos_gsc']:.1f}" if row["our_pos_gsc"] else "—"
         add_kpi_row(doc, [
             ("Focus Page", row["focus_page"]),
-            ("Our Position", str(row["our_pos"])),
-            ("Our Page RDs", str(row["our_rd"])),
+            ("Pos (Ahrefs)", str(row["our_pos"])),
+            ("Pos (GSC May '26)", gsc_pos_str),
             ("Gap", f"+{row['gap']} RDs" if row["gap"] else "No gap"),
         ])
 
