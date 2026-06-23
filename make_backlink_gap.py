@@ -58,6 +58,8 @@ COMP_RD_DR50 = {
     "developer.squareup.com/reference/square/loyalty-api":      11,
     "voucherify.io/loyalty-software":                            0,
     "squarespace.com/blog/customer-loyalty-programs":            0,
+    "talon.one/blog/top-10-enterprise-loyalty-program-software-for-2026": 0,
+    "brierley.com/blog/the-best-loyalty-software-vendors-for-2025": 0,
 }
 
 
@@ -72,6 +74,7 @@ def _lookup_comp_dr50(url):
 
 # ── GSC positions (May 2026, US, avg position) ───────────────────────────────
 GSC_POSITIONS = {
+    "loyalty software":                   4.0,   # Ahrefs SERP pos (GSC token expired — using Ahrefs)
     "customer loyalty software":          6.8,
     "best white label loyalty app":       5.9,
     "best customer loyalty software":     5.5,
@@ -89,6 +92,17 @@ GSC_POSITIONS = {
 # None = data not available from API (AI overview / PAA slots)
 
 SERP = {
+    "loyalty software": [
+        (2,  "gartner.com/reviews/market/loyalty-program-vendors",                92,  4,  14, 4741),
+        (4,  "openloyalty.io/",                                                   69, 11, 735, 2066),  # OUR PAGE
+        (5,  "loopyloyalty.com/",                                                  64, 11, 502, 6237),
+        (6,  "smile.io/",                                                          78, 17, 4822, 4050),
+        (7,  "yotpo.com/platform/loyalty/",                                        88, 13, 511, 2216),
+        (8,  "g2.com/categories/loyalty-management",                               91, 15,  53,  312),
+        (9,  "squareup.com/us/en/software/loyalty",                                93, 16, 180, 8036),
+        (10, "brierley.com/blog/the-best-loyalty-software-vendors-for-2025-…",     35,  4,  22, 1051),
+        (13, "talon.one/blog/top-10-enterprise-loyalty-program-software-for-2026", 70,  4,  11,  243),
+    ],
     "customer loyalty software": [
         (2,  "openloyalty.io/",                                                   69, 11, 728,  2066),
         (3,  "gartner.com/reviews/market/loyalty-program-vendors",                92,  4,  14,  4684),
@@ -188,6 +202,15 @@ SERP = {
 # ── Keyword metadata ──────────────────────────────────────────────────────────
 KEYWORDS = [
     {
+        "id": 0,
+        "keyword": "loyalty software",
+        "focus_page": "/ (homepage)",
+        "our_position_may": "pos 4",
+        "our_page_rd": 735,
+        "our_url_in_serp": "openloyalty.io/",
+        "our_pos_in_serp": 4,
+    },
+    {
         "id": 1,
         "keyword": "customer loyalty software",
         "focus_page": "/ (homepage)",
@@ -281,6 +304,14 @@ KEYWORDS = [
 
 # SERP character notes
 SERP_NOTES = {
+    "loyalty software": (
+        "Heavily AI Overview-dominated SERP — positions 1–3 are AI-generated features (null data). First real organic "
+        "result is Gartner (DR92, only 14 RDs) at pos 2, confirming DR trumps backlink volume here. "
+        "Open Loyalty ranks pos 4 with 735 RDs — already well above the top-5 median of 502 RDs, so no backlink gap exists. "
+        "Main competition comes from SMB tools (Loopy Loyalty, Smile.io) not enterprise peers: Antavo, Voucherify, "
+        "and LoyaltyLion do not appear in the top 20 at all. Path to pos 1–3 is content depth and AI Overview "
+        "inclusion, not backlinks."
+    ),
     "customer loyalty software": (
         "Mixed SERP: high-DR vendor homepages (Square DR93, Smile DR78) + review aggregators "
         "(Gartner DR92). Top result by refdomains is smile.io (4,817 RD) — an e-commerce loyalty "
