@@ -306,11 +306,16 @@ def build_report():
 
     # ── Top pages ──────────────────────────────────────────────────────────
     add_heading(doc, "3. Top Pages by Pipeline Stage", 1)
-    add_body(doc, "Pages ranked by combined MQL + Opportunity count. Slug = path after openloyalty.io.", color=MED_GRAY, size=9)
+    add_body(doc, "Organic Search + AI Referrals only. Slug = path after openloyalty.io.", color=MED_GRAY, size=9)
 
-    mql_pages  = Counter(r["_slug"] for r in by_lc("MQL"))
-    opp_pages  = Counter(r["_slug"] for r in by_lc("Opportunity"))
-    cust_pages = Counter(r["_slug"] for r in by_lc("Customer"))
+    INBOUND_SOURCES = {"ORGANIC_SEARCH", "AI_REFERRALS"}
+
+    def by_lc_inbound(lc):
+        return [r for r in rows if r["_lc"] == lc and r["source"] in INBOUND_SOURCES]
+
+    mql_pages  = Counter(r["_slug"] for r in by_lc_inbound("MQL"))
+    opp_pages  = Counter(r["_slug"] for r in by_lc_inbound("Opportunity"))
+    cust_pages = Counter(r["_slug"] for r in by_lc_inbound("Customer"))
     all_page_slugs = set(list(mql_pages.keys())[:20] + list(opp_pages.keys())[:20])
 
     page_combos = []
@@ -341,8 +346,8 @@ def build_report():
     # ── Top pages Q1 vs Q2 ─────────────────────────────────────────────────
     add_heading(doc, "Top Pages: Q1 vs Q2 Comparison", 2)
 
-    q1_pages = Counter(r["_slug"] for r in rows if r["_quarter"] == "Q1")
-    q2_pages = Counter(r["_slug"] for r in rows if r["_quarter"] == "Q2")
+    q1_pages = Counter(r["_slug"] for r in rows if r["_quarter"] == "Q1" and r["source"] in INBOUND_SOURCES)
+    q2_pages = Counter(r["_slug"] for r in rows if r["_quarter"] == "Q2" and r["source"] in INBOUND_SOURCES)
     top_slugs = [pg for _, _, _, _, pg in page_combos[:10]]
 
     qcomp_rows = []
