@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Generate updated scorecard CSV (W9–W24).
+Generate updated scorecard CSV (W9–W27).
 
-- W9–W22: uses cached data from the existing sheet
-- W23–W24: fresh GSC queries (W23 now complete; W24 is new)
-- Chatbeat: all 4 CSV files processed for all weeks
+- W9–W23: cached GSC data
+- W24–W27: fresh GSC queries
+- Chatbeat: Q1 + Q2 CSV files (coverage from W13 onwards)
 
 Output: semicolon-delimited CSV with comma decimal separators (European format).
 """
@@ -49,9 +49,11 @@ WEEKS = [
     ("W23", "2026-06-01", "2026-06-07"),
     ("W24", "2026-06-08", "2026-06-14"),
     ("W25", "2026-06-15", "2026-06-21"),
+    ("W26", "2026-06-22", "2026-06-28"),
+    ("W27", "2026-06-29", "2026-07-05"),
 ]
 N_WEEKS = len(WEEKS)
-CACHED_UP_TO = 15  # W9–W23 cached (indices 0–14); re-query W24(15) and W25(16)
+CACHED_UP_TO = 15  # W9–W23 cached (indices 0–14); re-query W24(15)..W27(18)
 
 # ---------------------------------------------------------------------------
 # Cached GSC data  W9–W23  (index 0–14, None = no data → will forward-fill)
@@ -196,9 +198,9 @@ def forward_fill(values):
             result.append(None)
     return result
 
-def build_gsc_row(cached_14, fresh_2):
-    """Combine 14 cached values + 2 fresh values, forward-fill."""
-    row = list(cached_14) + list(fresh_2)
+def build_gsc_row(cached, fresh):
+    """Combine cached values + fresh values, forward-fill."""
+    row = list(cached) + list(fresh)
     return forward_fill(row)
 
 def fmt(v):
@@ -224,7 +226,7 @@ def main():
     all_gsc_keywords = list(GSC_C1.keys()) + list(GSC_C2.keys())
     fresh = {kw: [] for kw in all_gsc_keywords}
 
-    requery_weeks = WEEKS[CACHED_UP_TO:]  # W23, W24
+    requery_weeks = WEEKS[CACHED_UP_TO:]  # W24–W27
     print(f"Querying GSC for {len(requery_weeks)} weeks × {len(all_gsc_keywords)} keywords...")
     for label, start, end in requery_weeks:
         print(f"  {label} ({start} → {end})")
@@ -245,9 +247,8 @@ def main():
 
     # -- Chatbeat --
     cb_files = [
-        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/dbbfb45e-stats26Q1_Open_Loyalty2026030720260607.csv",
-        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/83de7c53-stats26Q1_Open_Loyalty2026032220260622.csv",
-        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/b12f7d3d-stats26Q22026032220260622.csv",
+        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/fcaef80f-stats26Q1_Open_Loyalty2026032920260629.csv",
+        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/85b183b7-stats26Q22026032920260629.csv",
     ]
     print("\nProcessing Chatbeat files...")
     cb_weekly = load_chatbeat_weekly(cb_files)
@@ -321,7 +322,7 @@ def main():
     for p in CB_C2_ORDER:
         lines.append(row_to_csv(p, "", cb_c2_rows[p]))
 
-    out = "/tmp/scorecard_w25.csv"
+    out = "/tmp/scorecard_w27.csv"
     with open(out, "w") as f:
         f.write("\n".join(lines) + "\n")
 
