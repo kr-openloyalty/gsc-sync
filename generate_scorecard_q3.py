@@ -31,6 +31,7 @@ LLM_FILTER   = "GPT"
 # Q3 Weeks: W27–W39  (ISO Mon–Sun)
 # ---------------------------------------------------------------------------
 WEEKS = [
+    ("W26", "2026-06-22", "2026-06-28"),  # pre-Q3 baseline
     ("W27", "2026-06-29", "2026-07-05"),
     ("W28", "2026-07-06", "2026-07-12"),
     ("W29", "2026-07-13", "2026-07-19"),
@@ -152,12 +153,13 @@ def get_position_us(session, keyword, start, end):
 
 
 def get_position_global(session, keyword, start, end):
-    """Global position (Cluster 2)."""
+    """US position using query-level aggregation (Cluster 2 — no best-page selection needed)."""
     rows = gsc_post(session, {
         "startDate": start, "endDate": end,
         "dimensions": ["query"],
         "dimensionFilterGroups": [{"filters": [
-            {"dimension": "query", "operator": "equals", "expression": keyword},
+            {"dimension": "query",   "operator": "equals", "expression": keyword},
+            {"dimension": "country", "operator": "equals", "expression": "usa"},
         ]}],
         "rowLimit": 1,
     })
