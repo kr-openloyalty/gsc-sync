@@ -75,7 +75,6 @@ GSC_C2 = [
     "fashion loyalty programs",
     "beauty loyalty programs",
     "retail gamification",
-    "gift card software",
     "best rewards programs",
     "how to calculate roi for loyalty programs",
     "ecommerce loyalty platform",
