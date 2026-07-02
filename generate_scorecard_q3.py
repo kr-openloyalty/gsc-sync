@@ -276,9 +276,9 @@ def main():
     for lbl, s, e in active_weeks:
         print(f"  {lbl} ({s} → {e})")
         for kw in GSC_C2:
-            pos = get_position_global(session, kw, s, e)
+            pos = get_position_us(session, kw, s, e)
             c2_data[kw].append(pos)
-            print(f"    {'GL'} {kw[:42]:<42} {f'{pos:.1f}' if pos else '—'}")
+            print(f"    {'US'} {kw[:42]:<42} {f'{pos:.1f}' if pos else '—'}")
 
     # Pad remaining (future) weeks with None
     future = N_WEEKS - len(active_weeks)
