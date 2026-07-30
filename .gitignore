@@ -4,3 +4,4 @@ token.json
 
 # Python virtualenv
 .venv/
+.venv/
