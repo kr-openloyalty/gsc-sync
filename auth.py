@@ -12,6 +12,11 @@ import sys
 import warnings
 from urllib.parse import urlparse, parse_qs
 
+# Google may return more scopes than requested (e.g. if the account also grants
+# Sheets access on the consent screen). Without this, oauthlib raises on the
+# scope mismatch and the (single-use) auth code is wasted.
+os.environ.setdefault("OAUTHLIB_RELAX_TOKEN_SCOPE", "1")
+
 from google_auth_oauthlib.flow import Flow
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import AuthorizedSession
