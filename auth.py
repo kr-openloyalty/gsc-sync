@@ -76,6 +76,7 @@ def main():
         state=saved["state"],
     )
     flow.code_verifier = saved["code_verifier"]
+    os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "1"
     flow.fetch_token(code=code)
     creds = flow.credentials
 
