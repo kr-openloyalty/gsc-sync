@@ -193,20 +193,15 @@ def load_chatbeat_weekly(csv_files):
         p: {d: sum(v) / len(v) for d, v in days.items()}
         for p, days in ol_pos.items()
     }
-    filled = {}
+    # Only record days where OL actually appeared — no forward-fill so lost positions show as blank
+    actual = {}
     for prompt in scrape_days:
-        sorted_days = sorted(scrape_days[prompt])
-        last = None
         result = {}
-        for d in sorted_days:
-            if d in ol_daily.get(prompt, {}):
-                last = ol_daily[prompt][d]
-                result[d] = last
-            elif last is not None:
-                result[d] = last
-        filled[prompt] = result
+        for d in ol_daily.get(prompt, {}):
+            result[d] = ol_daily[prompt][d]
+        actual[prompt] = result
     weekly = {}
-    for prompt, day_map in filled.items():
+    for prompt, day_map in actual.items():
         by_week = defaultdict(list)
         for d_str, pos in day_map.items():
             ws = week_start(datetime.strptime(d_str, "%Y-%m-%d").date())
@@ -289,7 +284,7 @@ def main():
 
     # ── Chatbeat ─────────────────────────────────────────────────────────────
     cb_files = [
-        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/1d30b34c-stats26Q3C12026070920260807.csv",
+        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/6b6225f2-stats26Q3C12026050720260807.csv",
     ]
     print("\nProcessing Chatbeat files...")
     cb_weekly = load_chatbeat_weekly(cb_files)
@@ -301,7 +296,7 @@ def main():
         for _, s, _ in WEEKS:
             ws = datetime.strptime(s, "%Y-%m-%d").date()
             raw.append(week_map.get(ws))
-        return forward_fill(raw)
+        return raw  # no forward-fill: blank = lost position that week
 
     cb_rows = {p: cb_row(p) for p in CB_ORDER}
 
