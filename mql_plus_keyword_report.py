@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-MQL+ contact keyword report (Jun 2025 – Jun 2026)
+MQL+ contact keyword report (Jun 2025 – Aug 2026)
 
-Reads contacts from hs_contacts_all.json (MQL, SQL, Opportunity, Customer),
+Reads contacts from hs_contacts_all_2025_2026.json (MQL, SQL, Opportunity, Customer),
 queries GSC for the best keyword on the contact's first visit date,
 and writes two CSVs:
   - mql_plus_keywords_2025_2026.csv  — one row per contact
@@ -24,15 +24,15 @@ from urllib.parse import urlparse, urlunparse
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
-# ── config ────────────────────────────────────────────────────────────────────
+# ── config ────────────────────────────────────────────────────────────────────────────────
 TOKEN_FILE     = "token.json"
-CONTACTS_FILE  = "/tmp/claude-0/-home-user-gsc-sync/f50a975a-1f60-5601-8971-46eb9d92c41e/scratchpad/hs_contacts_all.json"
+CONTACTS_FILE  = "hs_contacts_all_2025_2026.json"
 OUTPUT_CSV     = "mql_plus_keywords_2025_2026.csv"
 KEYWORDS_CSV   = "top_keywords_pages_2025_2026.csv"
 SITE           = "sc-domain:openloyalty.io"
 GSC_API        = "https://www.googleapis.com/webmasters/v3"
 DATE_START     = date(2025, 6, 1)
-DATE_END       = date(2026, 6, 19)
+DATE_END       = date(2026, 8, 31)
 
 AB_RE = re.compile(r"^/ab/", re.IGNORECASE)
 
@@ -130,7 +130,7 @@ def categorise_sra(val):
     return "Other"
 
 
-# ── GSC session ───────────────────────────────────────────────────────────────
+# ── GSC session ────────────────────────────────────────────────────────────────────────────────
 with open(TOKEN_FILE) as f:
     t = json.load(f)
 
@@ -190,7 +190,7 @@ def gsc_query(page_url, visit_dt, country_a2):
     return "no GSC data", "—", "—", "—", -1
 
 
-# ── Load and deduplicate contacts ─────────────────────────────────────────────
+# ── Load and deduplicate contacts ────────────────────────────────────────────────────
 with open(CONTACTS_FILE) as f:
     raw_contacts = json.load(f)
 
@@ -247,7 +247,7 @@ stage_counts = Counter(c[0].get("properties", {}).get("lifecyclestage", "?") for
 print("By stage:", dict(stage_counts))
 
 
-# ── GSC enrichment ────────────────────────────────────────────────────────────
+# ── GSC enrichment ───────────────────────────────────────────────────────────────────────────────
 rows_out = []
 gsc_cache = {}  # (page, date_str, country) -> result
 
@@ -316,7 +316,7 @@ for idx, (c, norm_url, visit_dt, vd, cdate) in enumerate(valid):
 
 print(f"\nDone. Writing {len(rows_out)} rows to {OUTPUT_CSV}")
 
-# ── Write main CSV ────────────────────────────────────────────────────────────
+# ── Write main CSV ───────────────────────────────────────────────────────────────────────────────
 with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=CSV_FIELDS)
     w.writeheader()
@@ -325,7 +325,7 @@ with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
 print(f"Wrote {OUTPUT_CSV}")
 
 
-# ── Keyword + Page analysis CSV ───────────────────────────────────────────────
+# ── Keyword + Page analysis CSV ───────────────────────────────────────────────────────────────────────────
 # Aggregate: keyword -> count by stage, total, top pages
 kw_stats = defaultdict(lambda: {
     "total": 0, "mql": 0, "sql": 0, "opp": 0, "customer": 0,
@@ -399,7 +399,7 @@ PAGE_FIELDS = [
 
 sorted_pages = sorted(page_stats.items(), key=lambda x: -x[1]["total"])
 
-# Combined into one CSV with sections — write keyword CSV and page CSV separately
+# Combined into one CSV with sections
 with open(KEYWORDS_CSV, "w", newline="", encoding="utf-8") as f:
     f.write("# SECTION 1: TOP KEYWORDS (by total MQL+ contacts)\n")
     w = csv.DictWriter(f, fieldnames=KW_FIELDS)
