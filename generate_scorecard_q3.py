@@ -11,6 +11,7 @@ Output: semicolon-delimited CSV with comma decimal separators (European format).
 
 import csv
 import math
+import os
 import time
 import warnings
 from collections import defaultdict
@@ -180,6 +181,9 @@ def load_chatbeat_weekly(csv_files):
     scrape_days = defaultdict(set)
     ol_pos      = defaultdict(lambda: defaultdict(list))
     for path in csv_files:
+        if not os.path.exists(path):
+            print(f"  WARNING: Chatbeat file not found, skipping: {path}")
+            continue
         with open(path, newline="") as fh:
             for row in csv.DictReader(fh):
                 if row["llm"] != LLM_FILTER:
