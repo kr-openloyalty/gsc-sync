@@ -288,7 +288,7 @@ def main():
 
     # ── Chatbeat ─────────────────────────────────────────────────────────────
     cb_files = [
-        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/c5def443-stats26Q3C12026060420260904.csv",
+        "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/845dd9b8-stats26Q3C12026081320260911.csv",
     ]
     print("\nProcessing Chatbeat files...")
     cb_weekly = load_chatbeat_weekly(cb_files)
