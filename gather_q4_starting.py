@@ -106,8 +106,8 @@ GPT2_PROMPTS = [
     "Yotpo alternatives",
 ]
 
-CB_Q3_FILE = "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/9d8f9ca4-stats-26Q3C1-20260825-20260923.csv"
-CB_Q4_FILE = "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/e3eb7136-stats-26Q4-20260921-20260923.csv"
+CB_Q3_FILE = "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/11ec0c8b-stats-26Q3C1-20260827-20260925_1.csv"
+CB_Q4_FILE = "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/920fc14d-stats-26Q4-20260921-20260925.csv"
 
 
 def get_session():
