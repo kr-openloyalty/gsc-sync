@@ -32,7 +32,7 @@ KEYWORDS_CSV   = "top_keywords_pages_2025_2026.csv"
 SITE           = "sc-domain:openloyalty.io"
 GSC_API        = "https://www.googleapis.com/webmasters/v3"
 DATE_START     = date(2025, 6, 1)
-DATE_END       = date(2026, 8, 31)
+DATE_END       = date(2026, 11, 17)
 
 AB_RE = re.compile(r"^/ab/", re.IGNORECASE)
 
