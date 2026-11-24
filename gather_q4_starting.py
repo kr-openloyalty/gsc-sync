@@ -2,6 +2,8 @@
 """
 Gather Q4 starting positions (one-time baseline, run once at Q4 start).
 
+    python3 gather_q4_starting.py --q3c1 stats-26Q3C1-*.csv --q4 stats-26Q4-*.csv [--out out/q4_starting_positions.json]
+
 GSC baseline: W38 (Sep 14-20) — last complete week before Q4.
   C1 (15 kws) + C2 (10 kws) + C3 (6 kws), US filter, best-page selection.
 
@@ -12,110 +14,24 @@ Chatbeat baseline: average across all dates in the provided CSV files.
 Output: JSON + prints a per-row summary.
 Fallback: 100 when no position data exists.
 
-For future Q4 WEEKLY updates, see generate_scorecard_q4.py (to be created).
-To re-run with updated Chatbeat files, update CB_Q3_FILE and CB_Q4_FILE below.
+The baseline used by the weekly scorecard lives in q4_history.json; weekly updates: generate_scorecard_q4.py.
 """
-import csv, json, math, time, warnings
+import argparse, csv, json, math, os, time
 from collections import defaultdict
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import AuthorizedSession
 
-TOKEN_FILE   = "/home/user/gsc-sync/token.json"
-SITE         = "sc-domain:openloyalty.io"
-GSC_ENDPOINT = "https://www.googleapis.com/webmasters/v3"
-API_SLEEP    = 0.35
-OL_KEYWORDS  = {"open loyalty", "openloyalty"}
+from q4_config import (BASELINE_WEEK, C1_KEYWORDS, C2_KEYWORDS, C3_KEYWORDS, GPT2_PROMPTS, GSC_ENDPOINT,
+                       LLM_PROMPTS, OL_KEYWORDS, ROOT, SITE, TOKEN_FILE)
 
-# W38 as baseline (last complete week before Q4)
-W38_START = "2026-09-14"
-W38_END   = "2026-09-20"
-
-# Q4 Sheet keywords
-C1_KEYWORDS = [
-    "loyalty platform",
-    "loyalty program software",
-    "customer loyalty software",
-    "loyalty software",
-    "customer loyalty program software",
-    "customer loyalty platform",
-    "loyalty system",
-    "loyalty card system",
-    "voucher management system",
-    "coupon management software",
-    "loyalty program saas",
-    "loyalty rewards management system",
-    "best customer loyalty software",
-    "loyalty program api",
-    "loyalty management software",
-]
-
-C2_KEYWORDS = [
-    "loyalty points",
-    "loyalty program cost",
-    "loyalty program app",
-    "white label loyalty",
-    "b2b loyalty programs",
-    "b2b loyalty program software",
-    "ecommerce loyalty program",
-    "retail loyalty",
-    "omnichannel loyalty program",
-    "loyalty gamification",
-]
-
-C3_KEYWORDS = [
-    "yotpo alternatives",
-    "smile.io alternatives",
-    "voucherify competitors",
-    "loyaltylion alternatives",
-    "talon.one alternatives",
-    "antavo alternatives",
-]
-
-LLM_PROMPTS = [
-    "Best customer loyalty software",
-    "Best loyalty program software for enterprise",
-    "Best white label loyalty platform",
-    "Best B2B loyalty program software",
-    "Best API-first loyalty platform",
-    "Best loyalty platform",
-    "Best loyalty program software",
-    "Best customer loyalty program software",
-    "Best loyalty system",
-    "Best loyalty software",
-    "Best customer loyalty platform",
-    "Best loyalty card system",
-    "Best coupon management software",
-    "Best voucher software",
-    "Best loyalty program saas",
-]
-
-GPT2_PROMPTS = [
-    "Alternatives to Salesforce Loyalty Management",
-    "Antavo alternatives",
-    "Headless loyalty platform",
-    "How much does loyalty program software cost",
-    "Is it cheaper to build a loyalty program in-house or buy one",
-    "Loyalty program for restaurants",
-    "Loyalty program pricing models explained",
-    "Loyalty program software for ecommerce",
-    "LoyaltyLion alternatives",
-    "Omnichannel loyalty platform",
-    "Talon.One alternatives",
-    "Voucherify alternatives",
-    "What are the best alternatives to Smile.io",
-    "Yotpo alternatives",
-]
-
-CB_Q3_FILE = "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/11ec0c8b-stats-26Q3C1-20260827-20260925_1.csv"
-CB_Q4_FILE = "/root/.claude/uploads/429803ff-2598-58d6-93c1-b17332904b6d/920fc14d-stats-26Q4-20260921-20260925.csv"
+API_SLEEP = 0.35
+W38_START, W38_END = BASELINE_WEEK
 
 
 def get_session():
     with open(TOKEN_FILE) as f:
         creds = Credentials.from_authorized_user_info(json.load(f))
-    s = AuthorizedSession(creds)
-    s.verify = False
-    return s
+    return AuthorizedSession(creds)
 
 
 def gsc_post(session, payload, retries=4):
@@ -159,7 +75,7 @@ def get_position_us(session, keyword, start, end):
 def load_chatbeat(csv_path, llm_filter):
     """Return dict: {prompt: avg_position} filtering by llm and OL keywords."""
     positions = defaultdict(list)
-    with open(csv_path, newline="") as fh:
+    with open(csv_path, newline="", encoding="utf-8-sig") as fh:
         for row in csv.DictReader(fh):
             if row["llm"] != llm_filter:
                 continue
@@ -180,7 +96,11 @@ def fmt(v):
 
 
 def main():
-    warnings.filterwarnings("ignore", message="Unverified HTTPS request")
+    ap = argparse.ArgumentParser(description="Gather Q4 starting positions (GSC W38 + Chatbeat baseline).")
+    ap.add_argument("--q3c1", required=True, help="Chatbeat export with the 15 'Best loyalty…' prompts")
+    ap.add_argument("--q4", required=True, help="Chatbeat export with the 14 ChatGPT 2nd cluster prompts")
+    ap.add_argument("--out", default=os.path.join(ROOT, "out", "q4_starting_positions.json"))
+    args = ap.parse_args()
     results = {}
 
     # ── GSC queries ──────────────────────────────────────────────────────────
@@ -214,10 +134,10 @@ def main():
 
     # ── Chatbeat processing ───────────────────────────────────────────────────
     print("\nProcessing Chatbeat Q3 C1 file (GPT/CLAUDE/AI_OVERVIEW/PERPLEXITY)...")
-    chatgpt_pos = load_chatbeat(CB_Q3_FILE, "GPT")
-    claude_pos  = load_chatbeat(CB_Q3_FILE, "CLAUDE")
-    aiov_pos    = load_chatbeat(CB_Q3_FILE, "AI_OVERVIEW")
-    perp_pos    = load_chatbeat(CB_Q3_FILE, "PERPLEXITY")
+    chatgpt_pos = load_chatbeat(args.q3c1, "GPT")
+    claude_pos  = load_chatbeat(args.q3c1, "CLAUDE")
+    aiov_pos    = load_chatbeat(args.q3c1, "AI_OVERVIEW")
+    perp_pos    = load_chatbeat(args.q3c1, "PERPLEXITY")
 
     print(f"  ChatGPT prompts found: {len(chatgpt_pos)}")
     print(f"  Claude  prompts found: {len(claude_pos)}")
@@ -225,7 +145,7 @@ def main():
     print(f"  Perplexity prompts:    {len(perp_pos)}")
 
     print("\nProcessing Chatbeat Q4 file (GPT for 2nd cluster)...")
-    gpt2_pos = load_chatbeat(CB_Q4_FILE, "GPT")
+    gpt2_pos = load_chatbeat(args.q4, "GPT")
     print(f"  ChatGPT 2nd prompts: {len(gpt2_pos)}")
 
     results["chatgpt"] = chatgpt_pos
@@ -309,7 +229,8 @@ def main():
     updates[101] = fmt(gpt2_avg)      # ChatGPT 2nd Cluster
 
     # Save results
-    out = "/tmp/claude-0/-home-user-gsc-sync/429803ff-2598-58d6-93c1-b17332904b6d/scratchpad/q4_starting_positions.json"
+    out = args.out
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     with open(out, "w") as f:
         json.dump({"updates": updates, "raw": results}, f, indent=2)
     print(f"\nSaved to {out}")

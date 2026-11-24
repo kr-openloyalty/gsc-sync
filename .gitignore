@@ -3,3 +3,4 @@ token.json
 .auth_state.json
 __pycache__/
 *.pyc
+out/
